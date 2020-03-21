@@ -1,5 +1,11 @@
 ---
-title: "TJ Palanca"
+title: "Hey, I'm TJ"
+description: >
+  I'm a data scientist and all-around problem solver with experience building 
+  data products in fast growing companies across Asia Pacific. I'm passionate 
+  about providing people with access to data and technology that powers their 
+  daily lives.
 site: distill::distill_website
-listing: posts
 ---
+
+fdfdk

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>TJ Palanca</title>
+    <link>https://www.tjpalanca.com</link>
+    <atom:link href="https://www.tjpalanca.com/blog.xml" rel="self" type="application/rss+xml"/>
+    <description>Personal website and blog of TJ Palanca. A quest to bring numbers and reality
+together, especially on issues surrounding the Philippines.
+</description>
+    <image>
+      <title>TJ Palanca</title>
+      <url>https://www.tjpalanca.com/static/brand/favicon.png</url>
+      <link>https://www.tjpalanca.com</link>
+    </image>
+    <generator>Distill</generator>
+    <lastBuildDate>Sun, 12 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>On Facebook News in the Philippines:  Using topic modeling to find trends in online news coverage</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling</link>
+      <description>Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling.</description>
+      <guid>https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling</guid>
+      <pubDate>Sun, 12 Mar 2017 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/cover-social-media.jpg" medium="image" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>

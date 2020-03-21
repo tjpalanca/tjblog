@@ -1,12 +1,26 @@
-name: "blog"
+name: "tjpalanca"
 title: "TJ Palanca"
 description: |
-  TJ Palanca
+  Personal website and blog of TJ Palanca. A quest to bring numbers and reality
+  together, especially on issues surrounding the Philippines.
 output_dir: "docs"
 navbar:
+  logo:
+    image: static/brand/logo.png
+    href: https://www.tjpalanca.com
   right:
     - text: "Home"
       href: index.html
+    - text: "Blog"
+      href: blog.html
     - text: "About"
       href: about.html
-output: distill::distill_article
+output:
+  distill::distill_article:
+    css: static/css/styles.css
+base_url: https://www.tjpalanca.com
+repository_url: https://www.github.com/tjpalanca/blog
+creative_commons: CC BY-NC-SA
+twitter:
+  site: "@tjpalanca"
+favicon: static/brand/favicon.png

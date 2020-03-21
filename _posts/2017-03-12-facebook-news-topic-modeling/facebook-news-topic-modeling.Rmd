@@ -1,0 +1,26 @@
+---
+title: >-
+  On Facebook News in the Philippines: 
+  Using topic modeling to find trends in online news coverage
+description: >-
+  Facebook has become one of most visible sources of news in the Philippines,
+  and it has arguably played a huge role in shaping Filipino views. We take a
+  look at how the Philippines news cycle evolved with by using topic modeling.
+author:
+  - name: TJ Palanca
+    url: https://www.twitter.com/tjpalanca
+date: 2017-03-12
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - internet 
+  - natural language processing
+  - data visualization
+  - philippines
+  - social commentary
+preview: cover-social-media.jpg
+---
+
+
+
