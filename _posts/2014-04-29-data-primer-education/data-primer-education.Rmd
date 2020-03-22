@@ -1,0 +1,21 @@
+---
+title: "data-primer-education"
+description: |
+  A short description of the post.
+author:
+  - name: TJ Palanca
+    url: https://www.twitter.com/tjpalanca
+date: 04-29-2014
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+

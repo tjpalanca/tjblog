@@ -13,7 +13,16 @@ together, especially on issues surrounding the Philippines.
       <link>https://www.tjpalanca.com/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 12 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>On Databeers Manila</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2017-07-31-databeers-mnl</link>
+      <description>I spoke at Databeers Manila. The event was one of the best ones I've gone to  in Manila, and definitely eye-opening to see more and more dataphiliacs in  the country!</description>
+      <guid>https://www.tjpalanca.com/posts/2017-07-31-databeers-mnl</guid>
+      <pubDate>Mon, 31 Jul 2017 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2017-07-31-databeers-mnl/images/databeers-mnl.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage</title>
       <dc:creator>TJ Palanca</dc:creator>
@@ -22,6 +31,24 @@ together, especially on issues surrounding the Philippines.
       <guid>https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling</guid>
       <pubDate>Sun, 12 Mar 2017 00:00:00 +0000</pubDate>
       <media:content url="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On the Concorde</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2012-04-19-on-concorde</link>
+      <description>The Concorde. It’s a beauty; it’s just about the most beautiful man-made  thing in the world. What a shame that it guzzled gas, made so much noise,  and was eventually put out of service.</description>
+      <guid>https://www.tjpalanca.com/posts/2012-04-19-on-concorde</guid>
+      <pubDate>Thu, 19 Apr 2012 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2012-04-19-on-concorde/images/concorde.png" medium="image" type="image/png" width="640" height="435"/>
+    </item>
+    <item>
+      <title>On Man's Insignificance</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2012-04-19-on-mans-insignificance</link>
+      <description>From this distant vantage point, the Earth might not seem of particular interest. But for us, it’s different. Look again at that dot. That’s here, that’s home, that’s us.</description>
+      <guid>https://www.tjpalanca.com/posts/2012-04-19-on-mans-insignificance</guid>
+      <pubDate>Thu, 19 Apr 2012 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2012-04-19-on-mans-insignificance/images/pale-blue-dot.jpeg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

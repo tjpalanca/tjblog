@@ -1,0 +1,25 @@
+---
+title: "On the Concorde"
+description: >-
+  The Concorde. It’s a beauty; it’s just about the most beautiful man-made 
+  thing in the world. What a shame that it guzzled gas, made so much noise, 
+  and was eventually put out of service.
+author:
+  - name: TJ Palanca
+    url: https://www.twitter.com/tjpalanca
+date: 04-19-2012
+output:
+  distill::distill_article:
+    self_contained: false
+preview: images/concorde.png
+categories:
+  - personal
+  - aviation
+---
+
+```{r layout="l-body", fig.cap="The Concorde's elegant delta-wing design enabled it to fly supersonic speeds, yet unmatched by the commercial jets of today that still rely on the traditional fuselage and wing design."}
+knitr::include_graphics("images/concorde.png")
+```
+
+The Concorde. It’s a beauty; it’s just about the most beautiful man-made thing in the world. What a shame that it guzzled gas, made so much noise, and was eventually put out of service. Still, its elegant silhouette, as well as the fact that it can travel at twice the speed of sound, inspires me to no end. I remember from a documentary that New Yorkers who were protesting on the noise of the plane stopped in hushed awe when the Concorde was wheeled in. It was just that stunning.
+

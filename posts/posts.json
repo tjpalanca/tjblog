@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/2017-07-31-databeers-mnl/",
+    "title": "On Databeers Manila",
+    "description": "I spoke at Databeers Manila. The event was one of the best ones I've gone to  in Manila, and definitely eye-opening to see more and more dataphiliacs in  the country!",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2017-07-31",
+    "categories": [
+      "talks",
+      "philippines",
+      "social commentary",
+      "data science"
+    ],
+    "preview": "posts/2017-07-31-databeers-mnl/images/databeers-mnl.jpg",
+    "last_modified": "2020-03-22T17:54:28+00:00"
+  },
+  {
     "path": "posts/2017-03-12-facebook-news-topic-modeling/",
     "title": "On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage",
     "description": "Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling.",
@@ -18,6 +38,44 @@
       "social commentary"
     ],
     "preview": "posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg",
-    "last_modified": "2020-03-22T17:42:27+00:00"
+    "last_modified": "2020-03-22T17:42:28+00:00"
+  },
+  {
+    "path": "posts/2012-04-19-on-concorde/",
+    "title": "On the Concorde",
+    "description": "The Concorde. It’s a beauty; it’s just about the most beautiful man-made  thing in the world. What a shame that it guzzled gas, made so much noise,  and was eventually put out of service.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2012-04-19",
+    "categories": [
+      "personal",
+      "aviation"
+    ],
+    "preview": "posts/2012-04-19-on-concorde/images/concorde.png",
+    "last_modified": "2020-03-22T19:05:26+00:00",
+    "preview_width": 640,
+    "preview_height": 435
+  },
+  {
+    "path": "posts/2012-04-19-on-mans-insignificance/",
+    "title": "On Man's Insignificance",
+    "description": "From this distant vantage point, the Earth might not seem of particular interest. But for us, it’s different. Look again at that dot. That’s here, that’s home, that’s us.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2012-04-19",
+    "categories": [
+      "science",
+      "video"
+    ],
+    "preview": "posts/2012-04-19-on-mans-insignificance/images/pale-blue-dot.jpeg",
+    "last_modified": "2020-03-22T19:06:57+00:00"
   }
 ]
