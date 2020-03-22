@@ -1,4 +1,3 @@
-<script>
 function resizeIframe(iframe) {
   iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 }
@@ -14,4 +13,3 @@ $(window).resize(function() {
     $(this).trigger('load');
   });
 });
-</script>
