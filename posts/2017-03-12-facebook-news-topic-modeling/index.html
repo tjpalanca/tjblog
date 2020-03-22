@@ -1292,37 +1292,19 @@ document.addEventListener('DOMContentLoaded', function() {
 <link
   rel="stylesheet"
   type="text/css"
-  href="/static/jquery-ui-1.12.1/jquery-ui.min.css"
+  href="https://www.tjpalanca.com/static/jquery-ui-1.12.1/jquery-ui.min.css"
 />
 <script
-  src="/static/jquery-ui-1.12.1/jquery-ui.min.js"
+  src="https://www.tjpalanca.com/static/jquery-ui-1.12.1/jquery-ui.min.js"
 ></script>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="/files/workspace/tjpalanca.github.io/static/jquery-ui-1.12.1/jquery-ui.min.css"
-/>
+<!-- Resize iframes -->
 <script
-  src="/files/workspace/tjpalanca.github.io/static/jquery-ui-1.12.1/jquery-ui.min.js"
+  src="https://www.tjpalanca.com/static/custom/iframe-resize.js"
 ></script>
-
-<script>
-function resizeIframe(iframe) {
-  iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-}
-
-$(document).ready(function() {
-  $('iframe').on('load', function() {
-    resizeIframe($(this)[0]);
-  });
-});
-
-$(window).resize(function() {
-  $('iframe').each(function() {
-    $(this).trigger('load');
-  });
-});
-</script>
+<!-- Zoom Images -->
+<script
+  src="https://www.tjpalanca.com/static/custom/image-zoom.js"
+></script>
 
 <style type="text/css">
 .distill-site-nav {
