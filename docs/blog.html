@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://www.tjpalanca.com/blog.xml" />
+  <link rel="alternate" type="application/rss+xml" href="https://www.tjpalanca.com/blog/blog.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -24,7 +24,7 @@
   
   
   <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
-  <link rel="icon" type="image/png" href="static/brand/favicon.png"/>
+  <link rel="icon" type="image/png" href="static/img/favicon.png"/>
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -42,7 +42,7 @@
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Blog Posts"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","listing"]}},"value":[{"type":"character","attributes":{},"value":["Blog Posts"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1292,10 +1292,15 @@
     }
   }
   
+  d-article iframe {
+    border: none;
+    overflow: hidden;
+  }
+  
   </style>
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="static/css/styles.css" type="text/css"/>
+  <link rel="stylesheet" href="static/custom/styles.css" type="text/css"/>
 
 </head>
 
@@ -1312,15 +1317,29 @@
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a class="logo" href="https://www.tjpalanca.com">
-<img src="static/brand/logo.png"/>
+<a class="logo" href="https://www.tjpalanca.com/blog/">
+<img src="static/img/logo.png"/>
 </a>
 <a href="index.html" class="title">TJ Palanca</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
 <a href="about.html">About</a>
+<a href="policies.html">FAQ &amp; Policies</a>
+<a href="https://www.github.com/tjpalanca">
+<i class="fa fa-github"></i>
+</a>
+<a href="https://www.twitter.com/tjpalanca">
+<i class="fa fa-twitter"></i>
+</a>
+<a href="https://www.facebook.com/tjpalanca.blog">
+<i class="fa fa-facebook"></i>
+</a>
+<a href="blog.xml">
+<i class="fa fa-rss"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -1654,15 +1673,50 @@ function init_posts_list() {
 <div class="publishedDate">March 12, 2017</div>
 </div>
 <div class="thumbnail">
-<img data-src="posts/2017-03-12-facebook-news-topic-modeling/cover-social-media.jpg"/>
+<img data-src="posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg"/>
 </div>
 <div class="description">
-<h2>On Facebook News in the Philippines:  Using topic modeling to find trends in online news coverage</h2>
+<h2>On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage</h2>
 <p>Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling.</p>
 </div>
 </a>
 </div>
 <div class="posts-sidebar">
+<div class="sidebar-section subscribe">
+<h3>Subscribe</h3>
+<div class="social_footer">
+<form
+  style="border:0px solid #ccc; padding:3px; text-align:left;"
+  action="https://feedburner.google.com/fb/a/mailverify"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=tjpalanca-blog', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"
+>
+<p>
+  If you would like to receive updates when I have a new post,
+  enter your email address:
+</p>
+<p>
+  <input
+    type="text"
+    style="width:100%; padding: 3px;"
+    name="email"
+    style="border:1px solid #ccc;"
+  />
+</p>
+<input type="hidden" value="tjpalanca-blog" name="uri"/>
+<input type="hidden" name="loc" value="en_US"/>
+<button
+  type="submit"
+  class="ui-button ui-widget ui-corner-all"
+  style="background-color: #2cbf53; color: white;"
+>
+  <i class="fa fa-envelope-open fa-1x"></i>&nbsp;&nbsp;&nbsp;Subscribe
+</button>
+</form>
+</div>
+
+</div>
 <div class="sidebar-section categories">
 <h3>Categories</h3>
 <ul>
@@ -1722,6 +1776,17 @@ function init_posts_list() {
 </div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+<p>© Copyright 2009-2020 <a href="https://www.twitter.com/tjpalanca">TJ Palanca</a>. <br/> Opinions expressed here represent my own and not those of my employer. Content on this site is subject to <a href="https://www.tjpalanca.com/policies">policies</a>.</p>
+<!-- JQuery UI -->
+<p><link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+/> <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+></script></p>
+</div>
 <!--/radix_placeholder_navigation_after_body-->
 
 </body>

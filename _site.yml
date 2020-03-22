@@ -6,21 +6,38 @@ description: |
 output_dir: "docs"
 navbar:
   logo:
-    image: static/brand/logo.png
-    href: https://www.tjpalanca.com
+    image: static/img/logo.png
+    href: https://www.tjpalanca.com/blog/
   right:
     - text: "Home"
       href: index.html
     - text: "Blog"
       href: blog.html
+    - text: "Contact"
+      href: contact.html
     - text: "About"
       href: about.html
+    - text: "FAQ & Policies"
+      href: policies.html
+    - icon: fa fa-github
+      href: https://www.github.com/tjpalanca
+    - icon: fa fa-twitter
+      href: https://www.twitter.com/tjpalanca
+    - icon: fa fa-facebook
+      href: https://www.facebook.com/tjpalanca.blog
+    - icon: fa fa-rss
+      href: blog.xml
 output:
   distill::distill_article:
-    css: static/css/styles.css
-base_url: https://www.tjpalanca.com
+    css: static/custom/styles.css
+base_url: https://www.tjpalanca.com/blog/
 repository_url: https://www.github.com/tjpalanca/blog
 creative_commons: CC BY-NC-SA
 twitter:
   site: "@tjpalanca"
-favicon: static/brand/favicon.png
+favicon: static/img/favicon.png
+collections:
+  posts:
+    disqus: jumbodumbothoughts
+    share: [twitter, linkedin, facebook, pinterest]
+    subscribe: _subscribe.html

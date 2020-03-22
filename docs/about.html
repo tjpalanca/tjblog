@@ -19,32 +19,29 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>TJ Palanca: About this blog</title>
+  <title>TJ Palanca: About</title>
   
-  <meta property="description" itemprop="description" content="Some additional details about the blog"/>
   
   <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
-  <link rel="icon" type="image/png" href="static/brand/favicon.png"/>
+  <link rel="icon" type="image/png" href="static/img/favicon.png"/>
   
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="TJ Palanca: About this blog"/>
+  <meta property="og:title" content="TJ Palanca: About"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Some additional details about the blog"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="TJ Palanca"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="TJ Palanca: About this blog"/>
-  <meta property="twitter:description" content="Some additional details about the blog"/>
+  <meta property="twitter:title" content="TJ Palanca: About"/>
   <meta property="twitter:site" content="@tjpalanca"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this blog"]},{"type":"character","attributes":{},"value":["Some additional details about the blog"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["About"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1294,10 +1291,15 @@
     }
   }
   
+  d-article iframe {
+    border: none;
+    overflow: hidden;
+  }
+  
   </style>
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="static/css/styles.css" type="text/css"/>
+  <link rel="stylesheet" href="static/custom/styles.css" type="text/css"/>
 
 </head>
 
@@ -1306,7 +1308,7 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this blog","description":"Some additional details about the blog","authors":[]}
+{"title":"About","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1314,15 +1316,29 @@
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a class="logo" href="https://www.tjpalanca.com">
-<img src="static/brand/logo.png"/>
+<a class="logo" href="https://www.tjpalanca.com/blog/">
+<img src="static/img/logo.png"/>
 </a>
 <a href="index.html" class="title">TJ Palanca</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
 <a href="about.html">About</a>
+<a href="policies.html">FAQ &amp; Policies</a>
+<a href="https://www.github.com/tjpalanca">
+<i class="fa fa-github"></i>
+</a>
+<a href="https://www.twitter.com/tjpalanca">
+<i class="fa fa-twitter"></i>
+</a>
+<a href="https://www.facebook.com/tjpalanca.blog">
+<i class="fa fa-facebook"></i>
+</a>
+<a href="blog.xml">
+<i class="fa fa-rss"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -1332,13 +1348,31 @@
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About this blog</h1>
-<p>Some additional details about the blog</p>
+<h1>About</h1>
+
 </div>
 
 
 <div class="d-article">
-
+<h2 id="about-me">About me</h2>
+<div style="max-width: 300px;">
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="static/img/about_image.jpg" width="1002" /></p>
+</div>
+</div>
+<p>Hey, I’m TJ.</p>
+<p>I’m a data scientist and all-around problem solver with experience building data products in fast growing companies across Asia Pacific. I’m passionate about providing people with access to data and technology that powers their daily lives.</p>
+<p>I’m currently at First Circle working on solving financial inclusion for people in the Philippines. Before that I was at Uber, Grab, and EY.</p>
+<p>You’ll find my thoughts, work, personal and professional interests here.</p>
+<p>If you’re interested in connecting professionally, you can view my profile on LinkedIn.</p>
+<h2 id="about-the-blog">About the blog</h2>
+<p>This blog is a digitized quest to take data and numbers, extract meaningful insight, and apply them to relevant issues in business, politics, and society mainly in the international and Philippines scene.</p>
+<p>If you want to get a gist of why I write, take a look at this talk by the late Hans Rosling:</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Sm5xF-UYgdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>If you’re also a data nerd interested in changing the way this country works, drop me a line! If you are otherwise interested in data, visualization, and R, feel free to reach out as well.</p>
+<h2 id="about-the-site">About the site</h2>
+<p>This site is built using <a href="https://rmarkdown.rstudio.com/">R Markdown</a> and used the <a href="https://rstudio.github.io/distill/">Distill Web Framework</a>, and hosted using <a href="https://pages.github.com/">Github Pages</a>.</p>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1358,6 +1392,17 @@
 </div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+<p>© Copyright 2009-2020 <a href="https://www.twitter.com/tjpalanca">TJ Palanca</a>. <br/> Opinions expressed here represent my own and not those of my employer. Content on this site is subject to <a href="https://www.tjpalanca.com/policies">policies</a>.</p>
+<!-- JQuery UI -->
+<p><link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+/> <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+></script></p>
+</div>
 <!--/radix_placeholder_navigation_after_body-->
 
 </body>

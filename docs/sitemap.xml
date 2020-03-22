@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
-    <loc>https://www.tjpalanca.com/about.html</loc>
-    <lastmod>2020-03-21T13:23:00+00:00</lastmod>
+    <loc>https://www.tjpalanca.com/blog/about.html</loc>
+    <lastmod>2020-03-22T11:23:25+00:00</lastmod>
   </url>
   <url>
-    <loc>https://www.tjpalanca.com/blog.html</loc>
-    <lastmod>2020-03-21T16:52:51+00:00</lastmod>
+    <loc>https://www.tjpalanca.com/blog/blog.html</loc>
+    <lastmod>2020-03-22T12:53:52+00:00</lastmod>
   </url>
   <url>
-    <loc>https://www.tjpalanca.com/</loc>
+    <loc>https://www.tjpalanca.com/blog/contact.html</loc>
+    <lastmod>2020-03-22T12:55:39+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tjpalanca.com/blog/</loc>
     <lastmod>2020-03-21T16:57:02+00:00</lastmod>
   </url>
   <url>
-    <loc>https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/</loc>
-    <lastmod>2020-03-21T16:35:16+00:00</lastmod>
+    <loc>https://www.tjpalanca.com/blog/policies.html</loc>
+    <lastmod>2020-03-22T12:50:44+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tjpalanca.com/blog/posts/2017-03-12-facebook-news-topic-modeling/</loc>
+    <lastmod>2020-03-22T12:34:18+00:00</lastmod>
   </url>
 </urlset>

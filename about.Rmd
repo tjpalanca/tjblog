@@ -1,9 +1,35 @@
 ---
-title: "About this blog"
-description: |
-  Some additional details about the blog
+title: "About"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+## About me
+
+<div style="max-width: 300px;">
+```{r}
+knitr::include_graphics("static/img/about_image.jpg")
 ```
+</div>
+
+Hey, I’m TJ.
+
+I’m a data scientist and all-around problem solver with experience building data products in fast growing companies across Asia Pacific. I’m passionate about providing people with access to data and technology that powers their daily lives.
+
+I’m currently at First Circle working on solving financial inclusion for people in the Philippines. Before that I was at Uber, Grab, and EY.
+
+You’ll find my thoughts, work, personal and professional interests here.
+
+If you’re interested in connecting professionally, you can view my profile on LinkedIn.
+
+## About the blog
+
+This blog is a digitized quest to take data and numbers, extract meaningful insight, and apply them to relevant issues in business, politics, and society mainly in the international and Philippines scene.
+
+If you want to get a gist of why I write, take a look at this talk by the late Hans Rosling:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Sm5xF-UYgdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+If you’re also a data nerd interested in changing the way this country works, drop me a line! If you are otherwise interested in data, visualization, and R, feel free to reach out as well.
+
+## About the site
+
+This site is built using [R Markdown](https://rmarkdown.rstudio.com/) and used the [Distill Web Framework](https://rstudio.github.io/distill/), and hosted using [Github Pages](https://pages.github.com/). 
