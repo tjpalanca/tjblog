@@ -33,7 +33,6 @@ output:
     includes:
       in_header:
       - _header.html
-      - static/custom/_iframe_resize.html
 base_url: https://www.tjpalanca.com/
 repository_url: https://www.github.com/tjpalanca/tjpalanca.github.io
 creative_commons: CC BY-NC-SA
