@@ -3,7 +3,7 @@ title: "TJ Palanca"
 description: |
   Personal website and blog of TJ Palanca. A quest to bring numbers and reality
   together, especially on issues surrounding the Philippines.
-output_dir: "docs"
+output_dir: "."
 navbar:
   logo:
     image: static/img/logo.png
