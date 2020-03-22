@@ -67,7 +67,7 @@ Topic modeling, in natural language processing and machine learning, is a way fo
 
 Once we perform the topic modeling, we can generate some pretty interesting visualizations. See here for an overview of the news landscape of the Philippines, each group is composed of the most relevant words for that topic, and a manually-determined label. The distances that the topics have from each other reflect their semantic distance, or basically how different the words are for that topic.
 
-```{r layout="l-page", fig.cap="News Landscape of the Philippines ([zoom](figures/news-landscape-map.png))"}
+```{r layout="l-page", fig.cap="News Landscape of the Philippines (click to zoom)"}
 knitr::include_graphics("figures/news-landscape-map.png")
 ```
 
@@ -85,7 +85,7 @@ One thing to note is that Women's Volleyball and Beauty Pageants seems to have l
 
 But wait, how can we determine that these topic classifications actually make sense? Let's try to pull out sample articles classified by the model and see if they can be understood.
 
-```{r layout="l-screen", fig.cap="Sample articles from the LDA classification ([zoom](figures/topic-classification-sample.png))"}
+```{r layout="l-screen", fig.cap="Sample articles from the LDA classification (click to zoom)"}
 knitr::include_graphics("figures/topic-classification-sample.png")
 ```
 
@@ -95,7 +95,7 @@ Inspecting the headlines seems to show that the topics are well classified. For 
 
 Now that we are confident that topic classification is attained reasonably well, let's take a look at the trends over time.
 
-```{r layout="l-body-outset", fig.cap = "TOPIC TRENDS - Hover over each square to view sample articles. Red dots indicates 'peaks' for each topic"}
+```{r layout="l-body-outset", fig.cap = "TOPIC TRENDS - Hover over each square to view sample articles. Red dots indicates 'peaks' for each topic ([full screen](figures/topic-trends.html))"}
 knitr::include_url("figures/topic-trends.html", height = "800") 
 ```
 
@@ -118,7 +118,7 @@ We can see here how 2016 progressed in terms of "hot topics" in each week:
 
 If you're interested in viewing the trend for a particular topic, you can use this chart to view it. Simply hover over the line to highlight it and display the topic name.
 
-```{r layout="l-body-outset", fig.cap = "TOPIC TRENDS - Hover over each line to view the line in relation to others and to display the topic name as a tooltip"}
+```{r layout="l-body-outset", fig.cap = "TOPIC TRENDS - Hover over each line to view the line in relation to others and to display the topic name as a tooltip ([full screen](figures/topic-trends-line.html))"}
 knitr::include_url("figures/topic-trends-line.html", height = "800") 
 ```
 
@@ -128,7 +128,7 @@ knitr::include_url("figures/topic-trends-line.html", height = "800")
 
 A common accusation leveled against traditional news media is the amount of bias in reporting various topics. We try to explore the topic distribution of news articles.
 
-```{r layout="l-body-outset", fig.cap="BIAS AND BALANCE - Check the news distribution and hover over each bar for details."}
+```{r layout="l-body-outset", fig.cap="BIAS AND BALANCE - Check the news distribution and hover over each bar for details ([full screen](figures/topic-distribution-pages.html))"}
 knitr::include_url("figures/topic-distribution-pages.html", height = "600") 
 ```
 
@@ -143,7 +143,7 @@ A few observations from the chart:
 
 We know how each of the topics are distributed, but how do we measure topics against each other in terms of topic concentration and potential "bias". One way to measure concentration across different topics is the Herfindahl-Hirschman Index (HHI). This index ranges from 0 to 100 with 100 meaning perfect concentration.
 
-```{r layout="l-body-outset", fig.cap="TOPIC CONCENTRATION - Hover over each bar to see the top topics for that page."}
+```{r layout="l-body-outset", fig.cap="TOPIC CONCENTRATION - Hover over each bar to see the top topics for that page ([full screen](figures/topic-concentration.html))"}
 knitr::include_url("figures/topic-concentration.html", height = "800") 
 ```
 
@@ -157,7 +157,7 @@ The most concentrated were news pages that focused mainly on Filipino subjects (
 
 If topics are relatively well distributed in terms of topics, then how do we go about explaining the perception of biased media. Well, Facebook's timeline is heavily geared to provide information relating to topics that you have already interacted with. If we compare the amount of news articles published per topic over time, with the reactions we have to them over time:
 
-```{r layout="l-body-outset", fig.cap="REACTIONS VS ARTICLES - What news publish vs what topics we interact with"}
+```{r layout="l-body-outset", fig.cap="REACTIONS VS ARTICLES - What news publish vs what topics we interact with."}
 knitr::include_graphics("figures/reactions-vs-articles.gif")
 ```
 
