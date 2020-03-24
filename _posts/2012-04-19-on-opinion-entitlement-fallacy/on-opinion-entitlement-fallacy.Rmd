@@ -1,7 +1,11 @@
 ---
-title: "on-opinion-entitlement-fallacy"
-description: |
-  A short description of the post.
+title: "On the Opinion Entitlement Fallacy"
+description: >-
+  The process of argumentation has, for me, always been a journey towards 
+  the discovery of truth. However, seldom does this process go well. People
+  usually end up with more questions than answers and the matter is almost
+  never resolved. One of the reasons is because of certain fallacies that 
+  just won’t die.
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +13,20 @@ date: 04-19-2012
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - thoughts 
+  - personal
+preview: images/cover_image.jpg
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+The process of argumentation has, for me, always been a journey towards the discovery of truth. However, seldom does this process go well. People usually end up with more questions than answers and the matter is almost never resolved. One of the reasons is because of certain fallacies that just won’t die.
 
-Distill is a publication format for scientific and technical writing, native to the web.
+### Opinion Entitlement Fallacy
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+The truth is always singular at a particular point in time. We have all heard this before; that everyone has the right to his own opinion. My question is: to what does this entitlement translate? The right to property removes ownership from everyone else. The right to life removes the other person’s right to extend his knife-wielding hand too far. Does the right to an opinion enable you to keep your opinion, or does it oblige others to accept it? If you have one view on a topic and someone else has the exact opposite of yours, does that mean that you each have the right to keep your opinion? Maybe you do. However, that right to keep your opinion in no way validates or invalidates yours, or anyone else’s. Saying, “I am entitled to my own opinion” to the effect of ending an argument does not prove anything at all; it simply shifts the topic of discussion away from the issue at hand.
 
+Let’s say Simon Cowell in American Idol says to a contestant, “You’re not going to make it past this round.” and the contestant brazenly replies by saying “It’s my opinion against yours, meanie.” Is the contestant really going to make it? We won’t know from their conversation, that is, until the results show. (Note: the question is whether the contestant makes it to the next round, not whether he/she is a good singer or not.)
+
+The previous example probably isn’t the best. Suppose James and Jessie are arguing whether China’s foreign currency policy is detrimental to the world economy. James then puts forth evidence for his point, and Jessie does the same. However, the truth is singular; only James or only Jessie will be right. Jessie, out of some reason, plays the opinion entitlement card and the discussion ends. The truth had not been revealed, at all.
+
+So the next time someone says to you, “I am entitled to my own opinion,” it doesn’t matter anymore what the truth is. You may still be interested in finding out the truth, but the other person simply doesn’t want to know. Luckily for him or her, society has deemed it rude to continue the conversation.

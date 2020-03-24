@@ -1,7 +1,6 @@
 ---
-title: "on-interest-rates-and-mortality"
-description: |
-  A short description of the post.
+title: "On Interest Rates and Mortality"
+description: "A limited time on this earth makes time precious."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,21 @@ date: 04-20-2012
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20120420-interest-rates.jpg
+categories:
+  - psychology
+  - commentary
+  - economics
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r fig.cap="A limited time on this earth makes time precious."}
+knitr::include_graphics("images/20120420-interest-rates.jpg")
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+I’ve always been puzzled by interest rates. They say it’s the price that relates future goods to present goods. Simply put, it’s a price tag on the ability to consume goods now rather than later (for example, a saver who defers the purchase of his marshmallows will get an interest on his savings for more marshmallows in the future.)
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+Opportunity cost is something we encounter early in our transformation into zombies economics majors. Another thing that we learn is that there is no such thing as a free lunch. Every minute spent not doing anything is a minute not spent gorging ourselves on marshmallows (or some other worthwhile activity; although there is nothing more fulfilling than marshmallows). Most activities incur time as an opportunity cost. This is why we prize present consumption; it’s because we have a limited time on this earth to allocate efficiently among activities.
 
+Now that leaves me thinking: what if everyone turned immortal? What if someone found the elixir of life? Would interest rates disappear (meaning no one would care about consuming right then and there), or would something else in the human psyche still make us yearn for present consumption?
+
+Envy, perhaps?

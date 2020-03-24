@@ -1,7 +1,6 @@
 ---
-title: "on-video-trial-error-and-god-complex"
-description: |
-  A short description of the post.
+title: "On Video: Trial & Error and the God Complex"
+description: It seems so obvious when you listen to him, but it’s when you look around and see everyone trying to fix the world’s problems with their own preconceived master plans that you see how few people grasp the beautiful heuristic process of variation and selection.
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,10 @@ date: 04-19-2012
 output:
   distill::distill_article:
     self_contained: false
+categories: ["psychology", "economics", "video"]
+preview: images/tim_harford.png
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+**Tim Harford**, who writes one of my favorite blogs, [The Undercover Economist](http://timharford.com/), speaks at TED about the merits of trial and error, the failures of the God complex, and the importance of making good mistakes. It seems so obvious when you listen to him, but it’s when you look around and see everyone trying to fix the world’s problems with their own preconceived master plans that you see how few people grasp the beautiful heuristic process of variation and selection.
 
-Distill is a publication format for scientific and technical writing, native to the web.
-
-Learn more about using Distill at <https://rstudio.github.io/distill>.
-
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/K5wCfYujRdE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,7 +1,6 @@
 ---
-title: "on-economics-education"
-description: |
-  A short description of the post.
+title: "On Economics Education"
+description: "Here’s what four years of economics education has done to my political leanings."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,14 @@ date: 10-13-2012
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20121013-economics-education.png
+categories:
+  - politics
+  - personal
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+Here’s what four years of economics education has done to my political leanings. I figure this isn’t rare. Haha!
+
+```{r out.width="100%"}
+knitr::include_graphics("images/20121013-economics-education.png")
 ```
-
-Distill is a publication format for scientific and technical writing, native to the web.
-
-Learn more about using Distill at <https://rstudio.github.io/distill>.
-

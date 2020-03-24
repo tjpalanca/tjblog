@@ -1,7 +1,7 @@
 ---
-title: "on-graphs-finals-week"
+title: "On Graphs: Finals Week"
 description: |
-  A short description of the post.
+  This finals week was definitely the most gruelling of my college life.
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +9,17 @@ date: 04-20-2012
 output:
   distill::distill_article:
     self_contained: false
+categories: ["humor", "dataviz", "school"]
+preview: images/20120420-graphs-finals-week-thumb.jpg
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+This finals week was definitely the most gruelling of my college life. Here are a few visualizations that sum up my sentiments:
+
+```{r out.width="100%", fig.cap="Cups of Coffee Consumed"}
+knitr::include_graphics("images/20120420-graphs-finals-week-thumb.jpg")
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
-
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+```{r out.width="100%", fig.cap="Hours of Sleep Enjoyed"}
+knitr::include_graphics("images/20120420-graphs-finals-week-sleep.jpg")
+```
 

@@ -1,21 +1,25 @@
 ---
-title: "on-prize-linked-savings"
-description: |
-  A short description of the post.
+title: "On Prize-Linked Savings"
+description: "It’s basically a no-lose lottery; you get the chance to hit a big payday, but you still get to keep your money if you don’t."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
 date: 05-08-2012
 output:
+```{r fig.cap="For the Philippines, Prize-linked savings could be the savings product that produces the best fit.", out.width="300px"}
+knitr::include_graphics("images/20120508-prize-linked-savings-piggy.jpg")
+```
   distill::distill_article:
     self_contained: false
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+preview: images/20120508-prize-linked-savings-piggy.jpg
+categories:
+```{r fig.cap="For the Philippines, Prize-linked savings could be the savings product that produces the best fit.", out.width="300px"}
+knitr::include_graphics("images/20120508-prize-linked-savings-piggy.jpg")
 ```
-
-Distill is a publication format for scientific and technical writing, native to the web.
-
-Learn more about using Distill at <https://rstudio.github.io/distill>.
-
+  - business
+  - economics
+preview: images/20120508-prize-linked-savings-piggy.jpg
+categories:
+  - business
+  - economics
+---

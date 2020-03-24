@@ -1,21 +1,43 @@
 ---
-title: "on-ngrams-part-2-philippine-economy"
-description: |
-  A short description of the post.
-author:
+title: "On Ngrams Part 2: The Philippine Economy"
+description: "This installment reveals that growth is now more important than development, the Phillips curve’s tradeoffs do not necessarily apply to this measure, that fiscal policy is largely affected by current economic conditions, and much more."
+authors:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
 date: 05-22-2012
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20120522-ngram-fiscal-policy.jpg
+categories:
+  - data
+  - dataviz
+  - books
+  - philippines
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+Here’s the second part of this series on ngrams, as I’ve mentioned in a previous blog post. I’ve been messing around with the [Google Ngram Viewer](http://books.google.com/ngrams) which was highlighted in a previous post. If you don’t already know, ngrams are basically charts that display how often a word or phrase appears in Google’s entire book collection. It’s a rough but quick and easy way to find out what people were writing about in various time periods.
+
+This installment reveals that growth is now more important than development, the Phillips curve’s tradeoffs do not necessarily apply to this measure, that fiscal policy is largely affected by current economic conditions, and much more.
+
+See the graphs below (click to enlarge):
+
+```{r}
+knitr::include_graphics("images/20120522-ngram-fiscal-policy.jpg")
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+```{r}
+knitr::include_graphics("images/20120522-ph-economic-devt-vs-growth.jpg")
+```
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+```{r}
+knitr::include_graphics("images/20120522-ngram-philips-curve.jpg")
+```
 
+```{r}
+knitr::include_graphics("images/20120522-philips-curve-around-the-world.jpg")
+```
+
+```{r}
+knitr::include_graphics("images/20120522-asian-financial-crisis.jpg")
+```

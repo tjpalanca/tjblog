@@ -1,21 +1,39 @@
 ---
-title: "on-ngrams-philippine-history-quantified"
-description: |
-  A short description of the post.
-author:
+title: "On Ngrams: Philippine History Quantified in Books"
+description: "I’ve been messing around with the Google Ngram Viewer which was highlighted in a previous video post."
+authors:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
 date: 05-14-2012
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20131006-ngram-republic.jpg
+categories:
+  - data
+  - dataviz
+  - books
+  - philippines
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+I’ve been messing around with the [Google Ngram Viewer](http://books.google.com/ngrams) which was highlighted in a previous video post. If you don’t already know, ngrams are basically charts that display how often a word or phrase appears in Google’s entire book collection. It’s a rough but quick and easy way to find out what people were writing about in various time periods.
+
+I’ve been digging around for interesting results on Philippine history and this is what I found. These range from revealing censorship in the Marcos period, proving that Rizal really was the spark of the Philippine revolution, to a weird time in the 1980s when people were crazy about the Barong Tagalog.
+
+```{r fig.cap="N-gram Republic"}
+knitr::include_graphics("images/20131006-ngram-republic.jpg")
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+```{r fig.cap="Marcos Censorship"}
+knitr::include_graphics("images/20120514-marcos-censorship.jpg")
+```
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+```{r fig.cap="US Bases in the Philippines"}
+knitr::include_graphics("images/20120514-us-bases-ngram.jpg")
+```
 
+```{r fig.cap="Barong Taglogs"}
+knitr::include_graphics("images/20120514-ngram-barong.jpg")
+```
+
+I have another set coming up soon on the Philippine economy, so watch out for that if this interests you. :D

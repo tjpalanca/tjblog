@@ -1,7 +1,8 @@
 ---
-title: "on-prices"
-description: |
-  A short description of the post.
+title: "On Prices: Informative, Summative, and Coordinating"
+description: >-
+  It is only through the voluntary coordination of the efforts of various
+  economic agents that we can make the products we use today.
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +10,22 @@ date: 04-19-2012
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - politics
+  - social commentary
+  - business
+  - economics
+preview: images/cover_image.png
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+Nowadays, people usually take for granted that they can buy all sorts of stuff. It never crosses the mind how difficult it is to actually make the consumer products. As Milton Friedman demonstrates in the following video, no one person can make a product even as simple as a pencil from scratch.
 
-Distill is a publication format for scientific and technical writing, native to the web.
+It is only through the voluntary coordination of the efforts of various economic agents that we can make the products we use today.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+Critical to this coordination is the price system which, through a simple number, informs the various economic agents on what to produce, how to produce, and for whom to produce in order to maximize profit. This allows people, who might not even know each other, to cooperate and produce immense value for the economy.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/R5Gppi-O3a8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+This video is actually based on an essay by Leonard Read entitled “<a href="http://www.econlib.org/library/Essays/rdPncl1.html" target="_blank">I, Pencil</a>”. To sum up, here is a TED talk by Thomas Thwaites where he narrates how he tried to make a toaster from scratch.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5ODzO7Lz_pw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

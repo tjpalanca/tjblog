@@ -1,7 +1,6 @@
 ---
-title: "on-ifttt"
-description: |
-  A short description of the post.
+title: "On IFTTT"
+description: "IFTTT allows you to automate mundane internet tasks and boost ease of use through a simple 'If this, then that' workflow."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,24 @@ date: 06-07-2012
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20120607-ifttt.jpg
+categories:
+  - productivity
+  - technology
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r fig.cap="IFTTT allows you to automate mundane internet tasks and boost ease of use through a simple 'If this, then that' workflow.", out.width="100%"}
+knitr::include_graphics("images/20120607-ifttt.jpg")
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+I am obsessed with automating and optimizing my productive process, and I find that sometimes, there are some repetitive tasks that you are better off automating or outsourcing to a computer. Enter [IFTTT](http://ifttt.com/), a.k.a If This Then That. This web service works as its name suggests. Certain events or triggers, such as sending an email, starring a Gmail message, adding an event to Google calendar, or posting on your blog or Facebook profile, cause certain actions to be performed, ranging from updating your Twitter profile picture to texting you the weather. It’s greatly improved my workflow and the interoperability between various web services. Here are some of the things IFTTT does for me:
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+* Add all Facebook photos in which I’m tagged to a Dropbox folder.
+* Change my Twitter profile picture if my Facebook profile picture changes, and vice versa.
+* Mail a file to my Dropbox.
+* Autopost blog posts to my Facebook and Twitter.
+* Email me Tastefully Offensive’s Best Videos of the Day every day.
+* Archive Facebook, Twitter, and Tumblr updates to an Evernote Social Archive (for nostalgia’s sake).
+* Text me when rain is coming.
 
+These are just some of the things IFTTT can do. Users can create “recipes” and share them on the site, and this recipe collection is a rich resource for new automations. You’ll never have to post to multiple sites again.

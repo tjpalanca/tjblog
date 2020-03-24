@@ -1,7 +1,6 @@
 ---
-title: "on-that-moment-of-choice"
-description: |
-  A short description of the post.
+title: "On that Moment of Choice"
+description: "No matter how rationally we try to act, that one moment of choice is still a purely emotional exercise."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,22 @@ date: 05-02-2012
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20130502-choice.jpg
+categories:
+  - psychology
+  - commentary
+  - economics
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r out.width="300px", fig.cap="No matter how rationally we try to act, that one moment of choice is still a purely emotional exercise."}
+knitr::include_graphics("images/20120502-choice.jpg")
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+I was reading [this great book](http://youarenotsosmart.com/the-book/), and I found out something which may be useful for economists: **that moment when you make a decision among close alternatives, is purely emotional.** This is what the book has to say:
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+> It’s purely emotional, the moment you pick. People with brain damage to their emotional centers who have been rendered into Spock-like beings of pure logic find it impossible to decide things as simple as which brand of cereal to buy. They stand transfixed in the aisle, contemplating every element of their potential decision—the calories, the shapes, the net weight—everything. They can’t pick because they have no emotional connection to anything
+
+This is why companies are now starting to limit the variety in their product lines (the consummate example being Apple, of course), because it makes it easier to make an emotional connection and create post-hoc rationalizations about your choice. It may seem a little manipulative but this decision-making heuristic makes our lives easier; one just has to realize their cognitive biases.
+
+It’s quite in line with the <a href="http://en.wikipedia.org/wiki/Bounded_rationality" target="_blank" title="">bounded rationality</a> of behavioral economics; that people make choices rationally but only up to the extent of what they know and how they think. If this interests you, <a href="http://danariely.com/the-books/" target="_blank" title="">Predictibly Irrational and other books by Ariely</a> are great reads.
 

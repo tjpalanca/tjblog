@@ -1,7 +1,8 @@
 ---
-title: "on-quotes-from-fa-hayek"
-description: |
-  A short description of the post.
+title: "On Quotes from F.A. Hayek"
+description: >-
+  “The curious task of economics is to demonstrate to men how little they know
+  about what they can imagine they can design.”
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +10,24 @@ date: 04-19-2012
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20120419-fa-hayek.jpg
+categories: ["thoughts", "politics", "business", "quotes", "economics"]
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r fig.cap="What a majestic moustache."}
+knitr::include_graphics("images/20120419-fa-hayek.jpg")
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+Here are some interesting quotes I dug up from Friedrich A. Hayek:
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+**On the inherent conceit of top-down approaches:**
 
+<blockquote><span style="font-size: large;">“The curious task of economics is to demonstrate to men how little they know about what they can imagine they can design.”</span></blockquote>
+
+It’s amazing how the simple yet powerful price mechanism coordinates and optimizes the structure of production in the economy, and how plans by the many and not plans by the few allow this mechanism to operate well.
+
+**On redistributory mechanisms:**
+
+<blockquote><span style="font-size: large;">“There is all the difference in the world between treating people equally and attempting to make them equal.”</span></blockquote>
+
+Only what one deserves.

@@ -1,7 +1,6 @@
 ---
-title: "on-turkeys-bloody-friday"
-description: |
-  A short description of the post.
+title: "On Turkey's Bloody Friday"
+description: "It's one thing to feel oppressed, but it's another thing to feel alone. Spread the word."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,12 @@ date: 06-02-2013
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - news
+  - politics
+preview: images/20130612-turkey-bloody-friday-preview.jpg
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r out.width="100%"}
+knitr::include_graphics("images/20130612-turkey-bloody-friday.jpg")
 ```
-
-Distill is a publication format for scientific and technical writing, native to the web.
-
-Learn more about using Distill at <https://rstudio.github.io/distill>.
-
