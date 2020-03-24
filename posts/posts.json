@@ -41,6 +41,94 @@
     "last_modified": "2020-03-22T17:42:28+00:00"
   },
   {
+    "path": "posts/2013-10-02-tax-evasion-philippines/",
+    "title": "On Tax Evasion: They go to crooked politicians, anyway",
+    "description": "The Tax Justice Institute estimated the amount of taxes lost due to tax avoidance for several countries, including the Philippines, using World Bank data on shadow economies (the unregulated, but not illegal part of the market).",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-10-02",
+    "categories": [
+      "data",
+      "news",
+      "politics",
+      "business",
+      "infographic",
+      "economics"
+    ],
+    "preview": "posts/2013-10-02-tax-evasion-philippines/images/20131002-tax-evasion.png",
+    "last_modified": "2020-03-24T17:45:10+00:00",
+    "preview_width": 1041,
+    "preview_height": 729
+  },
+  {
+    "path": "posts/2013-09-29-traffic-accident-hotspots-manila-edsa-c5/",
+    "title": "On Traffic Accident HotspotsEDSA and C-5",
+    "description": "Ever wonder where and what types of vehicles are involved in road accidents along Manila's major thoroughfares? The MMDA twitter account can shed some light on that. Vehicular accidents reported by the MMDA along EDSA and C-5 are parsed to reveal the most dangerous intersections and flyovers, as well as expose buses and trucks as major accident culprits.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-09-29",
+    "categories": [
+      "data",
+      "news",
+      "thoughts",
+      "infgraphic"
+    ],
+    "preview": "posts/2013-09-29-traffic-accident-hotspots-manila-edsa-c5/images/20130929-traffic-accidents.png",
+    "last_modified": "2020-03-24T17:43:45+00:00",
+    "preview_width": 1600,
+    "preview_height": 720
+  },
+  {
+    "path": "posts/2013-09-26-philippines-casino-revenues-capital-freeze-index/",
+    "title": "On the News: The Philippines is hitting the jackpot, and the cash is here to stay",
+    "description": "This week in news: The Philippines posts large gaming revenue gains from recent resort and casino developments along Manila Bay, and the risk of capital flight remains relatively low amid prudent government finance and capital controls. Read more about them in this post.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-09-26",
+    "categories": [
+      "philippines",
+      "news",
+      "business",
+      "economics",
+      "dataviz"
+    ],
+    "preview": "posts/2013-09-26-philippines-casino-revenues-capital-freeze-index/images/20130926-casino.jpg",
+    "last_modified": "2020-03-24T17:42:29+00:00"
+  },
+  {
+    "path": "posts/2013-09-19-syrian-ghouta-chemical-attack/",
+    "title": "On the Syrian Ghouta Chemical AttacksUN Facts and Figures",
+    "description": "The United Nations has recently concluded an investigation into the Syrian chemical attack last August 21, 2012 and concluded that chemicals, particularly the nerve agent Sarin, were indeed used against civilians, including children.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-09-19",
+    "categories": [
+      "news",
+      "politics",
+      "infographic"
+    ],
+    "preview": "posts/2013-09-19-syrian-ghouta-chemical-attack/images/20130919-chemical-attacks.png",
+    "last_modified": "2020-03-24T17:38:58+00:00",
+    "preview_width": 650,
+    "preview_height": 249
+  },
+  {
     "path": "posts/2013-09-15-effectiveness-sin-taxes/",
     "title": "On the Effectiveness of Higher Sin Taxes",
     "description": "Last year, President Aquino signed the Sin Tax Bill. It's now been half a year since the new taxes were implemented, and it's a good time to assess how it's been achieving its goals so far.",
@@ -58,7 +146,7 @@
       "business"
     ],
     "preview": "posts/2013-09-15-effectiveness-sin-taxes/images/20130915-alcohol-consumption.png",
-    "last_modified": "2020-03-24T17:36:29+00:00",
+    "last_modified": "2020-03-24T17:38:14+00:00",
     "preview_width": 1267,
     "preview_height": 733
   },
