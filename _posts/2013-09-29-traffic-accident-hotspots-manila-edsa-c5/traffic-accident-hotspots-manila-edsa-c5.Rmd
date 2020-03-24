@@ -1,5 +1,5 @@
 ---
-title: "On Traffic Accident HotspotsEDSA and C-5"
+title: "On Traffic Accident Hotspots: EDSA and C-5"
 description: "Ever wonder where and what types of vehicles are involved in road accidents along Manila's major thoroughfares? The MMDA twitter account can shed some light on that. Vehicular accidents reported by the MMDA along EDSA and C-5 are parsed to reveal the most dangerous intersections and flyovers, as well as expose buses and trucks as major accident culprits."
 author:
   - name: TJ Palanca

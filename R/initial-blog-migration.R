@@ -122,7 +122,6 @@ open_post <- function() {
     } else {
       subtitle <- ""
     }
-    subtitle <- old_post_yaml$subtitle %||% ""
     new_post_title <- which(str_detect(new_post_content, "title: "))
     new_post_content[new_post_title] <-
       paste0("title: \"", old_post_yaml$title, subtitle, "\"")
@@ -223,7 +222,7 @@ open_post <- function() {
   file.edit(new_post_loc)
 }
 
-post_number <- 28
+post_number <- 29
 post_data$old_post[post_number]
 open_post()
 copy_image("img/posts/20130612-turkey-bloody-friday.jpg")

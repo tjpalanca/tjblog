@@ -1,5 +1,5 @@
 ---
-title: "On the Syrian Ghouta Chemical AttacksUN Facts and Figures"
+title: "On the Syrian Ghouta Chemical Attacks: UN Facts and Figures"
 description: "The United Nations has recently concluded an investigation into the Syrian chemical attack last August 21, 2012 and concluded that chemicals, particularly the nerve agent Sarin, were indeed used against civilians, including children."
 author:
   - name: TJ Palanca

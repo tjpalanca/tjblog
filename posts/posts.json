@@ -41,6 +41,68 @@
     "last_modified": "2020-03-22T17:42:28+00:00"
   },
   {
+    "path": "posts/2013-10-12-crappy-opinion-polls-wise-spending/",
+    "title": "On Crappy Opinion Polls and Belt Tightening",
+    "description": "Online opinion surveys, especially about objectively determinable facts, are at the fringes of proper research. Why ask people what's in their shopping carts when you can just see for yourself?",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-10-12",
+    "categories": [
+      "data",
+      "logic",
+      "economics",
+      "research"
+    ],
+    "preview": "posts/2013-10-12-crappy-opinion-polls-wise-spending/images/20131012-grocery-carts.jpg",
+    "last_modified": "2020-03-24T17:58:42+00:00"
+  },
+  {
+    "path": "posts/2013-10-09-w-h-taft-residences/",
+    "title": "On W.H. Taft Residences: Always the bridesmaid, never the bride",
+    "description": "A building along Taft Avenue, W.H. Taft Residences, is still under construction after nearly 7 years, serving as a prime example of why diversified conglomerates should be wary of putting their foot in the real estate and construction industry, where stretched operating cycles require special attention.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-10-09",
+    "categories": [
+      "news",
+      "business",
+      "research",
+      "accounting"
+    ],
+    "preview": "posts/2013-10-09-w-h-taft-residences/images/20131009-whtaft-residences.JPG",
+    "last_modified": "2020-03-24T17:57:20+00:00"
+  },
+  {
+    "path": "posts/2013-10-04-data-uaap-76-dlsu-vs-ust-game-1/",
+    "title": "On the UAAP Season 76: DLSU vs UST Finals Game 1",
+    "description": "What a heartbreaking loss! After recovering from a 17-point deficit, the DLSU Green Archers struggled to make the winning basket in their finals matchup against the UST Growling Tigers. To come to terms with it, I've tried to analyze the outcome of the game the way I know best: through data. Let's take a look at the numbers on the hard court.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-10-04",
+    "categories": [
+      "sports",
+      "data",
+      "thoughts",
+      "news",
+      "infographic",
+      "dataviz"
+    ],
+    "preview": "posts/2013-10-04-data-uaap-76-dlsu-vs-ust-game-1/images/20131004-basketball.jpg",
+    "last_modified": "2020-03-24T17:55:29+00:00"
+  },
+  {
     "path": "posts/2013-10-02-tax-evasion-philippines/",
     "title": "On Tax Evasion: They go to crooked politicians, anyway",
     "description": "The Tax Justice Institute estimated the amount of taxes lost due to tax avoidance for several countries, including the Philippines, using World Bank data on shadow economies (the unregulated, but not illegal part of the market).",
@@ -66,7 +128,7 @@
   },
   {
     "path": "posts/2013-09-29-traffic-accident-hotspots-manila-edsa-c5/",
-    "title": "On Traffic Accident HotspotsEDSA and C-5",
+    "title": "On Traffic Accident Hotspots: EDSA and C-5",
     "description": "Ever wonder where and what types of vehicles are involved in road accidents along Manila's major thoroughfares? The MMDA twitter account can shed some light on that. Vehicular accidents reported by the MMDA along EDSA and C-5 are parsed to reveal the most dangerous intersections and flyovers, as well as expose buses and trucks as major accident culprits.",
     "author": [
       {
@@ -82,7 +144,7 @@
       "infgraphic"
     ],
     "preview": "posts/2013-09-29-traffic-accident-hotspots-manila-edsa-c5/images/20130929-traffic-accidents.png",
-    "last_modified": "2020-03-24T17:43:45+00:00",
+    "last_modified": "2020-03-24T17:56:01+00:00",
     "preview_width": 1600,
     "preview_height": 720
   },
@@ -109,7 +171,7 @@
   },
   {
     "path": "posts/2013-09-19-syrian-ghouta-chemical-attack/",
-    "title": "On the Syrian Ghouta Chemical AttacksUN Facts and Figures",
+    "title": "On the Syrian Ghouta Chemical Attacks: UN Facts and Figures",
     "description": "The United Nations has recently concluded an investigation into the Syrian chemical attack last August 21, 2012 and concluded that chemicals, particularly the nerve agent Sarin, were indeed used against civilians, including children.",
     "author": [
       {
@@ -124,7 +186,7 @@
       "infographic"
     ],
     "preview": "posts/2013-09-19-syrian-ghouta-chemical-attack/images/20130919-chemical-attacks.png",
-    "last_modified": "2020-03-24T17:38:58+00:00",
+    "last_modified": "2020-03-24T17:56:36+00:00",
     "preview_width": 650,
     "preview_height": 249
   },
