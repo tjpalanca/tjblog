@@ -41,6 +41,90 @@
     "last_modified": "2020-03-22T17:42:28+00:00"
   },
   {
+    "path": "posts/2014-05-25-numbersense-purchasing-power-parity/",
+    "title": "On Purchasing Power Parities, the Big Mac Index, and the International Comparison Programme",
+    "description": "The GDP per capita of the Philippines exceeds that of India by 55%, but the cost of living is so much cheaper in India that if you account for cheaper goods and services, that difference narrows to only 20%. In this first installment of Numbersense, we will take a look at purchasing power parities and why they are important for cross-country comparisons.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-05-25",
+    "categories": [
+      "data",
+      "numbersense",
+      "statistics",
+      "business",
+      "economics"
+    ],
+    "preview": "posts/2014-05-25-numbersense-purchasing-power-parity/images/20140525-numbersense-cover-ppp.png",
+    "last_modified": "2020-03-25T16:25:15+00:00",
+    "preview_width": 1600,
+    "preview_height": 708
+  },
+  {
+    "path": "posts/2014-05-18-filipino-diaspora/",
+    "title": "On the Filipino Migration and Remittances: The grass is still greener on the other side",
+    "description": "The Filipino diaspora has been a relatively well-documented phenomenon, as poor circumstances in the domestic economy nudge others to seek greener pastures abroad. But where exactly do these people go, and how have the trends changed since 1990? Also, are there any people coming in to the country? Let's take a look at the data.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-05-18",
+    "categories": [
+      "data",
+      "commentary",
+      "dataviz",
+      "history"
+    ],
+    "preview": "posts/2014-05-18-filipino-diaspora/images/20140518-airplane-ofw.jpg",
+    "last_modified": "2020-03-25T16:24:24+00:00"
+  },
+  {
+    "path": "posts/2014-05-11-on-inflation-and-poverty/",
+    "title": "On Inflation and Poverty: It's getting more expensive to be poor",
+    "description": "Because the prices of various goods and services rise and fall at different rates, different groups of people, most notably the poor, experience the burden of inflation much more than the rest of the population.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-05-11",
+    "categories": [
+      "data",
+      "politics",
+      "economics",
+      "dataviz"
+    ],
+    "preview": "posts/2014-05-11-on-inflation-and-poverty/images/20140511-inflation.jpg",
+    "last_modified": "2020-03-25T16:22:35+00:00"
+  },
+  {
+    "path": "posts/2014-05-04-on-what-it-means-to-be-filipino/",
+    "title": "On What It Means to Be Filipino: Quantifying the Filipino Psyche",
+    "description": "What's important in life? What do you want in a job? Is suicide justifiable? Would you want a drug addict as a neighbor? How many children would you like to have? Do you have confidence in the church? Find out how Filipinos responded to these types of questions using data from the World Values Survey.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-05-04",
+    "categories": [
+      "data",
+      "philippines",
+      "psychology",
+      "commentary",
+      "dataviz"
+    ],
+    "preview": "posts/2014-05-04-on-what-it-means-to-be-filipino/images/20140504-filipino-psyche.jpg",
+    "last_modified": "2020-03-25T16:19:08+00:00"
+  },
+  {
     "path": "posts/2014-04-29-data-primer-education/",
     "title": "On Delays and Dropouts: A Data Primer on Education",
     "description": "Using new data from the Department of Education, we can take a look at the current state of Philippine education. Is everyone being educated, is it inclusive, and teachers being paid enough? Find out in this article.",
@@ -59,7 +143,7 @@
       "infographic"
     ],
     "preview": "posts/2014-04-29-data-primer-education/images/20140429-education-banner.png",
-    "last_modified": "2020-03-25T16:14:43+00:00",
+    "last_modified": "2020-03-25T16:14:44+00:00",
     "preview_width": 750,
     "preview_height": 250
   },
@@ -84,7 +168,7 @@
       "journal"
     ],
     "preview": "posts/2014-03-30-fraud-and-fake-ballots/images/20140330-ballot-boxes.jpg",
-    "last_modified": "2020-03-25T16:07:10+00:00"
+    "last_modified": "2020-03-25T16:07:11+00:00"
   },
   {
     "path": "posts/2014-03-19-choosing-vacation-destination-circular-dendrogram/",
@@ -127,7 +211,7 @@
       "dataviz"
     ],
     "preview": "posts/2014-03-09-on-probability-of-mortality/images/20140309-airplanes.jpg",
-    "last_modified": "2020-03-25T16:11:22+00:00"
+    "last_modified": "2020-03-25T16:11:23+00:00"
   },
   {
     "path": "posts/2014-02-22-collusion-corruption/",
