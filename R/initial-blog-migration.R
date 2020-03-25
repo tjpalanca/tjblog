@@ -222,7 +222,8 @@ open_post <- function() {
   file.edit(new_post_loc)
 }
 
-post_number <- 40
+nrow(post_data)
+post_number <- 44
 post_data$old_post[post_number]
 open_post()
 copy_image("img/posts/20130612-turkey-bloody-friday.jpg")

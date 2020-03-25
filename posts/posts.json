@@ -41,6 +41,91 @@
     "last_modified": "2020-03-22T17:42:28+00:00"
   },
   {
+    "path": "posts/2013-12-23-data-philippine-christmas-season/",
+    "title": "On Christmas in the Philippines",
+    "description": "Christmas festivities in the Philippines are world-renowned. Spectacular light displays, early morning mass, and smiles all around make it hard to be in the island nation during this time of the year and not feel the spirit of Christmas. Let's take a look at the data and see how we can quantify Christmas in the Philippines.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-12-23",
+    "categories": [
+      "data",
+      "philippines",
+      "news",
+      "economics",
+      "dataviz"
+    ],
+    "preview": "posts/2013-12-23-data-philippine-christmas-season/images/20131223-christmas-cover.jpg",
+    "last_modified": "2020-03-25T01:55:48+00:00"
+  },
+  {
+    "path": "posts/2013-12-15-philippines-foreign-trade-china-vs-usa/",
+    "title": "On Philippine Foreign Trade: USA vs China",
+    "description": "The world is in the middle of an epic struggle for political influence between the USA and China, but what does this mean for Filipinos, who are trapped in the middle, both in the geographic and political sense? We can take a look at the data on one of the avenues of influence, foreign trade, and find out a little bit more.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-12-15",
+    "categories": [
+      "data",
+      "commentary",
+      "philippines",
+      "economics",
+      "animation"
+    ],
+    "preview": "posts/2013-12-15-philippines-foreign-trade-china-vs-usa/images/20131215-us-ship.jpg",
+    "last_modified": "2020-03-25T01:50:33+00:00"
+  },
+  {
+    "path": "posts/2013-12-11-effectiveness-sin-taxes-philippines-2013q3-update/",
+    "title": "On the Effectiveness of Sin Taxes in the Philippines: 2013 Q3 Update",
+    "description": "SIN TAXED - How effective are higher sin taxes at reducing alcohol and tobacco consumption? Some say it's a 'tax on the poor' and it would only lead to downshifting to cheaper, more dangerous brands, others are all for it, armed with the basic principle of demand. Newly released 3rd quarter national accounts can shed light on the situation.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-12-11",
+    "categories": [
+      "data",
+      "philippines",
+      "politics"
+    ],
+    "preview": "posts/2013-12-11-effectiveness-sin-taxes-philippines-2013q3-update/images/20131211-effectiveness-sin-taxes.png",
+    "last_modified": "2020-03-25T01:49:08+00:00",
+    "preview_width": 512,
+    "preview_height": 204
+  },
+  {
+    "path": "posts/2013-12-05-iphone-arbitrage/",
+    "title": "On iPhone Exchange Rate and Tax Arbitrage: In which country can you buy the least expensive iPhone?",
+    "description": "ARBITRAGEURS REJOICE - Due to exchange rate and tax differences, the effective cost of your favorite gadget can vary from country to country, so if you're looking to buy yourself or a loved one an iPhone or other similar item during your Christmas vacation, here the most attractive 'iPhone tourism' sites. Read on to find out more.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-12-05",
+    "categories": [
+      "technology",
+      "data",
+      "infographic",
+      "tips",
+      "information",
+      "dataviz"
+    ],
+    "preview": "posts/2013-12-05-iphone-arbitrage/images/20131205-iphone-cover-image.jpg",
+    "last_modified": "2020-03-25T01:48:00+00:00"
+  },
+  {
     "path": "posts/2013-12-01-best-nerdy-webcomics/",
     "title": "On the Best Webcomics for your Inner Nerd",
     "description": "If you're looking for a place to get laughs, there are various free webcomics that can cater to your inner egghead (don't kid yourself - everyone has one), so here are six webcomics that can start you off, and how to subscribe to them.",
