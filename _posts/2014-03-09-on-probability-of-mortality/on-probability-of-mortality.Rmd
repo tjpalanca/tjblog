@@ -14,6 +14,7 @@ categories:
   - data
   - statistics
   - dataviz
+bibliography: bibliography.bib
 ---
 
 ```{r fig.cap="RISKY OR BENIGN? The fear of flying is one of the most common statistically irrational fears that people have. (Photo: <a href='http://www.flickr.com/photos/49253686@N04/5976264120/in/photolist-a76V7y-8kXKXM-dkPhYt-8rFV8c-bqbT3W-9Vwbk9-aD94hz-d5AzPW-988UcA-eyGNSc-bqoaSu-8mjP2t-akPZhh-akM9VD-akMbDF-deT76D-7Y8mF6-9uYR4y-8Xs9zt-kJX3yB-dHwwmS-dUUJmL-99u7Nq-d8RVdu-cTHZdd-9Dn17Z-8AeLSy-7XMq4K-8kp9aj-aAHLXz-9uYRuq-8AbEjt-aAnCf1-9NAh26-h26MDf-9uYQmy-8yEqj1-8cA3zR-grTSnA-dSknTm-8WrVR8-agLBJn-8yBkqB-8yEuRj-eDKfTK-8yBivV-ga6D5G-h26MDq-h26GVj-95grBG-7zw9eo' target='_blank'>Kuster & Wildhaber Photography/Flickr</a>, <a href='http://creativecommons.org/licenses/by-nd/2.0/' target='_blank'>CC BY-ND 2.0</a>)", out.width="100%"}
@@ -32,7 +33,7 @@ Now that we have that sorted out, let's take a look at mortality statistics with
 
 Have you ever heard that the chances of dying of a plane crash are much less than the risk when driving? This statement may not calm those who are already fearful fliers, but precisely quantifying the risk might further assuage these fears.
 
-```{r out.width="100%"}
+```{r layout="l-body-outset", fig.cap="[@Blastland_Spiegelhalter_2014]"}
 knitr::include_graphics("images/20140309-micromorts-transportation.png")
 ```
 
@@ -44,7 +45,7 @@ Still, I'd like to point out, that by far the safest form of transportation is b
 
 How about other activities, such as hanggliding, skydiving, rock climbing, or scuba diving? It turns out that the things we would never think of doing are much less risky than the things we expect to do in our lifetimes, such as undergoing non-emergency anaesthesia or giving birth.
 
-```{r out.width="100%"}
+```{r layout="l-body-outset", fig.cap="[@Blastland_Spiegelhalter_2014]"}
 knitr::include_graphics("images/20140309-risky-activities.png")
 ```
 

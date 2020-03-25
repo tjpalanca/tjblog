@@ -33,6 +33,24 @@ together, especially on issues surrounding the Philippines.
       <media:content url="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
+      <title>On Delays and Dropouts: A Data Primer on Education</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-04-29-data-primer-education</link>
+      <description>Using new data from the Department of Education, we can take a look at the current state of Philippine education. Is everyone being educated, is it inclusive, and teachers being paid enough? Find out in this article.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-04-29-data-primer-education</guid>
+      <pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-04-29-data-primer-education/images/20140429-education-banner.png" medium="image" type="image/png" width="750" height="250"/>
+    </item>
+    <item>
+      <title>On Fraud and Fake Ballots: Detecting election fraud through data</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-03-30-fraud-and-fake-ballots</link>
+      <description>Election fraud in the Philippines is almost always alleged, but never really proven. We can explore an approach that can identify voting data patterns those most likely to be associated with vote padding - adding fake ballots - and find out how the sanctity of the ballot can be preserved by the thoughtful use of election data.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-03-30-fraud-and-fake-ballots</guid>
+      <pubDate>Sun, 30 Mar 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-03-30-fraud-and-fake-ballots/images/20140330-ballot-boxes.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>On Using Data to Choose your Next Vacation Destination</title>
       <dc:creator>TJ Palanca</dc:creator>
       <link>https://www.tjpalanca.com/posts/2014-03-19-choosing-vacation-destination-circular-dendrogram</link>
