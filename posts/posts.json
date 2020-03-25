@@ -41,6 +41,199 @@
     "last_modified": "2020-03-22T17:42:28+00:00"
   },
   {
+    "path": "posts/2013-12-01-best-nerdy-webcomics/",
+    "title": "On the Best Webcomics for your Inner Nerd",
+    "description": "If you're looking for a place to get laughs, there are various free webcomics that can cater to your inner egghead (don't kid yourself - everyone has one), so here are six webcomics that can start you off, and how to subscribe to them.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-12-01",
+    "categories": [
+      "thoughts",
+      "nerd",
+      "comedy",
+      "humor"
+    ],
+    "preview": "posts/2013-12-01-best-nerdy-webcomics/images/20131201-nerdy-joke.JPG",
+    "last_modified": "2020-03-25T01:32:43+00:00"
+  },
+  {
+    "path": "posts/2013-11-27-globe-iphone-forever-plan-analysis/",
+    "title": "On the Globe iPhone Forever Plan: Am I just ''paying for the phone''?",
+    "description": "Globe Telecom has recently announced a new postpaid plan for iPhone-loving subscribers. You can trade-in your old iPhone every year for the latest model, provided that you abide by a lock-in period, of course.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-11-27",
+    "categories": [
+      "technology",
+      "data",
+      "finance",
+      "dataviz"
+    ],
+    "preview": "posts/2013-11-27-globe-iphone-forever-plan-analysis/images/20131127-globe-iphone-forever.png",
+    "last_modified": "2020-03-25T01:28:18+00:00",
+    "preview_width": 822,
+    "preview_height": 341
+  },
+  {
+    "path": "posts/2013-11-23-yolanda-haiyan-foreign-aid-who-is-giving-what-and-to-whom/",
+    "title": "On Yolanda/Haiyan Foreign Aid: Who is giving what, and to whom?",
+    "description": "SHOW ME THE MONEY - Foreign aid for the victims of Typhoon Yolanda (international name Haiyan) has reached staggering levels, with the United Nations Office for the Coordination of Humanitarian Affairs pegging the value at P19.53 billion. Data on these massive aid flows can be visualized to show the donors, and through which channels the donations were made.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-11-23",
+    "categories": [
+      "data",
+      "news",
+      "infographic",
+      "economics"
+    ],
+    "preview": "posts/2013-11-23-yolanda-haiyan-foreign-aid-who-is-giving-what-and-to-whom/images/20131123-header-yolanda-funds.png",
+    "last_modified": "2020-03-25T01:27:29+00:00",
+    "preview_width": 1500,
+    "preview_height": 1500
+  },
+  {
+    "path": "posts/2013-11-13-on-true-filipino-resilience/",
+    "title": "On True Filipino Resilience",
+    "description": "Super Typhoon Yolanda (international codename Haiyan) struck the Philippine central islands last November 8, 2012.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-11-13",
+    "categories": [
+      "news",
+      "politics",
+      "commentary",
+      "economics",
+      "dataviz"
+    ],
+    "preview": "posts/2013-11-13-on-true-filipino-resilience/images/20131113-yolanda-funds.jpg",
+    "last_modified": "2020-03-25T01:25:37+00:00"
+  },
+  {
+    "path": "posts/2013-11-06-risk-return-relationship-love-life/",
+    "title": "On the Risk-Return Relationship of your Love Life",
+    "description": "Chinese astrology tells of certain animal signs that, because of their inherent characteristics, have varying love compatibilities with each other. By applying statistics to superstition, we can also determine - generally - how nice, and how rocky, your love life ought to be based on your ruling animal.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-11-06",
+    "categories": [
+      "data",
+      "thoughts",
+      "humor",
+      "dataviz",
+      "personal"
+    ],
+    "preview": "posts/2013-11-06-risk-return-relationship-love-life/images/20131106-chinese-zodiac.jpg",
+    "last_modified": "2020-03-25T01:22:37+00:00"
+  },
+  {
+    "path": "posts/2013-11-03-giving-cash-to-the-poor/",
+    "title": "On Giving Cash to the Poor",
+    "description": "New research suggests that unconditional cash transfers to the poor may not be as misguided as usually perceived.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-11-03",
+    "categories": [
+      "philippines",
+      "psychology",
+      "politics",
+      "economics"
+    ],
+    "preview": "posts/2013-11-03-giving-cash-to-the-poor/images/20131103-rice.jpg",
+    "last_modified": "2020-03-25T01:20:49+00:00"
+  },
+  {
+    "path": "posts/2013-10-28-gender-gap-index-2013-philippines/",
+    "title": "On the News: No Double Standard Here",
+    "description": "NO DOUBLE STANDARD - The World Economic Forum published its Global Gender Gap Report 2013, which assesses the level of gender equality in different countries. The Philippines is ranked 5th highest in terms of gender equality, an improvement from past years, and the highest in Asia. Of the four aspects, the country performed well in terms of educational attainment and health, but was performed poorly in terms of economic and political participation.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-10-28",
+    "categories": [
+      "data",
+      "philippines",
+      "news",
+      "politics"
+    ],
+    "preview": "posts/2013-10-28-gender-gap-index-2013-philippines/images/20131028-global-gender-gap-index-ph.png",
+    "last_modified": "2020-03-25T01:16:13+00:00",
+    "preview_width": 1144,
+    "preview_height": 821
+  },
+  {
+    "path": "posts/2013-10-23-traffic-jams-private-vs-public/",
+    "title": "On Moving People, not Cars",
+    "description": "With the rainy season in full swing, monstrous traffic jams yet again plague the Philippine capital. There is a lot of blame to go around - some say we're too reliant on private transportation, and others say undisciplined, unregistered, and reckless buses are the real culprit. Let's take a closer look at the data and see if it can provide some clarity.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-10-23",
+    "categories": [
+      "data",
+      "philippines",
+      "politics",
+      "commentary",
+      "economics",
+      "dataviz"
+    ],
+    "preview": "posts/2013-10-23-traffic-jams-private-vs-public/images/20131023-cars-and-commuters.png",
+    "last_modified": "2020-03-25T01:08:45+00:00",
+    "preview_width": 1132,
+    "preview_height": 719
+  },
+  {
+    "path": "posts/2013-10-15-why-you-shouldnt-save-while-young/",
+    "title": "On Why You Shouldn't Save While You're Young",
+    "description": "\"Save while you're young\" is one of the most common pieces of financial advice for the fresh young professional, but there is an economic argument that it can be overdone. In your early twenties, you're better off having fun, learning, and making new connections, because YOLOETSI (You Only Live Once and the Earnings Trajectory Strictly Increases).",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2013-10-15",
+    "categories": [
+      "finance",
+      "personal",
+      "economics"
+    ],
+    "preview": "posts/2013-10-15-why-you-shouldnt-save-while-young/images/20131015-savings-graph.png",
+    "last_modified": "2020-03-25T00:53:31+00:00",
+    "preview_width": 823,
+    "preview_height": 550
+  },
+  {
     "path": "posts/2013-10-12-crappy-opinion-polls-wise-spending/",
     "title": "On Crappy Opinion Polls and Belt Tightening",
     "description": "Online opinion surveys, especially about objectively determinable facts, are at the fringes of proper research. Why ask people what's in their shopping carts when you can just see for yourself?",
