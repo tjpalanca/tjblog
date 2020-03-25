@@ -6,7 +6,7 @@ description: |
 output_dir: "."
 navbar:
   logo:
-    image: static/img/logo.png
+    image: site_libs/images/logo.png
     href: https://www.tjpalanca.com/
   right:
     - text: "Home"
@@ -29,7 +29,7 @@ navbar:
       href: blog.xml
 output:
   distill::distill_article:
-    css: static/custom/styles.css
+    css: site_libs/custom/styles.css
     includes:
       in_header:
       - _header.html
@@ -38,7 +38,7 @@ repository_url: https://www.github.com/tjpalanca/tjpalanca.github.io
 creative_commons: CC BY-NC-SA
 twitter:
   site: "@tjpalanca"
-favicon: static/img/favicon.png
+favicon: site_libs/images/favicon.png
 collections:
   posts:
     disqus: jumbodumbothoughts
