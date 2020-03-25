@@ -33,6 +33,105 @@ together, especially on issues surrounding the Philippines.
       <media:content url="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
+      <title>On Using Data to Choose your Next Vacation Destination</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-03-19-choosing-vacation-destination-circular-dendrogram</link>
+      <description>Are you looking for somewhere to lose yourself, experience new things, or just sit back and relax? We can take data on flights from the Philippines and construct a circular dendogram that allows you to view all your potential destinations and the airlines that service the route at a single glance.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-03-19-choosing-vacation-destination-circular-dendrogram</guid>
+      <pubDate>Wed, 19 Mar 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-03-19-choosing-vacation-destination-circular-dendrogram/images/20140319-cover-destination.png" medium="image" type="image/png" width="1238" height="525"/>
+    </item>
+    <item>
+      <title>On the Probability of Mortality</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-03-09-on-probability-of-mortality</link>
+      <description>Everything carries a risk, and nothing has preoccupied the human mind more than the risk of death. What are the safest (and most dangerous) modes of transportation? What activities commonly regarded as risky, really are? Let's find out.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-03-09-on-probability-of-mortality</guid>
+      <pubDate>Sun, 09 Mar 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-03-09-on-probability-of-mortality/images/20140309-airplanes.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Corruption and Collusion: Immoral acts are more likely when there are others with which to share the blame</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-02-22-collusion-corruption</link>
+      <description>They say corruption is 'infectious,' and you risk being 'eaten up by the system' when you enter government. In this article, we take a look at evidence that reveals how individual morality can be dampened if you have cohorts to share the blame with you, among other factors.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-02-22-collusion-corruption</guid>
+      <pubDate>Sat, 22 Feb 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-02-22-collusion-corruption/images/20140222-corruption-complaint-box.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Presidents and Priorities: Distilling the Numbers out of the State of the Nation Address</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-02-18-sona-words</link>
+      <description>The President's annual State of the Nation Address (SONA) is a strong indicator of an administration's priorities and accomplishments, but how do we compare across presidents? We can distill the SONA into numbers and count instances of national issues mentioned in the speech to find out and compare. You can also explore the speeches yourself using an interactive SONA word counter.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-02-18-sona-words</guid>
+      <pubDate>Tue, 18 Feb 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-02-18-sona-words/images/20140218-sona.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On the Philippine IT-BPO Industry: "Bayaning Puyat" or Dead-end Job?</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-02-10-philippine-it-bpo-industry</link>
+      <description>The call center industry, or more widely called IT-BPO, has received its fair share of praise for contributing to economic and job growth, but a job in this industry still carries the stigma of low pay and low skill. We can take a look at the IT-BPO industry using data from the Bangko Sentral ng Pilipinas to shed some light on the graveyard shift.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-02-10-philippine-it-bpo-industry</guid>
+      <pubDate>Mon, 10 Feb 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-02-10-philippine-it-bpo-industry/images/20140210-city-skyline.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Getting to Know the Filipino Informal Settler</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-02-02-filipino-informal-settlers</link>
+      <description>How well do you know the Filipino informal settler? Is he poor and underprivileged? What happens if you force him to pay rent? Well, short of actually starting a conversation with one, we can get to know the Filipino informal settler through data. Read on to find out more.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-02-02-filipino-informal-settlers</guid>
+      <pubDate>Sun, 02 Feb 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-02-02-filipino-informal-settlers/images/20140202-informal-settlers.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Maximizing Your Interview Chances: Schedule it right after a break</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-01-29-interviews-food-break</link>
+      <description>If you have an interview coming up, whether it be for a job, award, or in this particular study, parole, your chances are best when the interviewers are fresh from a break. A group of researchers at the National Academy of Sciences confirmed what we had suspected all along - happy tummies make happy decisions. Read on to find out more!</description>
+      <guid>https://www.tjpalanca.com/posts/2014-01-29-interviews-food-break</guid>
+      <pubDate>Wed, 29 Jan 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-01-29-interviews-food-break/images/20140129-cover-interview.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Your Life Expectancy: Chronic Behaviors and Longevity Returns</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-01-26-pick-your-poison</link>
+      <description>Everyone says that smoking can drastically reduce your life expectancy by introducing all sorts of complications, but the question is: how much of your life are you sacrificing, stick by stick? Know the answer to this question and for many other chronic behaviors by reading on!</description>
+      <guid>https://www.tjpalanca.com/posts/2014-01-26-pick-your-poison</guid>
+      <pubDate>Sun, 26 Jan 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-01-26-pick-your-poison/images/20140126-wine-cover.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Hot Hands and Shooting Streaks: Does "momentum" in basketball really exist?</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-01-22-hot-hand-basketball</link>
+      <description>Basketball fans and players alike will attest to the 'hot hand' phenomenon, where the chances or a player making the shot are much higher following a series of successful shots than the chances following a miss. In this article, we feature a journal article that debunks this phenomenon as merely a figment of fans' imaginations.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-01-22-hot-hand-basketball</guid>
+      <pubDate>Wed, 22 Jan 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-01-22-hot-hand-basketball/images/20140119-basketball.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Trains and Tribulations: The LRT South Extension and Fare Hikes</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-01-19-trains-and-tribulations</link>
+      <description>The Light Rail Transit Line 1 South Extension Project is now out for bidding, with the contract to be awarded in the second quarter of this year. The rail system is under intense public scrutiny amidst talks of fare hikes, but as in most cases, a look at the data can lend some meaningful context to these debates: fare hikes, capacity constraints, and South Extension feasibility.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-01-19-trains-and-tribulations</guid>
+      <pubDate>Sun, 19 Jan 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-01-19-trains-and-tribulations/images/20140119-trains-tribulations.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Holiday Weight Gain and New Years' Resolutions</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-01-01-holiday-weight-gain</link>
+      <description>Now that the holidays are over and a new year has started, it's time to take stock of the weight we have gained, and to decide how to stick to our recurring new year's resolution of getting that Bora body in time for summer. To help with that, let's take a look at holiday weight gain data and listen to a podcast on commitment devices - self-imposed punishments that keep you focused on the goal.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-01-01-holiday-weight-gain</guid>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-01-01-holiday-weight-gain/images/20150405-weighing-scale.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>On Christmas in the Philippines</title>
       <dc:creator>TJ Palanca</dc:creator>
       <link>https://www.tjpalanca.com/posts/2013-12-23-data-philippine-christmas-season</link>

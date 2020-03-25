@@ -19,19 +19,19 @@ Contact via social media channels to connect personally or professionally! Alway
 
 Subscribe to get e-mail or RSS updates to any new content on the blog. The information will be used only for pushing out updates and will never be shared with third-parties.
 
-Subscribe via <a href="https://feeds.feedburner.com/tjpalanca-blog" style="border: 0px solid; background-color:#FF6600; color:white;" class="ui-button ui-widget ui-corner-all" target="_blank"><i class='fa fa-rss-square fa-1x'></i>&nbsp;<strong>RSS</strong></a> or e-mail subscription through the form below:
+Subscribe via <a href="https://feeds.feedburner.com/tjpalanca-blog" style="border: 0px solid; background-color:#FF6600; color:white;" class="uk-button uk-button-default" target="_blank"><i class='fa fa-rss-square fa-1x'></i>&nbsp;<strong>RSS</strong></a> or e-mail subscription through the form below:
 
 <form style="border:0px solid #ccc; padding:3px; text-align:left;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=tjpalanca-blog', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
 <p><strong>Enter your email address:</strong></p>
-<p><input type="text" style="width:100%; padding: 3px;" name="email" style="border:1px solid #ccc;"/></p>
+<p><input type="text" class="uk-input" name="email" style="border:1px solid #ccc;"/></p>
 <input type="hidden" value="tjpalanca-blog" name="uri"/>
 <input type="hidden" name="loc" value="en_US"/>
-<button type="submit" class="ui-button ui-widget ui-corner-all" style="background-color: #2cbf53; color: white;">
-    <i class="fa fa-envelope-open fa-1x"></i>&nbsp;&nbsp;&nbsp;Subscribe
+<button type="submit" class="uk-button uk-button-default" style="background-color: #2cbf53; color: white;">
+    <i class="fa fa-envelope-open fa-1x"></i>&nbsp;&nbsp;Subscribe
 </button>
 </form>
 
 ## E-mail
 
-E-mail me directly for **guest contributions, consulting project offers, post corrections, syndication offers, and to collaborate on any project**. I'm reachable at <a href="mailto:mail@tjpalanca.com" style="border: 0px solid; background-color:gray; color:white;" class="ui-button ui-widget ui-corner-all" target="_blank"><i class='fa fa-envelope fa-1x' target="_blank"></i>&nbsp;<strong>mail&#64;tjpalanca.com</strong></a>.
+E-mail me directly for **guest contributions, consulting project offers, post corrections, syndication offers, and to collaborate on any project**. I'm reachable at <a href="mailto:mail@tjpalanca.com" style="border: 0px solid; background-color:gray; color:white;" class="uk-button uk-button-default" target="_blank"><i class='fa fa-envelope fa-1x' target="_blank"></i>&nbsp;<strong>mail&#64;tjpalanca.com</strong></a>.
 

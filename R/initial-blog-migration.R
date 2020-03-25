@@ -160,7 +160,7 @@ open_post <- function() {
   images <-
     new_post_content %>%
     glue_collapse("\n") %>%
-    str_extract_all("\\\"/img/.*?\\\"") %>%
+    str_extract_all("(\\\"|\\()/img/.*?(\\\"|\\()") %>%
     extract2(1)
   if (length(images) > 0) {
     images %>%
@@ -223,7 +223,7 @@ open_post <- function() {
 }
 
 nrow(post_data)
-post_number <- 44
+post_number <- 47
 post_data$old_post[post_number]
 open_post()
 copy_image("img/posts/20130612-turkey-bloody-friday.jpg")

@@ -1,7 +1,7 @@
 ---
 title: "On Ngrams Part 2: The Philippine Economy"
 description: "This installment reveals that growth is now more important than development, the Phillips curve’s tradeoffs do not necessarily apply to this measure, that fiscal policy is largely affected by current economic conditions, and much more."
-authors:
+author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
 date: 05-22-2012
@@ -27,17 +27,17 @@ knitr::include_graphics("images/20120522-ngram-fiscal-policy.jpg")
 ```
 
 ```{r}
-knitr::include_graphics("images/20120522-ph-economic-devt-vs-growth.jpg")
+knitr::include_graphics("images/20120522-ngram-fiscal-policy.jpg")
 ```
 
 ```{r}
-knitr::include_graphics("images/20120522-ngram-philips-curve.jpg")
+knitr::include_graphics("images/20120522-ngram-fiscal-policy.jpg")
 ```
 
 ```{r}
-knitr::include_graphics("images/20120522-philips-curve-around-the-world.jpg")
+knitr::include_graphics("images/20120522-ngram-fiscal-policy.jpg")
 ```
 
 ```{r}
-knitr::include_graphics("images/20120522-asian-financial-crisis.jpg")
+knitr::include_graphics("images/20120522-ngram-fiscal-policy.jpg")
 ```

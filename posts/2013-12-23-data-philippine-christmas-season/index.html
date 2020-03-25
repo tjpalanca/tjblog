@@ -1285,15 +1285,17 @@ document.addEventListener('DOMContentLoaded', function() {
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-<!-- JQuery UI -->
+<!-- UIKit -->
+<!-- UIkit CSS -->
 <link
   rel="stylesheet"
-  type="text/css"
-  href="https://www.tjpalanca.com/static/jquery-ui-1.12.1/jquery-ui.min.css"
+  href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css"
 />
-<script
-  src="https://www.tjpalanca.com/static/jquery-ui-1.12.1/jquery-ui.min.js"
-></script>
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js">
+</script>
 <!-- Resize iframes -->
 <script
   src="https://www.tjpalanca.com/static/custom/iframe-resize.js"
@@ -1484,7 +1486,7 @@ var disqus_config = function () {
 <p>
   <input
     type="text"
-    style="width:100%; padding: 3px;"
+    class="uk-input"
     name="email"
     style="border:1px solid #ccc;"
   />
@@ -1493,7 +1495,7 @@ var disqus_config = function () {
 <input type="hidden" name="loc" value="en_US"/>
 <button
   type="submit"
-  class="ui-button ui-widget ui-corner-all"
+  class="uk-button uk-button-default"
   style="background-color: #2cbf53; color: white;"
 >
   <i class="fa fa-envelope-open fa-1x"></i>&nbsp;&nbsp;&nbsp;Subscribe
