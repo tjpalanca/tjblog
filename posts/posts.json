@@ -41,6 +41,76 @@
     "last_modified": "2020-03-22T17:42:28+00:00"
   },
   {
+    "path": "posts/2015-03-19-airline-agitation/",
+    "title": "On Airline Agitation: Flight networks and what Facebook comments say about customer satisfaction",
+    "description": "The airline industry is one of the most competitive industries in the Philippines, and has recently undergone a wave of consolidation, rebranding, and restructuring in an effort to capture Filipinos' growing love for air travel. By analyzing Facebook comments and flight network data, we can shed light on how the key players are competing in this space.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2015-03-19",
+    "categories": [
+      "data",
+      "business",
+      "dataviz",
+      "analytics"
+    ],
+    "preview": "posts/2015-03-19-airline-agitation/images/20150319-polarities-cover.png",
+    "last_modified": "2020-03-26T00:49:15+00:00",
+    "preview_width": 1079,
+    "preview_height": 483
+  },
+  {
+    "path": "posts/2014-11-17-benfords-law-customs-imports/",
+    "title": "On Benford's Law: Determining import fraud risk using customs data",
+    "description": "If you were to think of the first digits of a group of related variables, say, tax payments, it would be intuitive to think that the digits would more or less be evenly distributed between 1 to 9. However, it turns out that the exponential nature of growth makes it such that the first digits are more likely to be 1's than any other number.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-11-17",
+    "categories": [
+      "taxes",
+      "business",
+      "dataviz",
+      "government",
+      "politics"
+    ],
+    "preview": "posts/2014-11-17-benfords-law-customs-imports/images/20150513-benfords-law-feature.PNG",
+    "last_modified": "2020-03-26T00:46:39+00:00",
+    "preview_width": 1206,
+    "preview_height": 268
+  },
+  {
+    "path": "posts/2014-10-19-coffee-coverage/",
+    "title": "On Coffee Coverage: Starbucks store density in Metro Manila",
+    "description": "Some people just can't start the day without having a cup of coffee. By taking a look at the city-specific distribution of Starbucks stores around Metro Manila, we can see where the coffee guzzlers are located.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-10-19",
+    "categories": [
+      "lifestyle",
+      "data",
+      "news",
+      "business",
+      "dataviz",
+      "map",
+      "infographic"
+    ],
+    "preview": "posts/2014-10-19-coffee-coverage/images/20141019-coffee-coverage.png",
+    "last_modified": "2020-03-26T00:44:20+00:00",
+    "preview_width": 702,
+    "preview_height": 356
+  },
+  {
     "path": "posts/2014-10-05-government-vs-corporations/",
     "title": "On Taxes versus Sales: How large is government compared to publicly-listed corporations?",
     "description": "Have you ever wondered how government finances compare to the largest publicly-listed corporations in the country? When the financial bulk of private entities outweigh that of the public purse, it may give rise to undue influence over regulation and legislation. Data from public company disclosures and Department of Finance can help us investigate the matter.",

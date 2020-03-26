@@ -33,6 +33,33 @@ together, especially on issues surrounding the Philippines.
       <media:content url="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
+      <title>On Airline Agitation: Flight networks and what Facebook comments say about customer satisfaction</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2015-03-19-airline-agitation</link>
+      <description>The airline industry is one of the most competitive industries in the Philippines, and has recently undergone a wave of consolidation, rebranding, and restructuring in an effort to capture Filipinos' growing love for air travel. By analyzing Facebook comments and flight network data, we can shed light on how the key players are competing in this space.</description>
+      <guid>https://www.tjpalanca.com/posts/2015-03-19-airline-agitation</guid>
+      <pubDate>Thu, 19 Mar 2015 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2015-03-19-airline-agitation/images/20150319-polarities-cover.png" medium="image" type="image/png" width="1079" height="483"/>
+    </item>
+    <item>
+      <title>On Benford's Law: Determining import fraud risk using customs data</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-11-17-benfords-law-customs-imports</link>
+      <description>If you were to think of the first digits of a group of related variables, say, tax payments, it would be intuitive to think that the digits would more or less be evenly distributed between 1 to 9. However, it turns out that the exponential nature of growth makes it such that the first digits are more likely to be 1's than any other number.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-11-17-benfords-law-customs-imports</guid>
+      <pubDate>Mon, 17 Nov 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-11-17-benfords-law-customs-imports/images/20150513-benfords-law-feature.PNG" medium="image" type="image/png" width="1206" height="268"/>
+    </item>
+    <item>
+      <title>On Coffee Coverage: Starbucks store density in Metro Manila</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2014-10-19-coffee-coverage</link>
+      <description>Some people just can't start the day without having a cup of coffee. By taking a look at the city-specific distribution of Starbucks stores around Metro Manila, we can see where the coffee guzzlers are located.</description>
+      <guid>https://www.tjpalanca.com/posts/2014-10-19-coffee-coverage</guid>
+      <pubDate>Sun, 19 Oct 2014 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2014-10-19-coffee-coverage/images/20141019-coffee-coverage.png" medium="image" type="image/png" width="702" height="356"/>
+    </item>
+    <item>
       <title>On Taxes versus Sales: How large is government compared to publicly-listed corporations?</title>
       <dc:creator>TJ Palanca</dc:creator>
       <link>https://www.tjpalanca.com/posts/2014-10-05-government-vs-corporations</link>
