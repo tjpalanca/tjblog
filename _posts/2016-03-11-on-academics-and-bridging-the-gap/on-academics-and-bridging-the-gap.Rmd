@@ -1,7 +1,6 @@
 ---
-title: "on-academics-and-bridging-the-gap"
-description: |
-  A short description of the post.
+title: "On Academics and Bridging the Gap"
+description: "Academics can change the world – if they stop talking only to their peers"
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,14 @@ date: 03-11-2016
 output:
   distill::distill_article:
     self_contained: false
+preview: https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/114045/width668/image-20160307-30506-480t7q.jpg
+categories:
+  - links
+  - academic
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+[LINK](https://theconversation.com/academics-can-change-the-world-if-they-stop-talking-only-to-their-peers-55713)
 
-Distill is a publication format for scientific and technical writing, native to the web.
+I guess this is the main problem that my blog aims to solve. There is so much beauty and insight hanging out in journals and research papers but very little actually makes it into where it matters - the public.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
-
+Great read! Allot 3 minutes. 

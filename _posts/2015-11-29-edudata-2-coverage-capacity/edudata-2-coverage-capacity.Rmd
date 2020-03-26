@@ -1,7 +1,6 @@
 ---
-title: "edudata-2-coverage-capacity"
-description: |
-  A short description of the post.
+title: "On Coverage and Capacity: A look at school capacity in the Philippines (EduData Part 2)"
+description: "Students require rooms, students, and operating budgets in order to receive a proper education. The question is, which resources are in short supply? How does this differ across different parts of the country? Let's find out how the school system is holding up in this second installment of the EduData Series."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,79 @@ date: 11-29-2015
 output:
   distill::distill_article:
     self_contained: false
+    toc: true
+preview: images/20151129-school-chair.jpg
+categories:
+  - data
+  - education
+  - dataviz
+  - government
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+This article is part of the EduData series, which explores the state of the Philippine education system, and what we could do to make it better. 
+
+## EduData Series
+
+ * [Part 1 - Schools and Survival: A look at dropout rates in the Philippines](/2015/08/edudata-1-dropouts.html)
+ * [Part 2 - Coverage and Capacity: A look at school capacity in the Philippines](/2015/11/edudata-2-coverage-capacity.html)
+  
+The Philippine population is relatively young, and to ensure that they are competitive in the marketplace when they grow up, we need enough capacity in our schools.  In the previous post, we tackled dropout rates and explored where, when, and who are the dropouts in the Philippine Education System. This time, we take a look at educational capacity and whether we are managing the flow of learners effectively.
+
+## Capacity Capers 
+
+Let’s first take a look at some overall capacity metrics:
+
+```{r layout="l-body-outset"}
+knitr::include_graphics("https://raw.githubusercontent.com/tjpalanca/JDT-deped-analytics/master/Output/O5%20-%20Capacity%20Metrics.png")
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+Resources required in an educational system consist of (a) teachers, (b) rooms, and (c) budgets. Teacher capacity averages roughly 35 students per teacher, and rooms slightly worse at roughly 40 students per teacher. Teacher capacity is higher but room capacity is lower in secondary school than in elementary school. However, there are still striking disparities in capacity, with some schools reaching 250 students per teacher or room.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+## Coverage
 
+While there might be resources placed into the system, the positioning of those resources matters, too. We'll take a look at the "path of least resistance" of each Philippine city or municipality from the nearest elementary or secondary school.
+
+```{r layout="l-body-outset"}
+knitr::include_graphics("https://raw.githubusercontent.com/tjpalanca/JDT-deped-analytics/master/Output/O4%20-%20Paths%20Plot.png")
+```
+
+It would seem that coverage is pretty good. All but one city/municipality is close to an elementary or secondary school. That lone municipality is Kalayaan, in the disputed area of the Spratly islands. Clearly, the educational system is not in a lack of coverage.
+
+## Capacity Clusters
+
+We have a dataset composed of thousands of schools, but many of them share the same characteristics in terms of capacity. In order to make sense of this all, we apply a clustering algorithm to automatically group together similar schools. For elementary schools, the clusters are as follows:
+
+```{r layout="l-body-outset"}
+knitr::include_graphics("https://raw.githubusercontent.com/tjpalanca/JDT-deped-analytics/master/Output/O17A%20-%20Elementary%20Schools%20Capacity%20Dashboard.png")
+```
+
+I've taken the liberty of naming the clusters based on my observation. Take note that these clusters are only defined based on capacity and not on any other metric. Here's my description of each cluster after a perusal of the data:
+
+  * _Head of the Pack._ This cluster is high on capacity and is concentrated mainly in Northern Luzon, at around 20 students per teacher and room and a healthy budget. However, this capacity surplus is probably because of the high dropout rates in the area.
+  * _Cash-Strapped._ These schools are good on teachers and rooms, but not so much on budget. They are concentrated around the Eastern seaboard of the country. Dropout rates are comparative to the national average.
+  * _Garden Variety_ These schools are roughly in the middle. They are in the Western seaboard and boast comparatively better dropout rates.
+  * _Brain Drain._ Teachers are in short supply in these areas, concentrated in Samar island. Dropout rates are increasing in this area.
+  * _Falling Behind._ A majority of schools are in this cluster, mainly located in the Bicol Region and Central Luzon. They are beginning to lag in all three capacity metrics. However, this is not so bad as dropout rates are comparatively better, causing supply shortages.
+  * _Left Behind._ These schools are in the lowest end, with average survival rates. At around 50 students per teacher and room, with budgets stretching to P500 per student, these schools are in desperate need of capacity. While the Southern provinces of Maguindanao and Sarangani contain these schools, majority are concentrated in Metro Manila.
+  
+For secondary schools, the clusters that I've discovered are as follows:
+
+```{r layout="l-body-outset"}
+knitr::include_graphics("https://raw.githubusercontent.com/tjpalanca/JDT-deped-analytics/master/Output/O17B%20-%20Secondary%20Schools%20Capacity%20Dashboard.png")
+```
+
+Secondary schools comprise mostly the same clusters, with a few differences:
+
+  * Teacher shortages are mainly in Western Visayas and Western Mindanao.
+  * There are severe secondary room shortages in Metro Manila.
+  * None of these capacity surpluses are due to dropouts, so any capacity shortages should be well-cured by a capacity infusion.
+  
+There you go! A brief study of capacity in the Philippine educational system. In the next part of the series we'll explore how to reallocate capacity around the system to make do with what we have.
+
+Thanks for reading! If you liked this post or found it interesting, I would appreciate it if you liked, shared, tweeted, or +1ed it on your preferred social network. Data, code, and computation requests may be made through the blog contact form.
+
+## Important Links
+
+  * [Data - Department of Education](http://deped.gov.ph/datasets)
+  * [Formal analysis document](https://github.com/tjpalanca/JDT-deped-analytics/raw/master/Documentation/Department%20of%20Education%20Analytics.pdf)
+  * [Code on GitHub](https://github.com/tjpalanca/JDT-deped-analytics)

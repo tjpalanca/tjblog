@@ -223,7 +223,7 @@ open_post <- function() {
 }
 
 nrow(post_data)
-post_number <- 65
+post_number <- 76
 post_data$old_post[post_number]
 open_post()
 copy_image("img/posts/20130612-turkey-bloody-friday.jpg")

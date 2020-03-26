@@ -1,7 +1,6 @@
 ---
-title: "wiad-2016-talk"
-description: |
-  A short description of the post.
+title: "On Data Visualization Design"
+description: "I was invited to speak last year at the World Information Architecture Day 2016 in Manila on data visualization design and use cases. The video is available for viewing."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,20 @@ date: 02-05-2017
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20170205-wiad-2016-grammar-graphics.png
+categories:
+  - talks
+  - dataviz
+  - philippines
+  - social commentary
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+Last year, I was invited to speak at [World Information Architecture Day 2016](http://www.2016.worldiaday.org/location/manila-phillippines) in Manila, held at A-Space, Makati. I covered an introduction to data use cases, and how to think about designing data visualizations, and why I think designing the right ways for people to consume insights from data is just as important than our ability to process or analyze them.
 
-Distill is a publication format for scientific and technical writing, native to the web.
+The video is up for people to watch. Please let me know your thoughts at the comments section. 
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LR_KXA3nZ_Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+If you'd like to view the slides more clearly, I've uploaded them to slideshare:
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/fjRlrhDHRiBsoB" width="100%" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>

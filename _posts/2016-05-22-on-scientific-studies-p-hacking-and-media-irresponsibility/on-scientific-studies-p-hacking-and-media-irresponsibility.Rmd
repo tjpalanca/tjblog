@@ -1,7 +1,6 @@
 ---
-title: "on-scientific-studies-p-hacking-and-media-irresponsibility"
-description: |
-  A short description of the post.
+title: "On Scientific Studies, P-Hacking, and Media Irresponsibility"
+description: "John Oliver lays down the problems with public perceptions of scientific studies shaped by the media."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,17 @@ date: 05-22-2016
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20160522-john-oliver-scientific-studies.png
+categories:
+  - video
+  - comedy
+  - social commentary
+  - statistics
+  - science
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+John Oliver takes a comedic stab at how science is portrayed in mainstream media. In the interest of presenting a simple soundbite, things like sample size, caveats, and other potential sources of bias are left out. Problems with p-hacking, lack of replication, and publish or perish are also discussed.
 
-Distill is a publication format for scientific and technical writing, native to the web.
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0Rnq1NpHdmw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
-
+You can find his other videos on his [YouTube channel](https://www.youtube.com/channel/UC3XTzVzaHQEd30rQbuvCtTQ).

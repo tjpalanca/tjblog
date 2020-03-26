@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+  <!--radix_placeholder_meta_tags-->
+  <title>On the MRT: A Capacity Conundrum</title>
+  
+  <meta property="description" itemprop="description" content="The Metro Rail Transit Line 3 (MRT) has been operating at 142% capacity since 2004. New prototype trains have been scheduled to arrive in 2015, but the actual deployment will still be in the following year. How bad is the current train situation? Let&#39;s find out through data!"/>
+  
+  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2015-05-16"/>
+  <meta property="article:created" itemprop="dateCreated" content="2015-05-16"/>
+  <meta name="article:author" content="TJ Palanca"/>
+  
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="On the MRT: A Capacity Conundrum"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="The Metro Rail Transit Line 3 (MRT) has been operating at 142% capacity since 2004. New prototype trains have been scheduled to arrive in 2015, but the actual deployment will still be in the following year. How bad is the current train situation? Let&#39;s find out through data!"/>
+  <meta property="og:locale" content="en_US"/>
+  
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="On the MRT: A Capacity Conundrum"/>
+  <meta property="twitter:description" content="The Metro Rail Transit Line 3 (MRT) has been operating at 142% capacity since 2004. New prototype trains have been scheduled to arrive in 2015, but the actual deployment will still be in the following year. How bad is the current train situation? Let&#39;s find out through data!"/>
+  
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview","categories"]}},"value":[{"type":"character","attributes":{},"value":["On the MRT: A Capacity Conundrum"]},{"type":"character","attributes":{},"value":["The Metro Rail Transit Line 3 (MRT) has been operating at 142% capacity since 2004. New prototype trains have been scheduled to arrive in 2015, but the actual deployment will still be in the following year. How bad is the current train situation? Let's find out through data!"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["TJ Palanca"]},{"type":"character","attributes":{},"value":["https://www.twitter.com/tjpalanca"]}]}]},{"type":"character","attributes":{},"value":["05-16-2015"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["images/20150516-mrt-cover-image.jpg"]},{"type":"character","attributes":{},"value":["news","dataviz","economics","transportation"]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["images/20150516-mrt-cover-image.jpg","images/20150516-mrt-network-congestion.png","images/20150516-mrt-od-matrix.png","images/20150516-mrt-passenger-flows.png","images/20150516-mrt-ridership-and-capacity.png","images/20150519-gross-passenger-flows.png","images/20150529-mrt-passenger-congestion.png","mrt-capacity-conundrum_files/bowser-1.9.3/bowser.min.js","mrt-capacity-conundrum_files/distill-2.2.21/template.v2.js","mrt-capacity-conundrum_files/jquery-1.11.3/jquery.min.js","mrt-capacity-conundrum_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+  
+  <style type="text/css">
+  
+  body {
+    background-color: white;
+  }
+  
+  .pandoc-table {
+    width: 100%;
+  }
+  
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+  
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+  
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+  
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+  
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+  
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+  
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .shaded-content {
+    background: white;
+  }
+  
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  d-article {
+    padding-bottom: 30px;
+  }
+  
+  d-appendix {
+    padding-top: 30px;
+  }
+  
+  d-article>p>img {
+    width: 100%;
+  }
+  
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+  
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  /* CSS for table of contents */
+  
+  .d-toc {
+    color: rgba(0,0,0,0.8);
+    font-size: 0.8em;
+    line-height: 1em;
+  }
+  
+  .d-toc-header {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 1.3em;
+  }
+  
+  .d-toc a {
+    border-bottom: none;
+  }
+  
+  .d-toc ul {
+    padding-left: 0;
+  }
+  
+  .d-toc li>ul {
+    padding-top: 0.8em;
+    padding-left: 16px;
+    margin-bottom: 0.6em;
+  }
+  
+  .d-toc ul,
+  .d-toc li {
+    list-style-type: none;
+  }
+  
+  .d-toc li {
+    margin-bottom: 0.9em;
+  }
+  
+  .d-toc-separator {
+    margin-top: 20px;
+    margin-bottom: 2em;
+  }
+  
+  .d-article-with-toc {
+    border-top: none;
+    padding-top: 0;
+  }
+  
+  
+  
+  /* Tweak code blocks (note that this CSS is repeated above in an injection
+     into the d-code shadow dom) */
+  
+  d-code {
+    overflow-x: auto !important;
+  }
+  
+  pre.d-code code.d-code {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+  
+  pre.text-output {
+  
+    font-size: 12px;
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  @media(min-width: 768px) {
+  
+  d-code {
+    overflow-x: visible !important;
+  }
+  
+  pre.d-code code.d-code  {
+      padding-left: 18px;
+      font-size: 14px;
+  }
+  pre.text-output {
+    font-size: 14px;
+  }
+  }
+  
+  /* Figure */
+  
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+  
+  .figure img {
+    width: 100%;
+  }
+  
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+  
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+  
+  
+  
+  /* Tweak 1000px media break to show more text */
+  
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+  
+    .grid {
+      grid-column-gap: 16px;
+    }
+  
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+  
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+  
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+  
+  
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+  
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  
+  /* Social footer */
+  
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+  
+  .disqus-comments {
+    margin-right: 30px;
+  }
+  
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+  #disqus_thread {
+    margin-top: 30px;
+  }
+  
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+  
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+  
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+  
+  
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+  
+  
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+  
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+  
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+  
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+  
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+  
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+  
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+  
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  </style>
+  
+  <script type="application/javascript">
+  
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+  
+  // show body when load is complete
+  function on_load_complete() {
+  
+    // set body to visible
+    document.body.style.visibility = 'visible';
+  
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+  
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+  
+  function init_distill() {
+  
+    init_common();
+  
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+  
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+  
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+  
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+  
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+  
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+  
+    // create d-bibliography
+    var bibliography = $('<d-bibliography></d-bibliography>');
+    $('#distill-bibliography').wrap(bibliography);
+  
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+  
+    // replace citations with <d-cite>
+    $('.citation').each(function(i, val) {
+      appendix = true;
+      var cites = $(this).attr('data-cites').split(" ");
+      var dt_cite = $('<d-cite></d-cite>');
+      dt_cite.attr('key', cites.join());
+      $(this).replaceWith(dt_cite);
+    });
+    // remove refs
+    $('#refs').remove();
+  
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+  
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-toc a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+  
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+  
+    // replace code blocks with d-code
+    $('pre>code').each(function(i, val) {
+      var code = $(this);
+      var pre = code.parent();
+      var clz = "";
+      var language = pre.attr('class');
+      if (language) {
+        // map unknown languages to "clike" (without this they just dissapear)
+        if ($.inArray(language, ["bash", "clike", "css", "go", "html",
+                                 "javascript", "js", "julia", "lua", "markdown",
+                                 "markup", "mathml", "python", "svg", "xml"]) == -1)
+          language = "clike";
+        language = ' language="' + language + '"';
+        var dt_code = $('<d-code block' + language + clz + '></d-code>');
+        dt_code.text(code.text());
+        pre.replaceWith(dt_code);
+      } else {
+        code.addClass('text-output').unwrap().changeElementType('pre');
+      }
+    });
+  
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+  
+      // capture layout
+      var layout = $(this).attr('data-layout');
+  
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('d-code, pre.text-output, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+  
+  
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+  
+    // load distill framework
+    load_distill_framework();
+  
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+  
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+  
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+  
+      // table of contents
+      if (have_authors) // adjust border if we are in authors
+        $('.d-toc').parent().addClass('d-article-with-toc');
+  
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+  
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+  
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+  
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+  
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+  
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+  
+      // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
+      $('d-code').each(function(i, val) {
+        var style = document.createElement('style');
+        style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
+                          '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
+        if (this.shadowRoot)
+          this.shadowRoot.appendChild(style);
+      });
+  
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+  
+      // clear polling timer
+      clearInterval(tid);
+  
+      // show body now that everything is ready
+      on_load_complete();
+    }
+  
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+  
+  }
+  
+  function init_downlevel() {
+  
+    init_common();
+  
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+  
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+  
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+  
+    // remove toc
+    $('.d-toc-header').remove();
+    $('.d-toc').remove();
+    $('.d-toc-separator').remove();
+  
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+  
+  
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+  
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+  
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+  
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+  
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+  
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+  
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+  
+    $('body').addClass('downlevel');
+  
+    on_load_complete();
+  }
+  
+  
+  function init_common() {
+  
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+  
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+  
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+  
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+  
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
+    });
+  
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+  
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+  
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+  
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+  
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+  
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+  
+  </script>
+  
+  <!--/radix_placeholder_distill-->
+  <script src="mrt-capacity-conundrum_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="mrt-capacity-conundrum_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="mrt-capacity-conundrum_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="mrt-capacity-conundrum_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"On the MRT: A Capacity Conundrum","description":"The Metro Rail Transit Line 3 (MRT) has been operating at 142% capacity since 2004. New prototype trains have been scheduled to arrive in 2015, but the actual deployment will still be in the following year. How bad is the current train situation? Let's find out through data!","authors":[{"author":"TJ Palanca","authorURL":"https://www.twitter.com/tjpalanca","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2015-05-16T00:00:00.000+00:00","citationText":"Palanca, 2015"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>On the MRT: A Capacity Conundrum</h1>
+<p>The Metro Rail Transit Line 3 (MRT) has been operating at 142% capacity since 2004. New prototype trains have been scheduled to arrive in 2015, but the actual deployment will still be in the following year. How bad is the current train situation? Let’s find out through data!</p>
+</div>
+
+<div class="d-byline">
+  TJ Palanca <a href="https://www.twitter.com/tjpalanca" class="uri">https://www.twitter.com/tjpalanca</a> 
+  
+<br/>05-16-2015
+</div>
+
+<div class="d-article">
+<h3 class="d-toc-header">Table of Contents</h3>
+<nav class="d-toc" id="TOC">
+<ul>
+<li><a href="#too-close-for-comfort">Too close for comfort</a></li>
+<li><a href="#its-best-not-to-go-with-the-flow">It’s best not to go with the flow</a></li>
+<li><a href="#not-all-mrt-stations-were-created-equal">Not all MRT stations were created equal</a></li>
+<li><a href="#origins-and-destinations">Origins and Destinations</a></li>
+<li><a href="#data-links">Data Links</a></li>
+<li><a href="#disclaimer">Disclaimer</a></li>
+</ul>
+</nav>
+<hr class="d-toc-separator"/>
+<p>This article was also featured on <a href="http://www.rappler.com/views/imho/93492-mrt-capacity-conundrum-data-research">Rappler</a> and <a href="http://www.gmanetwork.com/news/story/490510/scitech/science/on-the-mrt-a-capacity-conundrum">GMA News Online</a>!</p>
+<p>After more than 16 years in operation, it is clear that <a href="http://www.rappler.com/views/imho/93152-manila-mrt-awesome">the MRT isn’t anymore what it once was</a>. What used to be an enduring symbol of progress and technological innovation is now just an uncomfortable, <a href="http://newsinfo.inquirer.net/628821/mrt-train-derailed-report">accident-prone</a>, and unfortunately, inevitable mode of transport. Operating at the level of about 500,000 passengers per day on a capacity of only 350,000, transport secretary Abaya says the trains <a href="http://www.abs-cbnnews.com/nation/metro-manila/02/26/14/abaya-mrt-3-operating-over-capacity">continue to be worn down</a> from the excessive burden.</p>
+<h2 id="too-close-for-comfort">Too close for comfort</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="images/20150516-mrt-ridership-and-capacity.png" alt="MRT Ridership - Continuously operating at above capacity is sure to bring undue wear and tear to a system that hasn't seen any major overhaul since it was built." width="100%" />
+<p class="caption">
+Figure 1: MRT Ridership - Continuously operating at above capacity is sure to bring undue wear and tear to a system that hasn’t seen any major overhaul since it was built.
+</p>
+</div>
+</div>
+<p>I’ve written before on <a href="/2014/01/trains-and-tribulations.html">the state of train lines in the capital</a>, but new data from the Department of Transportation and Communications (DOTC) has surfaced, allowing us a more detailed look at the inner workings of the historic MRT.</p>
+<h2 id="its-best-not-to-go-with-the-flow">It’s best not to go with the flow</h2>
+<p>Ridership isn’t going to be evenly distributed throughout the operating day, so an adequately-planned facility requires a little slack capacity to handle the peak hour load. When this isn’t the case, passengers tend to build up inside the system, and congestion ensues.</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="images/20150529-mrt-passenger-congestion.png" alt="MRT Passenger Congestion - 7AM and 6PM are the worst times to hop onto the MRT." width="701" />
+<p class="caption">
+Figure 2: MRT Passenger Congestion - 7AM and 6PM are the worst times to hop onto the MRT.
+</p>
+</div>
+</div>
+<p>The numbers here seem quite intuitive - during peak times, the system is taking on more people that it can output, and the number of people that are left inside the train system increase. This peak is most apparent in the morning at around 7am, and also in the evening at 6pm. So, if you regularly take the MRT to work or school, it would be best to have a schedule that takes you away from commuting at these times. It might also be useful to know that the traffic load doesn’t taper off until you move ahead or behind at least two hours from these peak times.</p>
+<p>From a systems point of view, it would seem that creating differential work/school shifts would greatly help even out the workload and hopefully make it easier for everyone. The MRT already runs more trains during peak periods, but it seems that even the absolute maximum capacity isn’t enough.</p>
+<h2 id="not-all-mrt-stations-were-created-equal">Not all MRT stations were created equal</h2>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<img src="images/20150519-gross-passenger-flows.png" alt="Station-level traffic - At different times of the day, some stations serve as key entry points, some as exits, and some are even all throughout. Green bars are entries; red bars are exits." width="800" />
+<p class="caption">
+Figure 3: Station-level traffic - At different times of the day, some stations serve as key entry points, some as exits, and some are even all throughout. Green bars are entries; red bars are exits.
+</p>
+</div>
+</div>
+<p>When analyzing capacity, we not only have to look at the time-based load, but also the differential load on different stations. Let’s first take a look at the chart above. North Avenue, Araneta-Cubao, Shaw, Ayala, and Taft, being key points around the train line, are much busier than the others. Santolan and Buendia station, on the other hand, don’t seem to serve that many customers, possibly because they are too close to some major stations.</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/20150516-mrt-passenger-flows.png" width="100%" /></p>
+</div>
+<p>You may also catch the fact that not all stations serve the same load throughout the day. Some stations near residences serve as entry points during the day, and others are the opposite.</p>
+<p>Such a phenomenon is more clearly illustrated in the chart on the left (click to enlarge). Stations near residences and north/south entry points (North Avenue to Araneta Center, Guadalupe, Taft Avenue) have more people coming in that leaving during the day when people are heading to work. Other stations, near workplaces (Santolan, Ortigas, Shaw, Buendia, Ayala, Magallanes), have more people disembarking during the morning rush hour. At around 1pm, the pattern for all of the stations flip, when people begin to return to their homes.</p>
+<p>Taft Avenue and North Avenue are among the busiest stations, indicating that much of the workforce is already living beyond the reach of the MRT. In order to serve more people, extensions will have to be considered for the combined train system, but that’s when capacity isn’t such a problem anymore.</p>
+<p>Poor urban planning might also be at play here: the uneven zoning of residential vs commercial might cause uneven concentrations of passengers, further increasing the peak-hour load.</p>
+<h2 id="origins-and-destinations">Origins and Destinations</h2>
+<p>Since we had the entry and exit data per hour, I imputed the origin-destination matrix, i.e. the pairs of origins and destinations for each person riding the MRT. By taking a more detailed view, we can see the particular routes that people would usually take and how we can optimize around them.</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure"><span id="fig:unnamed-chunk-5"></span>
+<img src="images/20150516-mrt-od-matrix.png" alt="Origin-Destination Matrix - The arcs represent the number of people from the particular origin-destination pair. Orange arcs are northbound trips, and blue arcs are southbound trips. Stations are arranged from north to south." width="608" />
+<p class="caption">
+Figure 4: Origin-Destination Matrix - The arcs represent the number of people from the particular origin-destination pair. Orange arcs are northbound trips, and blue arcs are southbound trips. Stations are arranged from north to south.
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="images/20150516-mrt-network-congestion.png" width="300px" /></p>
+</div>
+<p>During the morning, the key routes are those to Ayala, Shaw, and Taft, whereas Taft, Araneta-Cubao, and North Avenue become key destinations in the evening. Although the MRT has no way in which trains can bypass each other (except for the stations in Taft, North Avenue, and Shaw), trains that do not stop at every station, but rather focus on serving busy origin-destination pairs might be feasible if such a method of bypass can be created.</p>
+<p>If we further extrapolate by imagining the throughput at each rail section, we can reveal the “weakest links” in the system. On the left (click to enlarge), we can see that the central stations are under a lot of strain on the southbound rail during the morning, and on the northbound rail at night. Additional load from the upcoming south rail extension should be considered, because passengers that transfer onto the line will increase the load.</p>
+<p>Having some trains skip some stations in this area should speed up the system, but only if trains were allowed to bypass each other. Then again, if capacity is really the issue, there is little system reengineering would do.<br /><br />There you go! A closer look at our ailing MRT system. I realize that I’m no train expert, so please help me make sense of the data by commenting below.</p>
+<p>Thanks for reading! If you found this post interesting, I would appreciate it if you shared, liked, tweeted, or +1’ed it on your preferred social network, or also shared your thoughts in the comments section below. Data, code, and computation requests can be made through the contact form.</p>
+<h2 id="data-links">Data Links</h2>
+<ul>
+<li><a href="http://dotc.gov.ph/images/front/Data_Sets/MRT3-DailyPassengerTrafficperHourperStationforCY2014.xlsx">DOTC - Daily Passenger Traffic</a></li>
+<li><a href="http://dotc.gov.ph/images/front/Data_Sets/MRT3-MonthlyPassengerTrafficperStationforCY2014.xlsx">DOTC - Monthly Passenger Traffic</a></li>
+</ul>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>The views and opinions expressed herein are those of the author only, and do not relate to any personal or professional affiliation. The content above is presented for information purposes only and the author cannot be held responsible for any harm caused by acting on this information without prior consultation.</p>
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frapplerdotcom%2Fposts%2F978910982129685&amp;width=500" width="500" height="482" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
+</iframe>
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgmanews%2Fposts%2F10153056736651977&amp;width=500" width="500" height="501" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true">
+</iframe>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

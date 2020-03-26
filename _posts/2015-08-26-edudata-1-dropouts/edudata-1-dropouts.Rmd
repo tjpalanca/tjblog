@@ -1,7 +1,6 @@
 ---
-title: "edudata-1-dropouts"
-description: |
-  A short description of the post.
+title: "On Schools and Survival: A look at dropout rates in the Philippines (EduData Part 1)"
+description: "In what grade level are students most likely to drop out? Are females or males more likely to stay in school? We'll explore delays and dropouts in the Philippine education system with data from the Department of Education in this first installment of the EduData series."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,84 @@ date: 08-26-2015
 output:
   distill::distill_article:
     self_contained: false
+    toc: true
+preview: images/20150826-edudata-header.jpg
+categories:
+  - education
+  - dataviz
+  - government
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+<div uk-alert class="ul-alert-primary">
+This post also appears on [GMANews SciTech section](http://www.gmanetwork.com/news/story/534610/scitech/science/a-look-at-dropout-rates-in-the-philippines)!
+</div>
+
+This article is part the EduData series, which explores the state of the Philippine education system, and what we could do to make it better.
+
+## EduData Series
+
+  * [Part 1 - Schools and Survival: A look at dropout rates in the Philippines](/2015/08/edudata-1-dropouts.html)
+  * [Part 2 - Coverage and Capacity: A look at school capacity in the Philippines](/2015/11/edudata-2-coverage-capacity.html)
+  
+Education is one of the cornerstones of development, particularly in a country where majority of the population is of school age. Luckily, the Department of Education has released tons of data that allows us to shed light on the state of the Philippine education system. For the first post in this series, we will focus on dropouts and where, grade level-wise and geographically, they occur.
+
+## Swimming against the tide
+
+What percentage of students that enter Grade 1 are likely to graduate high school? We first compute the survival and dropout rates over time. The cumulative survival rate (top panel) is the proportion of the Grade 1 class that is expected to graduate high school. The single-year dropout rate (bottom panel) is the attrition of the class for that particular grade level.
+
+### By Time
+
+```{r layout="l-body-outset"}
+knitr::include_graphics("https://raw.githubusercontent.com/tjpalanca/JDT-deped-analytics/master/Output/O1%20-%20Survival%20Rates%20by%20Year.png")
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+There are some things we can say about the data:
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+  * Survival rates have been improving steadily over the past three year, with about 60% of the initial Grade 1 class graduating high school in 2015, compared to about 50% in 2013.
+  * The survival rate improvement can be attributable to the Grade 2 dropout rate. More and more students are choosing to proceed after Grade 1 in 2015, compared to past years.
+  * Once a student has reached Grade 3, the chance that he/she will be unable to graduate elementary school becomes small. However, making the leap from elementary to high school is still difficult.
+  
+### By Gender
+  
+Let's also flip the facets and compare the cumulative survival rates and dropout rates by gender.
 
+```{r layout="l-body-outset"}
+knitr::include_graphics("https://raw.githubusercontent.com/tjpalanca/JDT-deped-analytics/master/Output/O2%20-%20Survival%20Rates%20by%20Gender.png")
+```
+
+There are a couple of very interesting findings from this chart:
+
+  * Females have a higher propensity staying in school than males, but fewer are given the opportunity to attend high school after graduating elementary.
+  * The gender gaps in dropout rates have remained generally unchanged over time.
+   
+If we were to learn from this data, we could make the following recommendations:
+
+  * To get the most impact, focus on ensuring that new Grade 1 students make it through to Grade 2. For females,  focus on ensuring a transition from elementary to secondary school.
+  * Focus on retention for males throughout the grade levels.
+  * While we cannot drill down to the root cause of the issues, educators may have some insight. If you are an educator, feel free to share your thoughts with us!
+  
+### By Location
+
+Broad averages can conceal a lot of information, and there may be large disparities in dropout rates in different parts of the country. Let's take a look at the geographic distribution of dropout rates and determine whether there any any 'hotspots.'
+  
+```{r layout="l-body-outset"}
+knitr::include_graphics("https://raw.githubusercontent.com/tjpalanca/JDT-deped-analytics/master/Output/O3%20-%20Survival%20Map.png")
+```
+  
+The conflict-torn Zamboanga-ARMM region has always been plagued by survival rates as low as 10%. The situation has not get any better over time. In recent years, however, Eastern Visayas has grown into a significant hotspot, probably due to migration out of the region and exacerbated by the effects of typhoons, especially Yolanda. The effect in Eastern Visayas is more pronounced for males than females. A small hotspot is also developing for males in Central Luzon.
+
+If this is the state of the Philippine education system, what can we suggest?
+
+  * Prioritize these 'hotspots' for intervention, determine the causes behind the dropouts in these areas and resolve the issues.
+  * Programs such as the Conditional Cash Transfer (CCT) program may have larger impact in these areas in terms of reducing dropouts.
+  * This is just the first in the EduData series! In the next few installments, we'll be focusing on capacities in terms of teachers, rooms, and budget, so stay tuned!
+  
+Thanks for reading! If you liked this post or found it interesting, I would appreciate it if you liked, shared, tweeted, or +1ed it on your preferred social network. Data, code, and computation requests may be made through the blog contact form.
+
+**Important Links:**
+
+  * [Data - Department of Education](http://deped.gov.ph/datasets)
+  * [Formal analysis document](https://github.com/tjpalanca/JDT-deped-analytics/raw/master/Documentation/Department%20of%20Education%20Analytics.pdf)
+  * [Code on GitHub](https://github.com/tjpalanca/JDT-deped-analytics)
+  
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgmanews%2Fposts%2F10153329994611977&width=500" width="545" height="545" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>

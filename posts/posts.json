@@ -20,6 +20,25 @@
     "last_modified": "2020-03-22T17:54:28+00:00"
   },
   {
+    "path": "posts/2017-05-01-on-minimalistic-maps/",
+    "title": "On Minimalistic Maps: Mapping Population Density in the Philippines",
+    "description": "We take a break and try to plot some cool minimalistic plots of population density in the Philippines.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2017-05-01",
+    "categories": [
+      "maps",
+      "dataviz",
+      "philippines"
+    ],
+    "preview": "https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/05-bicol.png",
+    "last_modified": "2020-03-26T03:06:55+00:00"
+  },
+  {
     "path": "posts/2017-03-12-facebook-news-topic-modeling/",
     "title": "On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage",
     "description": "Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling.",
@@ -39,6 +58,190 @@
     ],
     "preview": "posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg",
     "last_modified": "2020-03-22T17:42:28+00:00"
+  },
+  {
+    "path": "posts/2017-02-05-wiad-2016-talk/",
+    "title": "On Data Visualization Design",
+    "description": "I was invited to speak last year at the World Information Architecture Day 2016 in Manila on data visualization design and use cases. The video is available for viewing.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2017-02-05",
+    "categories": [
+      "talks",
+      "dataviz",
+      "philippines",
+      "social commentary"
+    ],
+    "preview": "posts/2017-02-05-wiad-2016-talk/images/20170205-wiad-2016-grammar-graphics.png",
+    "last_modified": "2020-03-26T02:55:08+00:00",
+    "preview_width": 1506,
+    "preview_height": 810
+  },
+  {
+    "path": "posts/2016-06-15-fete-wisely-this-2016/",
+    "title": "Fête wisely this 2016",
+    "description": "The gist is music-lovers the world over celebrate Fête dela Musique --- World Music Day --- in June every year.  In the Philippines this year, the 22nd Fête will be held on 18 June 2016 in Makati. With that much stages, it can be a very daunting task though.  So how do we do make it easier? Let's follow the data.",
+    "author": [
+      {
+        "name": "Carl Calub",
+        "url": "https://www.facebook.com/carldominick.calub"
+      }
+    ],
+    "date": "2016-06-15",
+    "categories": [
+      "contributed",
+      "music",
+      "events",
+      "rbloggers"
+    ],
+    "preview": {},
+    "last_modified": "2020-03-26T02:53:30+00:00"
+  },
+  {
+    "path": "posts/2016-05-27-on-elections-part-1/",
+    "title": "On the Elections: Election Fingerprints",
+    "description": "In this elections series, we'll explore various aspects of the 2016 Philippine National Elections, from fraud detection to the differences in how our country votes. In this first instalment, we learn about election fingerprints and how they may be used to detect fraud in the form of ballot stuffing or vote padding.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2016-05-27",
+    "categories": [
+      "philippines",
+      "politics",
+      "statistics"
+    ],
+    "preview": "posts/2016-05-27-on-elections-part-1/images/20140330-ballot-boxes.jpg",
+    "last_modified": "2020-03-26T02:59:55+00:00"
+  },
+  {
+    "path": "posts/2016-05-22-on-scientific-studies-p-hacking-and-media-irresponsibility/",
+    "title": "On Scientific Studies, P-Hacking, and Media Irresponsibility",
+    "description": "John Oliver lays down the problems with public perceptions of scientific studies shaped by the media.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2016-05-22",
+    "categories": [
+      "video",
+      "comedy",
+      "social commentary",
+      "statistics",
+      "science"
+    ],
+    "preview": "posts/2016-05-22-on-scientific-studies-p-hacking-and-media-irresponsibility/images/20160522-john-oliver-scientific-studies.png",
+    "last_modified": "2020-03-26T02:21:16+00:00",
+    "preview_width": 1712,
+    "preview_height": 882
+  },
+  {
+    "path": "posts/2016-03-11-on-academics-and-bridging-the-gap/",
+    "title": "On Academics and Bridging the Gap",
+    "description": "Academics can change the world – if they stop talking only to their peers",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2016-03-11",
+    "categories": [
+      "links",
+      "academic"
+    ],
+    "preview": "https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/114045/width668/image-20160307-30506-480t7q.jpg",
+    "last_modified": "2020-03-26T02:20:37+00:00"
+  },
+  {
+    "path": "posts/2015-11-29-edudata-2-coverage-capacity/",
+    "title": "On Coverage and Capacity: A look at school capacity in the Philippines (EduData Part 2)",
+    "description": "Students require rooms, students, and operating budgets in order to receive a proper education. The question is, which resources are in short supply? How does this differ across different parts of the country? Let's find out how the school system is holding up in this second installment of the EduData Series.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2015-11-29",
+    "categories": [
+      "data",
+      "education",
+      "dataviz",
+      "government"
+    ],
+    "preview": "posts/2015-11-29-edudata-2-coverage-capacity/images/20151129-school-chair.jpg",
+    "last_modified": "2020-03-26T02:19:13+00:00"
+  },
+  {
+    "path": "posts/2015-08-26-edudata-1-dropouts/",
+    "title": "On Schools and Survival: A look at dropout rates in the Philippines (EduData Part 1)",
+    "description": "In what grade level are students most likely to drop out? Are females or males more likely to stay in school? We'll explore delays and dropouts in the Philippine education system with data from the Department of Education in this first installment of the EduData series.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2015-08-26",
+    "categories": [
+      "education",
+      "dataviz",
+      "government"
+    ],
+    "preview": "posts/2015-08-26-edudata-1-dropouts/images/20150826-edudata-header.jpg",
+    "last_modified": "2020-03-26T02:19:35+00:00"
+  },
+  {
+    "path": "posts/2015-05-16-mrt-capacity-conundrum/",
+    "title": "On the MRT: A Capacity Conundrum",
+    "description": "The Metro Rail Transit Line 3 (MRT) has been operating at 142% capacity since 2004. New prototype trains have been scheduled to arrive in 2015, but the actual deployment will still be in the following year. How bad is the current train situation? Let's find out through data!",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2015-05-16",
+    "categories": [
+      "news",
+      "dataviz",
+      "economics",
+      "transportation"
+    ],
+    "preview": "posts/2015-05-16-mrt-capacity-conundrum/images/20150516-mrt-cover-image.jpg",
+    "last_modified": "2020-03-26T02:19:58+00:00"
+  },
+  {
+    "path": "posts/2015-04-05-tedxdlsu-hero-generation/",
+    "title": "On Why the Hero Generation is an Informed One (TEDxDLSU)",
+    "description": "Businesses and governments in the Philippines should adopt a data mindset - where intuition and personal experience are always backed up by data and an effort to see the entire picture is always made - in order to realize the benefits of entering the demographic window.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2015-04-05",
+    "categories": [
+      "philippines",
+      "talks",
+      "dataviz",
+      "video",
+      "personal"
+    ],
+    "preview": "posts/2015-04-05-tedxdlsu-hero-generation/images/20150405-tedxdlsu.png",
+    "last_modified": "2020-03-26T01:50:02+00:00",
+    "preview_width": 604,
+    "preview_height": 270
   },
   {
     "path": "posts/2015-03-19-airline-agitation/",

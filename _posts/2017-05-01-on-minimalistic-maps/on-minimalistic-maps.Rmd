@@ -1,7 +1,6 @@
 ---
-title: "on-minimalistic-maps"
-description: |
-  A short description of the post.
+title: "On Minimalistic Maps: Mapping Population Density in the Philippines"
+description: "We take a break and try to plot some cool minimalistic plots of population density in the Philippines."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,65 @@ date: 05-01-2017
 output:
   distill::distill_article:
     self_contained: false
+    toc: true
+preview: https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/05-bicol.png
+categories:
+  - maps
+  - dataviz
+  - philippines
+repository_url: https://github.com/tjpalanca/population-lines
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+## Minimalistic maps
 
-Distill is a publication format for scientific and technical writing, native to the web.
+Taking the idea from the [Population Lines Print](http://spatial.ly/2014/08/population-lines/) by Spatial.ly / Dr James Cheshire, we plot local population density maps for the Philippines in the same style. The data is taken from the [NASA Socioeconomic Data and Applications Center (SEDAC)](http://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-density-adjusted-to-2015-unwpp-country-totals/data-download).
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+## Philippine population density maps
 
+Fortunately, the process was relatively straightforward and it was not difficult to produce the same cool faux-3D population peak effect with a bit of data wrangling and good old `ggplot2`. Here are some I've produced for key Philippine metropolitan areas and my home region Bicol.
+
+<div class="l-body-outset uk-card uk-card-body uk-card-default" style="margin-bottom: 30px;">
+<ul uk-tab>
+<li><a href="#">Philippines</a></li>
+<li><a href="#">Greater Manila</a></li>
+<li><a href="#">Cebu</a></li>
+<li><a href="#">Davao</a></li>
+<li><a href="#">Bicol Region</a></li>
+</ul>
+<ul class="uk-switcher uk-margin">
+<li>
+<a href="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/01-philippines.png">
+<img src="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/01-philippines.png"/>
+</a>
+</li>
+<li>
+<a href="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/02-greater-manila-area.png">
+<img src="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/02-greater-manila-area.png"/>
+</a>
+</li>
+<li>
+<a href="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/03-cebu.png">
+<img src="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/03-cebu.png"/>
+</a>
+</li>
+<li>
+<a href="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/04-davao.png">
+<img src="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/04-davao.png"/>
+</a>
+</li>
+<li>
+<a href="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/05-bicol.png">
+<img src="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/05-bicol.png"/>
+</a>
+</li>
+</ul>
+</div>
+
+## Reproducibility 
+
+Here are the notebooks containing the code, results, and commentary behind the post. You may download the resulting code and run it yourself, provided:
+
+* You have to download the population density maps on your own access rights, and
+* You agree that this is provided as-is and with no warranty.
+  
+You may also view the GitHub Repository [here](https://github.com/tjpalanca/population-lines) for the complete code and analysis that went into this post. 

@@ -24,6 +24,15 @@ together, especially on issues surrounding the Philippines.
       <media:content url="https://www.tjpalanca.com/posts/2017-07-31-databeers-mnl/images/databeers-mnl.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
+      <title>On Minimalistic Maps: Mapping Population Density in the Philippines</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2017-05-01-on-minimalistic-maps</link>
+      <description>We take a break and try to plot some cool minimalistic plots of population density in the Philippines.</description>
+      <guid>https://www.tjpalanca.com/posts/2017-05-01-on-minimalistic-maps</guid>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      <media:content url="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/05-bicol.png" medium="image" type="image/png"/>
+    </item>
+    <item>
       <title>On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage</title>
       <dc:creator>TJ Palanca</dc:creator>
       <link>https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling</link>
@@ -31,6 +40,86 @@ together, especially on issues surrounding the Philippines.
       <guid>https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling</guid>
       <pubDate>Sun, 12 Mar 2017 00:00:00 +0000</pubDate>
       <media:content url="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Data Visualization Design</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2017-02-05-wiad-2016-talk</link>
+      <description>I was invited to speak last year at the World Information Architecture Day 2016 in Manila on data visualization design and use cases. The video is available for viewing.</description>
+      <guid>https://www.tjpalanca.com/posts/2017-02-05-wiad-2016-talk</guid>
+      <pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2017-02-05-wiad-2016-talk/images/20170205-wiad-2016-grammar-graphics.png" medium="image" type="image/png" width="1506" height="810"/>
+    </item>
+    <item>
+      <title>Fête wisely this 2016</title>
+      <dc:creator>Carl Calub</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2016-06-15-fete-wisely-this-2016</link>
+      <description>The gist is music-lovers the world over celebrate Fête dela Musique --- World Music Day --- in June every year.  In the Philippines this year, the 22nd Fête will be held on 18 June 2016 in Makati. With that much stages, it can be a very daunting task though.  So how do we do make it easier? Let's follow the data.</description>
+      <guid>https://www.tjpalanca.com/posts/2016-06-15-fete-wisely-this-2016</guid>
+      <pubDate>Wed, 15 Jun 2016 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>On the Elections: Election Fingerprints</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2016-05-27-on-elections-part-1</link>
+      <description>In this elections series, we'll explore various aspects of the 2016 Philippine National Elections, from fraud detection to the differences in how our country votes. In this first instalment, we learn about election fingerprints and how they may be used to detect fraud in the form of ballot stuffing or vote padding.</description>
+      <guid>https://www.tjpalanca.com/posts/2016-05-27-on-elections-part-1</guid>
+      <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2016-05-27-on-elections-part-1/images/20140330-ballot-boxes.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Scientific Studies, P-Hacking, and Media Irresponsibility</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2016-05-22-on-scientific-studies-p-hacking-and-media-irresponsibility</link>
+      <description>John Oliver lays down the problems with public perceptions of scientific studies shaped by the media.</description>
+      <guid>https://www.tjpalanca.com/posts/2016-05-22-on-scientific-studies-p-hacking-and-media-irresponsibility</guid>
+      <pubDate>Sun, 22 May 2016 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2016-05-22-on-scientific-studies-p-hacking-and-media-irresponsibility/images/20160522-john-oliver-scientific-studies.png" medium="image" type="image/png" width="1712" height="882"/>
+    </item>
+    <item>
+      <title>On Academics and Bridging the Gap</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2016-03-11-on-academics-and-bridging-the-gap</link>
+      <description>Academics can change the world – if they stop talking only to their peers</description>
+      <guid>https://www.tjpalanca.com/posts/2016-03-11-on-academics-and-bridging-the-gap</guid>
+      <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
+      <media:content url="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/114045/width668/image-20160307-30506-480t7q.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Coverage and Capacity: A look at school capacity in the Philippines (EduData Part 2)</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2015-11-29-edudata-2-coverage-capacity</link>
+      <description>Students require rooms, students, and operating budgets in order to receive a proper education. The question is, which resources are in short supply? How does this differ across different parts of the country? Let's find out how the school system is holding up in this second installment of the EduData Series.</description>
+      <guid>https://www.tjpalanca.com/posts/2015-11-29-edudata-2-coverage-capacity</guid>
+      <pubDate>Sun, 29 Nov 2015 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2015-11-29-edudata-2-coverage-capacity/images/20151129-school-chair.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Schools and Survival: A look at dropout rates in the Philippines (EduData Part 1)</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2015-08-26-edudata-1-dropouts</link>
+      <description>In what grade level are students most likely to drop out? Are females or males more likely to stay in school? We'll explore delays and dropouts in the Philippine education system with data from the Department of Education in this first installment of the EduData series.</description>
+      <guid>https://www.tjpalanca.com/posts/2015-08-26-edudata-1-dropouts</guid>
+      <pubDate>Wed, 26 Aug 2015 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2015-08-26-edudata-1-dropouts/images/20150826-edudata-header.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On the MRT: A Capacity Conundrum</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2015-05-16-mrt-capacity-conundrum</link>
+      <description>The Metro Rail Transit Line 3 (MRT) has been operating at 142% capacity since 2004. New prototype trains have been scheduled to arrive in 2015, but the actual deployment will still be in the following year. How bad is the current train situation? Let's find out through data!</description>
+      <guid>https://www.tjpalanca.com/posts/2015-05-16-mrt-capacity-conundrum</guid>
+      <pubDate>Sat, 16 May 2015 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2015-05-16-mrt-capacity-conundrum/images/20150516-mrt-cover-image.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>On Why the Hero Generation is an Informed One (TEDxDLSU)</title>
+      <dc:creator>TJ Palanca</dc:creator>
+      <link>https://www.tjpalanca.com/posts/2015-04-05-tedxdlsu-hero-generation</link>
+      <description>Businesses and governments in the Philippines should adopt a data mindset - where intuition and personal experience are always backed up by data and an effort to see the entire picture is always made - in order to realize the benefits of entering the demographic window.</description>
+      <guid>https://www.tjpalanca.com/posts/2015-04-05-tedxdlsu-hero-generation</guid>
+      <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
+      <media:content url="https://www.tjpalanca.com/posts/2015-04-05-tedxdlsu-hero-generation/images/20150405-tedxdlsu.png" medium="image" type="image/png" width="604" height="270"/>
     </item>
     <item>
       <title>On Airline Agitation: Flight networks and what Facebook comments say about customer satisfaction</title>
