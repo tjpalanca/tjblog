@@ -154,7 +154,7 @@ video {
  * 2. Auto-scale the height. Only needed if `height` attribute is present.
  * 3. Corrects responsive `max-width` behavior if padding and border are used.
  * 4. Exclude SVGs for IE11 because they don't preserve their aspect ratio.
-
+ */
 canvas,
 img,
 video {
@@ -162,7 +162,6 @@ video {
   height: auto;
   box-sizing: border-box;
 }
- */
 /* 4
 @supports (display: block) {
   svg {
