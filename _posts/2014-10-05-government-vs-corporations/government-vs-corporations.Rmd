@@ -1,7 +1,6 @@
 ---
-title: "government-vs-corporations"
-description: |
-  A short description of the post.
+title: "On Taxes versus Sales: How large is government compared to publicly-listed corporations?"
+description: "Have you ever wondered how government finances compare to the largest publicly-listed corporations in the country? When the financial bulk of private entities outweigh that of the public purse, it may give rise to undue influence over regulation and legislation. Data from public company disclosures and Department of Finance can help us investigate the matter."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,40 @@ date: 10-05-2014
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20141005-government-corporations.png
+categories:
+  - news
+  - politics
+  - business
+  - dataviz
+  - interactive
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+## Revenues: Government still on top
 
-Distill is a publication format for scientific and technical writing, native to the web.
+Let's compare total revenue or operating turnover for the Philippine government and publicly-listed non-financial corporations listed in the Philippine Stock Exchange. We exclude banks and financial institutions because their revenue structure is inherently different.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+<iframe id="tableauiframe" src="https://public.tableau.com/views/JumboDumboThoughts-CorporationsvsGovernment/RevenueComparison?:embed=y&:showTabs=y&:display_count=yes&:toolbar=no" height = "795px" width="100%">
+</iframe>
 
+The Philippine Government is still the largest revenue-generator in the country, and is roughly the size of the manufacturing sector and double that of the real estate, power, or mining sector. San Miguel Corporation's revenue is only half of government revenue, despite it being the largest corporation in terms of operating turnover.  
+
+Even if you take it back in time, it's clear that no private company is going to overtake government in revenues anytime soon.      
+
+<iframe id="tableauiframe" src="https://public.tableau.com/views/JumboDumboThoughts-CorporationsvsGovernment/RevenueTimeSeries?:embed=y&:showTabs=y&:display_count=yes&:toolbar=no" height = "654px" width="100%">
+</iframe>
+
+In terms of revenue, government is still clearly on top, but what about in terms of debt?  
+
+## Liabilities: Sovereign debt still sovereign
+
+Now, let's compare the debt figures for government, as well as publicly-traded banks and financial institutions. This will give us an idea as to where loanable funds are allocated in the economy.     
+
+<iframe id="tableauiframe" src="https://public.tableau.com/views/JumboDumboThoughts-CorporationsvsGovernment/LiabilitiesComparison?:embed=y&:showTabs=y&:display_count=yes&:toolbar=no" height = "629px" width="100%">
+</iframe>
+
+Government debt is still very large compared to private bank deposits and other liabilities. National government debt is about the same as total liabilities for the entire publicly-traded banking sector. The largest bank, BDO Unibank, has liabilities that are only a fourth of sovereign debt.  
+
+Feel free to hover and click around the interactive charts for more information, and if you find any interesting patterns and observations, please share them in the comments section. Thanks for reading!  
+
+If you found this post interesting or otherwise enjoyable, I'd appreciate it if you liked, shared, tweeted, or +1'ed it on your preferred social network, and also shared your thoughts in the comments section.

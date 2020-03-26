@@ -1,7 +1,6 @@
 ---
-title: "economics-love-dating-relationships"
-description: |
-  A short description of the post.
+title: "On the Economics and Data of Love, Dating, and Relationships"
+description: "Last Valentine's Day, I was asked by my former college organization to deliver a talk on the \"data of love, dating, and relationships\" as part of their Young Economists' Lecture and Learning Series at De La Salle University."
 author:
   - name: TJ Palanca
     url: https://www.twitter.com/tjpalanca
@@ -9,13 +8,24 @@ date: 08-27-2014
 output:
   distill::distill_article:
     self_contained: false
+preview: images/20140827-economics-love-dating-relationships.png
+categories:
+  - talks
+  - data
+  - dataviz
+  - humor
+  - economics
+  - personal
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r out.width="100%"}
+knitr::include_graphics("images/20140827-economics-love-dating-relationships.png")
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+Last Valentine's Day, I was asked by my former college organization to deliver a talk on the "data of love, dating, and relationships" as part of their Young Economists' Lecture and Learning Series at De La Salle University.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+I thought I'd share the presentation with you and put this up for posterity's sake. Hopefully, you can piece together what I was talking about.
 
+<iframe allowfullscreen="" frameborder="0" height="530" marginheight="0" marginwidth="0" scrolling="no" src="//www.slideshare.net/slideshow/embed_code/38292198?rel=0" style="border-width: 1px; border: 1px solid #CCC; margin-bottom: 5px; max-width: 100%;" width="650"> </iframe><br />
+
+I'd appreciate it if you liked, tweeted, shared, or&nbsp;+1'ed this post on your preferred social network, as well as shared your thoughts in the comments section.

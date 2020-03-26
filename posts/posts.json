@@ -41,6 +41,160 @@
     "last_modified": "2020-03-22T17:42:28+00:00"
   },
   {
+    "path": "posts/2014-10-05-government-vs-corporations/",
+    "title": "On Taxes versus Sales: How large is government compared to publicly-listed corporations?",
+    "description": "Have you ever wondered how government finances compare to the largest publicly-listed corporations in the country? When the financial bulk of private entities outweigh that of the public purse, it may give rise to undue influence over regulation and legislation. Data from public company disclosures and Department of Finance can help us investigate the matter.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-10-05",
+    "categories": [
+      "news",
+      "politics",
+      "business",
+      "dataviz",
+      "interactive"
+    ],
+    "preview": "posts/2014-10-05-government-vs-corporations/images/20141005-government-corporations.png",
+    "last_modified": "2020-03-26T00:42:36+00:00",
+    "preview_width": 761,
+    "preview_height": 469
+  },
+  {
+    "path": "posts/2014-09-27-regional-accounts-2013/",
+    "title": "On Imperial Manila, Modernization Failure, and Comparative Advantage: A close look at regional accounts",
+    "description": "With traffic jams and port congestion an all-too-common sight in the Philippine capital, there is growing sentiment that development should be moved away from the metropolis and into other regions. What does the data, particularly regional accounts from the Philippine Statistics Authority, have to say?",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-09-27",
+    "categories": [
+      "data",
+      "business",
+      "economics",
+      "dataviz"
+    ],
+    "preview": "posts/2014-09-27-regional-accounts-2013/images/20140927-manila.jpg",
+    "last_modified": "2020-03-26T00:42:10+00:00"
+  },
+  {
+    "path": "posts/2014-09-16-sin-taxes-2014q2-update/",
+    "title": "On the Effectiveness of Higher Sin Taxes: Losing Steam? (2014 Q2 Update)",
+    "description": "We update our assessment on the effectiveness of sin taxes with fresh national accounts data for the second quarter of 2014, and learn that sin taxes may be losing steam - smokers and drinkers may be having a hard time kicking the habit.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-09-16",
+    "categories": [
+      "data",
+      "news",
+      "politics",
+      "health",
+      "commentary"
+    ],
+    "preview": "posts/2014-09-16-sin-taxes-2014q2-update/images/20140916-cigarette.png",
+    "last_modified": "2020-03-26T00:39:54+00:00",
+    "preview_width": 512,
+    "preview_height": 204
+  },
+  {
+    "path": "posts/2014-08-31-retail-pump-prices/",
+    "title": "On Pump Prices: Where can you gas up for less?",
+    "description": "What providers let your stretch you gas money for more miles? Where is it more economical to gas up? Data from the Department of Energy's price watch can provide some data-driven answers to these questions.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-08-31",
+    "categories": [
+      "finance",
+      "business",
+      "dataviz",
+      "information",
+      "economics"
+    ],
+    "preview": "posts/2014-08-31-retail-pump-prices/images/20140831-pump-prices.jpg",
+    "last_modified": "2020-03-26T00:37:18+00:00"
+  },
+  {
+    "path": "posts/2014-08-27-economics-love-dating-relationships/",
+    "title": "On the Economics and Data of Love, Dating, and Relationships",
+    "description": "Last Valentine's Day, I was asked by my former college organization to deliver a talk on the \"data of love, dating, and relationships\" as part of their Young Economists' Lecture and Learning Series at De La Salle University.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-08-27",
+    "categories": [
+      "talks",
+      "data",
+      "dataviz",
+      "humor",
+      "economics",
+      "personal"
+    ],
+    "preview": "posts/2014-08-27-economics-love-dating-relationships/images/20140827-economics-love-dating-relationships.png",
+    "last_modified": "2020-03-26T00:36:12+00:00",
+    "preview_width": 883,
+    "preview_height": 612
+  },
+  {
+    "path": "posts/2014-08-24-philippines-taxes-tmap/",
+    "title": "On Taxes: Do Filipinos really pay the highest taxes among ASEAN countries?'",
+    "description": "Congress is moving to lower income tax rates for Filipinos, with impetus from a report by the Tax Management Association of the Philippines (TMAP) asserting that Filipinos pay the highest income tax rates in Southeast Asia. Let's investigate this claim and determine whether the argument holds water.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-08-24",
+    "categories": [
+      "data",
+      "infographics",
+      "politics",
+      "business",
+      "dataviz"
+    ],
+    "preview": "posts/2014-08-24-philippines-taxes-tmap/images/20140824-taxes-tmap.jpg",
+    "last_modified": "2020-03-26T00:35:27+00:00"
+  },
+  {
+    "path": "posts/2014-08-13-sona-words-july-2014/",
+    "title": "On Presidential Priorities (July 2014): Aquino moves toward legacy",
+    "description": "The annual State of the Nation Address (SONA) of the President of the Philippines, when distilled using word counts, can provide insight into the pressing issues of the day. We update [our original post ](/2014/02/sona-words.html) to include the latest 2014 SONA by President Aquino.",
+    "author": [
+      {
+        "name": "TJ Palanca",
+        "url": "https://www.twitter.com/tjpalanca"
+      }
+    ],
+    "date": "2014-08-13",
+    "categories": [
+      "data",
+      "news",
+      "politics",
+      "commentary",
+      "dataviz",
+      "economics"
+    ],
+    "preview": "posts/2014-08-13-sona-words-july-2014/images/20140813-sona.jpg",
+    "last_modified": "2020-03-26T00:33:29+00:00"
+  },
+  {
     "path": "posts/2014-07-04-on-pork-and-plunder/",
     "title": "On Pork and Plunder: The numbers behind the Priority Development Assistance Fund (PDAF) scam",
     "description": "In one of the rarest moments in Philippine history, three high-ranking lawmakers were arrested on charges of plunder related to the Priority Development Assistance Fund (PDAF), or pork barrel scam.",
