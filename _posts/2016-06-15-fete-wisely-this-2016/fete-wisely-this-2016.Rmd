@@ -9,7 +9,7 @@ output:
   distill::distill_article:
     self_contained: false
     toc: true
-preview: images/20160615-fete-de-la-musique/plot0_venuLocs_wLabs_resize.png
+preview: images/plot0_venuLocs_wLabs_resize.png
 categories:
   - contributed
   - music
