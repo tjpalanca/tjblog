@@ -1364,11 +1364,11 @@
 <a href="index.html" class="title">TJ Palanca</a>
 </div>
 <div class="nav-right">
-<a href="index.html">Home</a>
-<a href="blog.html">Blog</a>
-<a href="contact.html">Contact</a>
-<a href="about.html">About</a>
-<a href="policies.html">FAQ &amp; Policies</a>
+<a href="index.html">home</a>
+<a href="blog.html">blog</a>
+<a href="contact.html">contact</a>
+<a href="about.html">about</a>
+<a href="policies.html">faq &amp; policies</a>
 <a href="https://www.github.com/tjpalanca">
 <i class="fa fa-github"></i>
 </a>
@@ -1396,22 +1396,371 @@
 
 
 <div class="d-article">
-<h2 id="blog-posts">Blog Posts</h2>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>
-function (site_dir, metadata, collection, articles) 
-{
-    categories &lt;- not_null(collection[[&quot;categories&quot;]], TRUE)
-    subscription_html &lt;- subscription_html(site_dir, collection)
-    if (!is.null(subscription_html)) {
-        subscription_html &lt;- tags$div(class = &quot;sidebar-section subscribe&quot;, 
-            tags$h3(&quot;Subscribe&quot;), subscription_html)
-    }
-    html_for_articles(articles, caption = metadata$title, categories = categories, 
-        subscription_html = subscription_html)
+<!--radix_placeholder_article_listing-->
+
+<style type="text/css">
+
+/* Styles for listing layout (hide title) */
+.layout-listing d-title, .layout-listing .d-title {
+  display: none;
 }
-&lt;bytecode: 0x5569fea96b98&gt;
-&lt;environment: namespace:distill&gt;</code></pre>
+
+/* Styles for posts lists (not auto-injected) */
+
+
+.posts-with-sidebar {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.posts-list .description h2,
+.posts-list .description p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.posts-list .description h2 {
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.posts-list h2.post-tag {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
+}
+.posts-list {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.posts-list .post-preview {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+}
+
+.post-preview-last {
+  border-bottom: none !important;
+}
+
+.posts-list .posts-list-caption {
+  grid-column: screen;
+  font-weight: 400;
+}
+
+.posts-list .post-preview h2 {
+  margin: 0 0 6px 0;
+  line-height: 1.2em;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.posts-list .post-preview p {
+  margin: 0 0 12px 0;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+
+.posts-list .post-preview .thumbnail {
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  position: relative;
+  max-width: 500px;
+}
+.posts-list .post-preview img {
+  width: 100%;
+  display: block;
+}
+
+.posts-list .metadata {
+  font-size: 12px;
+  line-height: 1.4em;
+  margin-bottom: 18px;
+}
+
+.posts-list .metadata > * {
+  display: inline-block;
+}
+
+.posts-list .metadata .publishedDate {
+  margin-right: 1em;
+}
+
+.posts-list .metadata .tags {
+  margin-top: 1em;
+}
+
+.posts-list .tags .tag {
+  color: rgba(0,0,0,0.67);
+  padding: 0.3em 0.5em;
+  margin: 0;
+  font-size: 80%;
+  border: 1px solid rgba(0,0,0,0.4);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.posts-list img {
+  opacity: 1;
+}
+
+.posts-list img[data-src] {
+  opacity: 0;
+}
+
+.posts-more {
+  clear: both;
+}
+
+
+.posts-sidebar {
+  font-size: 16px;
+}
+
+.posts-sidebar h3 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0;
+}
+
+.categories li>a {
+  border-bottom: none;
+}
+
+.categories li>a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.categories .active {
+  font-weight: 600;
+}
+
+.categories .category-count {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+@media(min-width: 768px) {
+  .posts-list .post-preview h2 {
+    font-size: 26px;
+  }
+  .posts-list .post-preview .thumbnail {
+    float: right;
+    width: 35%;
+    margin-bottom: 0;
+  }
+  .posts-list .post-preview .description {
+    float: left;
+    width: 45%;
+  }
+  .posts-list .post-preview .metadata {
+    float: left;
+    width: 15%;
+    margin-top: 8px;
+  }
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  .posts-with-sidebar .posts-list {
+    float: left;
+    width: 72%;
+  }
+  .posts-with-sidebar .posts-sidebar {
+    float: right;
+    width: 20%;
+    margin-top: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.downlevel .posts-list .post-preview {
+  color: inherit;
+}
+
+</style>
+
+<script type="application/javascript">
+
+function init_posts_list() {
+
+  function load_image(img) {
+    var src = $(img).attr('data-src');
+    if (src) {
+      $(img).attr('src', src);
+      $(img).load(function() {
+        img.removeAttribute('data-src');
+      });
+    }
+  }
+
+  function set_posts_visible(posts, visible) {
+    if (visible) {
+
+      // show bottom border by default
+      $(posts).removeClass('post-preview-last');
+
+      // apply limits if need be
+      var max_posts = 25;
+      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
+      if (apply_limits && posts.length > max_posts) {
+        posts = $(posts).slice(0, max_posts);
+      } else {
+        $('.posts-more a').addClass('hidden');
+      }
+
+      // apply last style
+      $(posts.slice(-1)[0]).addClass('post-preview-last');
+
+      $(posts).removeClass('hidden');
+      $(posts).find('img[data-src]').each(function(i, img) {
+        load_image(img);
+      });
+    } else {
+      $(posts).addClass('hidden');
+    }
+  }
+
+  function apply_hash_filter() {
+
+    // clear active state
+    $('.categories .active').removeClass('active');
+
+    // mark all posts invisible to start
+    set_posts_visible($('.posts-list').children('a'), false);
+
+    // if we have a hash filter
+    if (window.location.hash) {
+
+      // mark posts that match the category visible
+      var page_category = window.location.hash.replace("#", "");
+      var posts = $('.post-metadata').map(function(idx, script) {
+        var metadata = $.parseJSON($(script).html());
+        var post = null;
+        $.each(metadata.categories, function(idx, category) {
+          category = category.replace(/ /g,"_");
+          if (category == page_category) {
+            post = $(script).parent().get();
+            return false;
+          }
+        });
+        return post;
+      });
+      set_posts_visible(posts, true);
+
+      // mark the hash active
+      $('.categories li>a[href="' + window.location.hash + '"]').addClass('active');
+
+    } else {
+
+      // no hash filter, make all posts visible (subject to max display)
+      set_posts_visible($('.posts-list').children(), true);
+
+    }
+  }
+
+  // more articles
+  function apply_post_limits(apply) {
+    if (apply) {
+      $('.posts-container').addClass('posts-apply-limit');
+      $('.posts-more a').removeClass('hidden');
+    } else {
+      $('.posts-container').removeClass('posts-apply-limit');
+      $('.posts-more a').addClass('hidden');
+    }
+  }
+
+  // hash filter handling
+  apply_hash_filter();
+  $(window).on('hashchange',function() {
+    apply_post_limits(true);
+    apply_hash_filter();
+  });
+
+  // more articles link
+  $('.posts-more a').click(function(e) {
+    e.preventDefault();
+    apply_post_limits(false);
+    apply_hash_filter();
+    return false;
+  });
+
+}
+
+</script>
+
+
+
+<div class="posts-container posts-apply-limit l-page">
+<div class="posts-list" style="margin-top: 0px;">
+<a href="posts/2017-07-31-databeers-mnl/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["talks","philippines","social commentary","data science"]}</script>
+<div class="metadata">
+<div class="publishedDate">July 31, 2017</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2017-07-31-databeers-mnl/images/databeers-mnl.jpg"/>
+</div>
+<div class="description">
+<h2>On Databeers Manila</h2>
+<p>I spoke at Databeers Manila. The event was one of the best ones I've gone to  in Manila, and definitely eye-opening to see more and more dataphiliacs in  the country!</p>
+</div>
+</a>
+<a href="posts/2017-05-01-on-minimalistic-maps/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["maps","dataviz","philippines"]}</script>
+<div class="metadata">
+<div class="publishedDate">May 1, 2017</div>
+</div>
+<div class="thumbnail">
+<img data-src="https://raw.githubusercontent.com/tjpalanca/population-lines/master/out/05-bicol.png"/>
+</div>
+<div class="description">
+<h2>On Minimalistic Maps: Mapping Population Density in the Philippines</h2>
+<p>We take a break and try to plot some cool minimalistic plots of population density in the Philippines.</p>
+</div>
+</a>
+<a href="posts/2017-03-12-facebook-news-topic-modeling/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["internet","natural language processing","data visualization","philippines","social commentary","featured"]}</script>
+<div class="metadata">
+<div class="publishedDate">March 12, 2017</div>
+</div>
+<div class="thumbnail">
+<img data-src="posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg"/>
+</div>
+<div class="description">
+<h2>On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage</h2>
+<p>Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling.</p>
+</div>
+</a>
+</div>
+<div>
+<a href="blog.html">More articles »</a>
+</div>
+</div>
+<!--/radix_placeholder_article_listing-->
 </div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

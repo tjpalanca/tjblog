@@ -20,6 +20,7 @@ categories:
   - data visualization
   - philippines
   - social commentary
+  - featured
 preview: images/cover-social-media.jpg
 bibliography: bibliography.bib
 repository_url: https://github.com/tjpalanca/facebook-news-analysis

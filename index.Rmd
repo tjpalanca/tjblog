@@ -8,10 +8,25 @@ description: >
 site: distill::distill_website
 ---
 
-## Blog Posts
-
-
-```{r}
-distill:::article_listing_html
+```{r Posts}
+library(jsonlite)
+library(magrittr)
+library(purrr)
+library(htmltools)
+read_json("posts/posts.json") %>% 
+  extract(1:pmin(3, length(.))) %>% 
+  distill:::html_for_articles() %>% (
+    function(article_html) {
+      article_html[[2]][[1]][[2]]$children[[1]]$attribs$style <- 
+        "margin-top: 0px;"
+      article_html[[2]][[1]][[2]]$children[[2]] <- 
+        tags$div(
+          tags$a(
+            href = "blog.html",
+            "More articles »"
+          )
+        )
+      article_html
+    }
+  )
 ```
-

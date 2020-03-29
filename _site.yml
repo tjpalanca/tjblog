@@ -9,15 +9,15 @@ navbar:
     image: site_libs/images/logo.png
     href: https://www.tjpalanca.com/
   right:
-    - text: "Home"
+    - text: "home"
       href: index.html
-    - text: "Blog"
+    - text: "blog"
       href: blog.html
-    - text: "Contact"
+    - text: "contact"
       href: contact.html
-    - text: "About"
+    - text: "about"
       href: about.html
-    - text: "FAQ & Policies"
+    - text: "faq & policies"
       href: policies.html
     - icon: fa fa-github
       href: https://www.github.com/tjpalanca
