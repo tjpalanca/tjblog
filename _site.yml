@@ -4,6 +4,7 @@ description: |
   Personal website and blog of TJ Palanca. A quest to bring numbers and reality
   together, especially on issues surrounding the Philippines.
 output_dir: "."
+google_analytics: "UA-63170596-2"
 navbar:
   logo:
     image: site_libs/images/logo.png

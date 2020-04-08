@@ -23,7 +23,7 @@ read_json("posts/posts.json") %>%
         tags$div(
           tags$a(
             href = "blog.html",
-            "More articles »"
+            "See all articles »"
           )
         )
       article_html
