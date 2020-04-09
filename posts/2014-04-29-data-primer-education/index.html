@@ -1300,6 +1300,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <script src="https://www.tjpalanca.com/site_libs/uikit-3.3.7/uikit-icons.min.js">
 </script>
+<!-- Lunr.JS -->
+<script src="https://www.tjpalanca.com/site_libs/lunr-2.3.8/lunr.js">
+</script>
+<!-- Search Posts -->
+<script src="https://www.tjpalanca.com/site_libs/custom/search-posts.js">
+</script>
 <!-- Resize iframes -->
 <script
   src="https://www.tjpalanca.com/site_libs/custom/iframe-resize.js"
@@ -1329,20 +1335,20 @@ gtag('config', 'UA-63170596-2');
   text-decoration: none;
 }
 
+#search_widget {
+  border: 0 solid #ccc;
+  text-align: left;
+  display: none;
+}
+
+#search_widget button {
+  background-color: #aaaaaa;
+  color: white;
+  margin-top: 10px;
+}
+
 .distill-site-nav a:hover {
   color: rgba(120, 120, 120, 0.8);
-}
-
-.distill-site-header {
-}
-
-.distill-site-footer {
-}
-
-@media print {
-  .distill-site-nav {
-    display: none;
-  }
 }
 
 d-article iframe {
@@ -1494,9 +1500,8 @@ var disqus_config = function () {
 })();
 </script>
   <p>
-    <div class="subscribe"><div class="social_footer">
+    <div class="subscribe"><div uk-margin style="border:0px solid #ccc; text-align:left;">
 <form
-  style="border:0px solid #ccc; padding:3px; text-align:left;"
   action="https://feedburner.google.com/fb/a/mailverify"
   method="post"
   target="popupwindow"
@@ -1508,26 +1513,45 @@ var disqus_config = function () {
     enter your email address:
   </strong>
 </p>
-<div uk-margin>
-<input
-  type="text"
-  class="uk-input"
-  name="email"
-/>
+<input type="text" class="uk-input" name="email"/>
 <input type="hidden" value="tjpalanca-blog" name="uri"/>
 <input type="hidden" name="loc" value="en_US"/>
 <button
   type="submit"
-  class="uk-button uk-button-default"
-  style="background-color: #2cbf53; color: white;"
+  class="uk-button uk-button-default uk-button-small"
+  style="background-color: #2cbf53; color: white; margin-top: 10px;"
 >
 <div style="display:flex; align-items:center">
   <span uk-icon="icon: mail" style="margin-right: 2px;"></span>
   <span>Subscribe</span>
 </div>
 </button>
-</div>
 </form>
+</div>
+
+<div id="search_widget" uk-margin>
+<br/>
+<h3>Search</h3>
+<input type="text" class="uk-input" id="search_string"/>
+<button
+  id="search_button"
+  class="uk-button uk-button-default uk-button-small"
+>
+<div style="display:flex; align-items:center">
+  <span uk-icon="icon: search" style="margin-right: 2px;"></span>
+  <span>Search</span>
+</div>
+</button>
+<button
+  id="reset_button"
+  class="uk-button uk-button-default uk-button-small"
+  style="display: none;"
+>
+<div style="display:flex; align-items:center">
+  <span uk-icon="icon: close" style="margin-right: 2px;"></span>
+  <span>Reset</span>
+</div>
+</button>
 </div>
 </div>
   </p>

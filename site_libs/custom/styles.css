@@ -10,20 +10,20 @@
   text-decoration: none;
 }
 
+#search_widget {
+  border: 0 solid #ccc;
+  text-align: left;
+  display: none;
+}
+
+#search_widget button {
+  background-color: #aaaaaa;
+  color: white;
+  margin-top: 10px;
+}
+
 .distill-site-nav a:hover {
   color: rgba(120, 120, 120, 0.8);
-}
-
-.distill-site-header {
-}
-
-.distill-site-footer {
-}
-
-@media print {
-  .distill-site-nav {
-    display: none;
-  }
 }
 
 d-article iframe {
