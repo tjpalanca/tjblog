@@ -111,13 +111,13 @@ function initialize_search_posts() {
               .append(
                 $("<a/>")
                   .attr("href", "#")
-                  .attr("onclick", `search_author('${author_name}')`)
-                  .html(`${author_name} `)
+                  .click(() => search_author(author_name))
+                  .html(author_name)
               )
               .append(
                 $("<span/>")
                   .addClass("category-count")
-                  .html(`(${num_posts})`)
+                  .html(` (${num_posts})`)
               )
           );
       }
