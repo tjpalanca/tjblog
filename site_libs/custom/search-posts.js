@@ -156,7 +156,7 @@ function initialize_search_posts() {
     $('.categories .active').removeClass('active');
 
     // mark all posts invisible to start
-    hide_all_posts()
+    hide_all_posts();
 
     // if we have a hash filter
     if (window.location.hash) {
