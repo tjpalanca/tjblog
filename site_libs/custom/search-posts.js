@@ -39,7 +39,7 @@ function initialize_search_posts() {
   }
 
   function make_post_visible(ref) {
-    const post = $(`a[href$="${ref}"]`);
+    const post = $(`d-article a[href$="${ref}"]`);
     set_posts_visible(post, true);
     $('.posts-list').append(post);
   }
