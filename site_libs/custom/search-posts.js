@@ -63,6 +63,7 @@ function search_posts() {
       // Add explainer line
       if ($('p#search_description').length) {
         $('p#search_description')
+          .show()
           .html(`Search results for: ${search_string}`);
       } else {
         $(`<p id="search_description">Search results for: ${search_string}</p>`)
@@ -72,6 +73,8 @@ function search_posts() {
     } else {
       $('#search_string').addClass('uk-form-danger');
     }
+    // clear active state
+    $('.categories .active').removeClass('active');
     // Show the reset button
     $('button#search_button').hide();
     $('button#reset_button').show();
@@ -100,7 +103,7 @@ function construct_author_list() {
 
     // Add each atuhort
     for (let [author_name, num_posts] of Object.entries(author_list)) {
-      $("#author_list")
+      $("ul#author_list")
         .append(
           $("<li/>")
             .append(
@@ -237,21 +240,19 @@ function hide_all_posts() {
 function reset_search_posts() {
   // Resort all posts
   get_posts();
-  POSTS.map(function(post) {
-    const ref = post.path;
-    make_post_visible(ref);
-  })
+  POSTS.map(post => make_post_visible(post.path));
   // Reset
   apply_post_limits(true);
   apply_hash_filter();
   // Switch Buttons
-  $('button#reset_button').hide();
   $('button#search_button').show();
+  $('button#reset_button').hide();
+  $('#search_description').hide();
   $('#search_string').removeClass('uk-form-danger');
 }
 
 $(document).ready(function() {
-  if ($('.posts-list').length) {
+  if ($('.posts-list').length > 0) {
     $('div#search_widget').show();
     $('input#search_string')
       .on("keyup", function(event) {
