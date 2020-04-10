@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+  <!--radix_placeholder_meta_tags-->
+<title>TJ Palanca: On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage</title>
+
+<meta property="description" itemprop="description" content="Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling."/>
+
+<link rel="canonical" href="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/"/>
+<link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+<link rel="icon" type="image/png" href="../../static/images/favicon.png"/>
+
+<!--  https://schema.org/Article -->
+<meta property="article:published" itemprop="datePublished" content="2017-03-12"/>
+<meta property="article:created" itemprop="dateCreated" content="2017-03-12"/>
+<meta name="article:author" content="TJ Palanca"/>
+
+<!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<meta property="og:title" content="TJ Palanca: On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling."/>
+<meta property="og:url" content="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/"/>
+<meta property="og:image" content="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="TJ Palanca"/>
+
+<!--  https://dev.twitter.com/cards/types/summary -->
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:title" content="TJ Palanca: On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage"/>
+<meta property="twitter:description" content="Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling."/>
+<meta property="twitter:url" content="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/"/>
+<meta property="twitter:image" content="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/images/cover-social-media.jpg"/>
+<meta property="twitter:site" content="@tjpalanca"/>
+
+<!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
+<meta name="citation_title" content="TJ Palanca: On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage"/>
+<meta name="citation_fulltext_html_url" content="https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/"/>
+<meta name="citation_fulltext_world_readable" content=""/>
+<meta name="citation_online_date" content="2017/03/12"/>
+<meta name="citation_publication_date" content="2017/03/12"/>
+<meta name="citation_author" content="TJ Palanca"/>
+<!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Latent dirichlet allocation;citation_publication_date=2003;citation_volume=3;citation_author=David M Blei;citation_author=Blei\@cs Berkeley Edu;citation_author=Andrew Y Ng;citation_author=Michael I Jordan;citation_author=Jordan\@cs Berkeley Edu;citation_author=John Lafferty"/>
+  <meta name="citation_reference" content="citation_title=Philippines: A digital lifestyle capital in the making?;citation_publication_date=2017;citation_author=Jonha Revesencio"/>
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+<script type="text/json" id="radix-rmarkdown-metadata">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","author","date","output","categories","preview","bibliography","repository_url","editor_options","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY-NC-SA"]},{"type":"character","attributes":{},"value":["On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage"]},{"type":"character","attributes":{},"value":["Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["TJ Palanca"]},{"type":"character","attributes":{},"value":["https://www.twitter.com/tjpalanca"]}]}]},{"type":"character","attributes":{},"value":["2017-03-12"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["internet","natural language processing","data visualization","philippines","social commentary","featured"]},{"type":"character","attributes":{},"value":["images/cover-social-media.jpg"]},{"type":"character","attributes":{},"value":["bibliography.bib"]},{"type":"character","attributes":{},"value":["https://github.com/tjpalanca/facebook-news-analysis"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]},{"type":"character","attributes":{},"value":["https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/"]},{"type":"character","attributes":{},"value":["https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/"]}]}
+</script>
+<!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["bibliography.bib","docs/fb-scraping.html","docs/fb-topic-modeling.html","docs/libs/bootstrap-3.3.5/css/bootstrap-theme.css","docs/libs/bootstrap-3.3.5/css/bootstrap-theme.css.map","docs/libs/bootstrap-3.3.5/css/bootstrap-theme.min.css","docs/libs/bootstrap-3.3.5/css/bootstrap.css","docs/libs/bootstrap-3.3.5/css/bootstrap.css.map","docs/libs/bootstrap-3.3.5/css/bootstrap.min.css","docs/libs/bootstrap-3.3.5/css/cerulean.min.css","docs/libs/bootstrap-3.3.5/css/cosmo.min.css","docs/libs/bootstrap-3.3.5/css/flatly.min.css","docs/libs/bootstrap-3.3.5/css/fonts/Lato.ttf","docs/libs/bootstrap-3.3.5/css/fonts/LatoBold.ttf","docs/libs/bootstrap-3.3.5/css/fonts/LatoItalic.ttf","docs/libs/bootstrap-3.3.5/css/fonts/NewsCycle.ttf","docs/libs/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf","docs/libs/bootstrap-3.3.5/css/fonts/OpenSans.ttf","docs/libs/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf","docs/libs/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf","docs/libs/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf","docs/libs/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf","docs/libs/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf","docs/libs/bootstrap-3.3.5/css/fonts/Raleway.ttf","docs/libs/bootstrap-3.3.5/css/fonts/RalewayBold.ttf","docs/libs/bootstrap-3.3.5/css/fonts/Roboto.ttf","docs/libs/bootstrap-3.3.5/css/fonts/RobotoBold.ttf","docs/libs/bootstrap-3.3.5/css/fonts/RobotoLight.ttf","docs/libs/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf","docs/libs/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf","docs/libs/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf","docs/libs/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf","docs/libs/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf","docs/libs/bootstrap-3.3.5/css/fonts/Ubuntu.ttf","docs/libs/bootstrap-3.3.5/css/journal.min.css","docs/libs/bootstrap-3.3.5/css/lumen.min.css","docs/libs/bootstrap-3.3.5/css/paper.min.css","docs/libs/bootstrap-3.3.5/css/readable.min.css","docs/libs/bootstrap-3.3.5/css/sandstone.min.css","docs/libs/bootstrap-3.3.5/css/simplex.min.css","docs/libs/bootstrap-3.3.5/css/spacelab.min.css","docs/libs/bootstrap-3.3.5/css/united.min.css","docs/libs/bootstrap-3.3.5/css/yeti.min.css","docs/libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot","docs/libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg","docs/libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf","docs/libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff","docs/libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2","docs/libs/bootstrap-3.3.5/js/bootstrap.js","docs/libs/bootstrap-3.3.5/js/bootstrap.min.js","docs/libs/bootstrap-3.3.5/js/npm.js","docs/libs/bootstrap-3.3.5/shim/html5shiv.min.js","docs/libs/bootstrap-3.3.5/shim/respond.min.js","docs/libs/d3-4.3.0/d3.min.js","docs/libs/datatables-binding-0.2/datatables.js","docs/libs/dt-core-1.10.12/css/jquery.dataTables.extra.css","docs/libs/dt-core-1.10.12/css/jquery.dataTables.min.css","docs/libs/dt-core-1.10.12/js/jquery.dataTables.min.js","docs/libs/ggiraph-binding-0.3.2/ggiraph.js","docs/libs/htmlwidgets-0.8/htmlwidgets.js","docs/libs/jquery-1.11.3/jquery.min.js","docs/libs/jquery-1.12.4/jquery.min.js","docs/libs/jquery-1.12.4/LICENSE.txt","docs/libs/jqueryui-1.11.4/images/ui-icons_444444_256x240.png","docs/libs/jqueryui-1.11.4/images/ui-icons_555555_256x240.png","docs/libs/jqueryui-1.11.4/images/ui-icons_777620_256x240.png","docs/libs/jqueryui-1.11.4/images/ui-icons_777777_256x240.png","docs/libs/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png","docs/libs/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png","docs/libs/jqueryui-1.11.4/index.html","docs/libs/jqueryui-1.11.4/jquery-ui.css","docs/libs/jqueryui-1.11.4/jquery-ui.js","docs/libs/jqueryui-1.11.4/jquery-ui.min.css","docs/libs/jqueryui-1.11.4/jquery-ui.min.js","docs/libs/jqueryui-1.11.4/jquery-ui.structure.css","docs/libs/jqueryui-1.11.4/jquery-ui.structure.min.css","docs/libs/jqueryui-1.11.4/jquery-ui.theme.css","docs/libs/jqueryui-1.11.4/jquery-ui.theme.min.css","docs/libs/jqueryui-1.11.4/README","docs/libs/navigation-1.1/codefolding.js","docs/libs/navigation-1.1/FileSaver.min.js","docs/libs/navigation-1.1/sourceembed.js","docs/libs/navigation-1.1/tabsets.js","docs/libs/styles-0.0.1/styles.css","docs/libs/styles-0.0.1/styles.js","docs/libs/tocify-1.9.1/jquery.tocify.css","docs/libs/tocify-1.9.1/jquery.tocify.js","facebook-news-topic-modeling_files/bowser-1.9.3/bowser.min.js","facebook-news-topic-modeling_files/custom-1.0/iframe-resize.js","facebook-news-topic-modeling_files/custom-1.0/image-zoom.js","facebook-news-topic-modeling_files/custom-1.0/styles.css","facebook-news-topic-modeling_files/distill-2.2.21/template.v2.js","facebook-news-topic-modeling_files/htmlwidgets-1.5.1/htmlwidgets.js","facebook-news-topic-modeling_files/jquery-1.11.3/jquery.min.js","facebook-news-topic-modeling_files/jquery-1.12.4/jquery.min.js","facebook-news-topic-modeling_files/leaflet-1.3.1/images/layers-2x.png","facebook-news-topic-modeling_files/leaflet-1.3.1/images/layers.png","facebook-news-topic-modeling_files/leaflet-1.3.1/images/marker-icon-2x.png","facebook-news-topic-modeling_files/leaflet-1.3.1/images/marker-icon.png","facebook-news-topic-modeling_files/leaflet-1.3.1/images/marker-shadow.png","facebook-news-topic-modeling_files/leaflet-1.3.1/leaflet.css","facebook-news-topic-modeling_files/leaflet-1.3.1/leaflet.js","facebook-news-topic-modeling_files/leaflet-binding-2.0.3/leaflet.js","facebook-news-topic-modeling_files/leafletfix-1.0.0/leafletfix.css","facebook-news-topic-modeling_files/Proj4Leaflet-1.0.1/proj4-compressed.js","facebook-news-topic-modeling_files/Proj4Leaflet-1.0.1/proj4leaflet.js","facebook-news-topic-modeling_files/rstudio_leaflet-1.3.1/images/1px.png","facebook-news-topic-modeling_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css","facebook-news-topic-modeling_files/webcomponents-2.0.0/webcomponents.js","figures/04-skewness-kurtosis-chart.html","figures/20160527-skewness-kurtosis-chart.html","figures/20160529-election-fingerprint-explorer.html","figures/20170309-news-landscape-map.png","figures/20170309-topic-classification-sample.png","figures/js/d3-4.3.0/d3.min.js","figures/js/fontawesome-4.5.0/font-awesome.min.css","figures/js/fontawesome-4.5.0/fonts/fontawesome-webfont.eot","figures/js/fontawesome-4.5.0/fonts/fontawesome-webfont.svg","figures/js/fontawesome-4.5.0/fonts/fontawesome-webfont.ttf","figures/js/fontawesome-4.5.0/fonts/fontawesome-webfont.woff","figures/js/fontawesome-4.5.0/fonts/fontawesome-webfont.woff2","figures/js/fontawesome-4.5.0/fonts/FontAwesome.otf","figures/js/ggiraph-binding-0.3.2/ggiraph.js","figures/js/highchart-binding-0.3.1.9999/highchart.js","figures/js/highchart-binding-0.4.0/highchart.js","figures/js/highchart-binding-0.5.0/highchart.js","figures/js/highcharts-4.2.4/css/motion.css","figures/js/highcharts-4.2.4/highcharts-3d.js","figures/js/highcharts-4.2.4/highcharts-more.js","figures/js/highcharts-4.2.4/highcharts.js","figures/js/highcharts-4.2.4/highstock.js","figures/js/highcharts-4.2.4/modules/boost.js","figures/js/highcharts-4.2.4/modules/boost.src.js","figures/js/highcharts-4.2.4/modules/broken-axis.js","figures/js/highcharts-4.2.4/modules/broken-axis.src.js","figures/js/highcharts-4.2.4/modules/canvas-tools.js","figures/js/highcharts-4.2.4/modules/canvas-tools.src.js","figures/js/highcharts-4.2.4/modules/data.js","figures/js/highcharts-4.2.4/modules/data.src.js","figures/js/highcharts-4.2.4/modules/drilldown.js","figures/js/highcharts-4.2.4/modules/drilldown.src.js","figures/js/highcharts-4.2.4/modules/exporting.js","figures/js/highcharts-4.2.4/modules/exporting.src.js","figures/js/highcharts-4.2.4/modules/funnel.js","figures/js/highcharts-4.2.4/modules/funnel.src.js","figures/js/highcharts-4.2.4/modules/heatmap.js","figures/js/highcharts-4.2.4/modules/heatmap.src.js","figures/js/highcharts-4.2.4/modules/map.js","figures/js/highcharts-4.2.4/modules/no-data-to-display.js","figures/js/highcharts-4.2.4/modules/no-data-to-display.src.js","figures/js/highcharts-4.2.4/modules/offline-exporting.js","figures/js/highcharts-4.2.4/modules/offline-exporting.src.js","figures/js/highcharts-4.2.4/modules/reset.js","figures/js/highcharts-4.2.4/modules/solid-gauge.js","figures/js/highcharts-4.2.4/modules/solid-gauge.src.js","figures/js/highcharts-4.2.4/modules/treemap.js","figures/js/highcharts-4.2.4/modules/treemap.src.js","figures/js/highcharts-4.2.4/plugins/annotations.js","figures/js/highcharts-4.2.4/plugins/delay.js","figures/js/highcharts-4.2.4/plugins/draggable-legend.js","figures/js/highcharts-4.2.4/plugins/draggable-points.js","figures/js/highcharts-4.2.4/plugins/highcharts-contour.js","figures/js/highcharts-4.2.4/plugins/motion.js","figures/js/highcharts-4.2.4/plugins/pattern-fill-v2.js","figures/js/highcharts-4.2.4/plugins/symbols-extra.js","figures/js/highcharts-4.2.4/plugins/text-symbols.js","figures/js/highcharts-5.0.6/css/motion.css","figures/js/highcharts-5.0.6/custom/reset.js","figures/js/highcharts-5.0.6/custom/symbols-extra.js","figures/js/highcharts-5.0.6/custom/text-symbols.js","figures/js/highcharts-5.0.6/highcharts-3d.js","figures/js/highcharts-5.0.6/highcharts-more.js","figures/js/highcharts-5.0.6/highcharts.js","figures/js/highcharts-5.0.6/highstock.js","figures/js/highcharts-5.0.6/modules/accessibility.js","figures/js/highcharts-5.0.6/modules/annotations.js","figures/js/highcharts-5.0.6/modules/boost.js","figures/js/highcharts-5.0.6/modules/broken-axis.js","figures/js/highcharts-5.0.6/modules/canvas-tools.js","figures/js/highcharts-5.0.6/modules/data.js","figures/js/highcharts-5.0.6/modules/drilldown.js","figures/js/highcharts-5.0.6/modules/exporting.js","figures/js/highcharts-5.0.6/modules/funnel.js","figures/js/highcharts-5.0.6/modules/heatmap.js","figures/js/highcharts-5.0.6/modules/map.js","figures/js/highcharts-5.0.6/modules/no-data-to-display.js","figures/js/highcharts-5.0.6/modules/offline-exporting.js","figures/js/highcharts-5.0.6/modules/solid-gauge.js","figures/js/highcharts-5.0.6/modules/treemap.js","figures/js/highcharts-5.0.6/plugins/annotations.js","figures/js/highcharts-5.0.6/plugins/draggable-legend.js","figures/js/highcharts-5.0.6/plugins/draggable-points.js","figures/js/highcharts-5.0.6/plugins/export-csv.js","figures/js/highcharts-5.0.6/plugins/grouped-categories.js","figures/js/highcharts-5.0.6/plugins/motion.js","figures/js/highcharts-5.0.6/plugins/pattern-fill-v2.js","figures/js/highcharts-5.0.6/plugins/tooltip-delay.js","figures/js/htmlwdgtgrid-1/htmlwdgtgrid.css","figures/js/htmlwidgets-0.6/htmlwidgets.js","figures/js/htmlwidgets-0.8/htmlwidgets.js","figures/js/jquery-1.11.1/jquery.min.js","figures/js/proj4js-2.3.15/proj4.js","figures/js/styles-0.0.1/styles.css","figures/js/styles-0.0.1/styles.js","figures/js/underscore-1.8.3/underscore-min.js","figures/news-landscape-map.png","figures/reactions-vs-articles.gif","figures/topic-classification-sample.png","figures/topic-concentration.html","figures/topic-distribution-pages.html","figures/topic-trends-line.html","figures/topic-trends.html","images/cover-social-media.jpg","images/lda-process-description.png"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+
+<script type="application/javascript">
+
+  window.headroom_prevent_pin = false;
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // initialize headroom for banner
+    var header = $('header').get(0);
+    var headerHeight = header.offsetHeight;
+    var headroom = new Headroom(header, {
+      onPin : function() {
+        if (window.headroom_prevent_pin) {
+          window.headroom_prevent_pin = false;
+          headroom.unpin();
+        }
+      }
+    });
+    headroom.init();
+    if(window.location.hash)
+      headroom.unpin();
+    $(header).addClass('headroom--transition');
+
+    // offset scroll location for banner on hash change
+    // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+    window.addEventListener("hashchange", function(event) {
+      window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+    });
+
+    // responsive menu
+    $('.distill-site-header').each(function(i, val) {
+      var topnav = $(this);
+      var toggle = topnav.find('.nav-toggle');
+      toggle.on('click', function() {
+        topnav.toggleClass('responsive');
+      });
+    });
+
+    // nav dropdowns
+    $('.nav-dropbtn').click(function(e) {
+      $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+      $(this).parent().siblings('.nav-dropdown')
+         .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $("body").click(function(e){
+      $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $(".nav-dropdown").click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<style type="text/css">
+
+/* Theme (user-documented overrideables for nav appearance) */
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #455a64;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+.distill-site-header {
+
+}
+
+.distill-site-footer {
+
+}
+
+
+/* Site Header */
+
+.distill-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.distill-site-header .nav-left {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header .nav-left {
+    margin-left: 0;
+  }
+}
+
+
+.distill-site-header .nav-right {
+  float: right;
+  margin-right: 8px;
+}
+
+.distill-site-header a,
+.distill-site-header .title {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 10px 14px 10px;
+}
+
+.distill-site-header .title {
+  font-size: 18px;
+}
+
+.distill-site-header .logo {
+  padding: 0;
+}
+
+.distill-site-header .logo img {
+  display: none;
+  max-height: 20px;
+  width: auto;
+  margin-bottom: -4px;
+}
+
+.distill-site-header .nav-image img {
+  max-height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .distill-site-header .logo img {
+    display: inline-block;
+  }
+  .distill-site-header .nav-left {
+    margin-left: 20px;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 20px;
+  }
+  .distill-site-header .title {
+    padding-left: 12px;
+  }
+}
+
+
+.distill-site-header .nav-toggle {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-dropdown .nav-dropbtn {
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 16px 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown-content hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown-active {
+  display: block;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+  color: black;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-content .nav-dropdown-header {
+  display: block;
+  padding: 5px 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999999;
+  white-space: nowrap;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+  color: white;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-right .nav-dropdown-content {
+  margin-left: -45%;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
+    float: right;
+    display: block;
+  }
+  .distill-site-header .title {
+    margin-left: 0;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 0;
+  }
+  .distill-site-header {
+    overflow: hidden;
+  }
+  .nav-right .nav-dropdown-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-header.responsive {position: relative;}
+  .distill-site-header.responsive a.nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
+    display: block;
+    text-align: left;
+  }
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
+    width: 100%;
+  }
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Site Footer */
+
+.distill-site-footer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* Headroom */
+
+d-title {
+  padding-top: 6rem;
+}
+
+@media print {
+  d-title {
+    padding-top: 4rem;
+  }
+}
+
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+</style>
+
+<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+<script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
+<!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+<style type="text/css">
+
+body {
+  background-color: white;
+}
+
+.pandoc-table {
+  width: 100%;
+}
+
+.pandoc-table>caption {
+  margin-bottom: 10px;
+}
+
+.pandoc-table th:not([align]) {
+  text-align: left;
+}
+
+.pagedtable-footer {
+  font-size: 15px;
+}
+
+.html-widget {
+  margin-bottom: 2.0em;
+}
+
+.l-screen-inset {
+  padding-right: 16px;
+}
+
+.l-screen .caption {
+  margin-left: 10px;
+}
+
+.shaded {
+  background: rgb(247, 247, 247);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .html-widget {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .shaded-content {
+  background: white;
+}
+
+.text-output {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+d-article {
+  padding-bottom: 30px;
+}
+
+d-appendix {
+  padding-top: 30px;
+}
+
+d-article>p>img {
+  width: 100%;
+}
+
+d-article iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.0em;
+  width: 100%;
+}
+
+figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* CSS for table of contents */
+
+.d-toc {
+  color: rgba(0,0,0,0.8);
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+.d-toc-header {
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1.3em;
+}
+
+.d-toc a {
+  border-bottom: none;
+}
+
+.d-toc ul {
+  padding-left: 0;
+}
+
+.d-toc li>ul {
+  padding-top: 0.8em;
+  padding-left: 16px;
+  margin-bottom: 0.6em;
+}
+
+.d-toc ul,
+.d-toc li {
+  list-style-type: none;
+}
+
+.d-toc li {
+  margin-bottom: 0.9em;
+}
+
+.d-toc-separator {
+  margin-top: 20px;
+  margin-bottom: 2em;
+}
+
+.d-article-with-toc {
+  border-top: none;
+  padding-top: 0;
+}
+
+
+
+/* Tweak code blocks (note that this CSS is repeated above in an injection
+   into the d-code shadow dom) */
+
+d-code {
+  overflow-x: auto !important;
+}
+
+pre.d-code code.d-code {
+  padding-left: 10px;
+  font-size: 12px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+pre.text-output {
+
+  font-size: 12px;
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+@media(min-width: 768px) {
+
+d-code {
+  overflow-x: visible !important;
+}
+
+pre.d-code code.d-code  {
+    padding-left: 18px;
+    font-size: 14px;
+}
+pre.text-output {
+  font-size: 14px;
+}
+}
+
+/* Figure */
+
+.figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.figure .caption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.figure .caption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.figure .caption b,
+.figure .caption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+
+
+/* Tweak 1000px media break to show more text */
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+  figure .caption, .figure .caption, figure figcaption {
+    font-size: 13px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+/* Get the citation styles for the appendix (not auto-injected on render since
+   we do our own rendering of the citation appendix) */
+
+d-appendix .citation-appendix,
+.d-appendix .citation-appendix {
+  font-size: 11px;
+  line-height: 15px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 18px;
+  border-radius: 3px;
+  color: rgba(150, 150, 150, 1);
+  overflow: hidden;
+  margin-top: -12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+/* Social footer */
+
+.social_footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.67);
+}
+
+.disqus-comments {
+  margin-right: 30px;
+}
+
+.disqus-comment-count {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.article-sharing a {
+  border-bottom: none;
+  margin-right: 8px;
+}
+
+.article-sharing a:hover {
+  border-bottom: none;
+}
+
+.sidebar-section.subscribe {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.subscribe p {
+  margin-bottom: 0.5em;
+}
+
+
+.article-footer .subscribe {
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+
+/* Improve display for browsers without grid (IE/Edge <= 15) */
+
+.downlevel {
+  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.downlevel .d-title {
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.downlevel .d-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+.downlevel .d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  margin-top: 0;
+}
+
+.downlevel .d-byline {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.8em;
+}
+
+.downlevel .section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.downlevel .d-article {
+  font-size: 1.06rem;
+  line-height: 1.7em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+
+.downlevel .d-appendix {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.downlevel .footnotes ol {
+  padding-left: 13px;
+}
+
+.downlevel .base-grid,
+.downlevel .distill-header,
+.downlevel .d-title,
+.downlevel .d-abstract,
+.downlevel .d-article,
+.downlevel .d-appendix,
+.downlevel .distill-appendix,
+.downlevel .d-byline,
+.downlevel .d-footnote-list,
+.downlevel .d-citation-list,
+.downlevel .distill-footer,
+.downlevel .appendix-bottom,
+.downlevel .posts-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media(min-width: 768px) {
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 900px;
+}
+}
+
+.downlevel pre code {
+  display: block;
+  border-left: 2px solid rgba(0, 0, 0, .1);
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+.downlevel code, .downlevel pre {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+</style>
+
+<script type="application/javascript">
+
+function is_downlevel_browser() {
+  if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                 window.navigator.userAgent)) {
+    return true;
+  } else {
+    return window.load_distill_framework === undefined;
+  }
+}
+
+// show body when load is complete
+function on_load_complete() {
+
+  // set body to visible
+  document.body.style.visibility = 'visible';
+
+  // force redraw for leaflet widgets
+  if (window.HTMLWidgets) {
+    var maps = window.HTMLWidgets.findAll(".leaflet");
+    $.each(maps, function(i, el) {
+      var map = this.getMap();
+      map.invalidateSize();
+      map.eachLayer(function(layer) {
+        if (layer instanceof L.TileLayer)
+          layer.redraw();
+      });
+    });
+  }
+
+  // trigger 'shown' so htmlwidgets resize
+  $('d-article').trigger('shown');
+}
+
+function init_distill() {
+
+  init_common();
+
+  // create front matter
+  var front_matter = $('<d-front-matter></d-front-matter>');
+  $('#distill-front-matter').wrap(front_matter);
+
+  // create d-title
+  $('.d-title').changeElementType('d-title');
+
+  // create d-byline
+  var byline = $('<d-byline></d-byline>');
+  $('.d-byline').replaceWith(byline);
+
+  // create d-article
+  var article = $('<d-article></d-article>');
+  $('.d-article').wrap(article).children().unwrap();
+
+  // move posts container into article
+  $('.posts-container').appendTo($('d-article'));
+
+  // create d-appendix
+  $('.d-appendix').changeElementType('d-appendix');
+
+  // create d-bibliography
+  var bibliography = $('<d-bibliography></d-bibliography>');
+  $('#distill-bibliography').wrap(bibliography);
+
+  // flag indicating that we have appendix items
+  var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+  // replace citations with <d-cite>
+  $('.citation').each(function(i, val) {
+    appendix = true;
+    var cites = $(this).attr('data-cites').split(" ");
+    var dt_cite = $('<d-cite></d-cite>');
+    dt_cite.attr('key', cites.join());
+    $(this).replaceWith(dt_cite);
+  });
+  // remove refs
+  $('#refs').remove();
+
+  // replace footnotes with <d-footnote>
+  $('.footnote-ref').each(function(i, val) {
+    appendix = true;
+    var href = $(this).attr('href');
+    var id = href.replace('#', '');
+    var fn = $('#' + id);
+    var fn_p = $('#' + id + '>p');
+    fn_p.find('.footnote-back').remove();
+    var text = fn_p.html();
+    var dtfn = $('<d-footnote></d-footnote>');
+    dtfn.html(text);
+    $(this).replaceWith(dtfn);
+  });
+  // remove footnotes
+  $('.footnotes').remove();
+
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    var id = $(this).attr('id');
+    $('.d-toc a[href="#' + id + '"]').parent().remove();
+    appendix = true;
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+  });
+
+  // show d-appendix if we have appendix content
+  $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+  // replace code blocks with d-code
+  $('pre>code').each(function(i, val) {
+    var code = $(this);
+    var pre = code.parent();
+    var clz = "";
+    var language = pre.attr('class');
+    if (language) {
+      // map unknown languages to "clike" (without this they just dissapear)
+      if ($.inArray(language, ["bash", "clike", "css", "go", "html",
+                               "javascript", "js", "julia", "lua", "markdown",
+                               "markup", "mathml", "python", "svg", "xml"]) == -1)
+        language = "clike";
+      language = ' language="' + language + '"';
+      var dt_code = $('<d-code block' + language + clz + '></d-code>');
+      dt_code.text(code.text());
+      pre.replaceWith(dt_code);
+    } else {
+      code.addClass('text-output').unwrap().changeElementType('pre');
+    }
+  });
+
+  // localize layout chunks to just output
+  $('.layout-chunk').each(function(i, val) {
+
+    // capture layout
+    var layout = $(this).attr('data-layout');
+
+    // apply layout to markdown level block elements
+    var elements = $(this).children().not('d-code, pre.text-output, script');
+    elements.each(function(i, el) {
+      var layout_div = $('<div class="' + layout + '"></div>');
+      if (layout_div.hasClass('shaded')) {
+        var shaded_content = $('<div class="shaded-content"></div>');
+        $(this).wrap(shaded_content);
+        $(this).parent().wrap(layout_div);
+      } else {
+        $(this).wrap(layout_div);
+      }
+    });
+
+
+    // unwrap the layout-chunk div
+    $(this).children().unwrap();
+  });
+
+  // load distill framework
+  load_distill_framework();
+
+  // wait for window.distillRunlevel == 4 to do post processing
+  function distill_post_process() {
+
+    if (!window.distillRunlevel || window.distillRunlevel < 4)
+      return;
+
+    // hide author/affiliations entirely if we have no authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+    if (!have_authors)
+      $('d-byline').addClass('hidden');
+
+    // table of contents
+    if (have_authors) // adjust border if we are in authors
+      $('.d-toc').parent().addClass('d-article-with-toc');
+
+    // strip links that point to #
+    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+    // hide elements of author/affiliations grid that have no value
+    function hide_byline_column(caption) {
+      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+    }
+
+    // affiliations
+    var have_affiliations = false;
+    for (var i = 0; i<front_matter.authors.length; ++i) {
+      var author = front_matter.authors[i];
+      if (author.affiliation !== "&nbsp;") {
+        have_affiliations = true;
+        break;
+      }
+    }
+    if (!have_affiliations)
+      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+    // published date
+    if (!front_matter.publishedDate)
+      hide_byline_column("Published");
+
+    // document object identifier
+    var doi = $('d-byline').find('h3:contains("DOI")');
+    var doi_p = doi.next().empty();
+    if (!front_matter.doi) {
+      // if we have a citation and valid citationText then link to that
+      if ($('#citation').length > 0 && front_matter.citationText) {
+        doi.html('Citation');
+        $('<a href="#citation"></a>')
+          .text(front_matter.citationText)
+          .appendTo(doi_p);
+      } else {
+        hide_byline_column("DOI");
+      }
+    } else {
+      $('<a></a>')
+         .attr('href', "https://doi.org/" + front_matter.doi)
+         .html(front_matter.doi)
+         .appendTo(doi_p);
+    }
+
+     // change plural form of authors/affiliations
+    if (front_matter.authors.length === 1) {
+      var grid = $('.authors-affiliations');
+      grid.children('h3:contains("Authors")').text('Author');
+      grid.children('h3:contains("Affiliations")').text('Affiliation');
+    }
+
+    // inject pre code styles (can't do this with a global stylesheet b/c a shadow root is used)
+    $('d-code').each(function(i, val) {
+      var style = document.createElement('style');
+      style.innerHTML = 'pre code { padding-left: 10px; font-size: 12px; border-left: 2px solid rgba(0,0,0,0.1); } ' +
+                        '@media(min-width: 768px) { pre code { padding-left: 18px; font-size: 14px; } }';
+      if (this.shadowRoot)
+        this.shadowRoot.appendChild(style);
+    });
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // clear polling timer
+    clearInterval(tid);
+
+    // show body now that everything is ready
+    on_load_complete();
+  }
+
+  var tid = setInterval(distill_post_process, 50);
+  distill_post_process();
+
+}
+
+function init_downlevel() {
+
+  init_common();
+
+   // insert hr after d-title
+  $('.d-title').after($('<hr class="section-separator"/>'));
+
+  // check if we have authors
+  var front_matter = JSON.parse($("#distill-front-matter").html());
+  var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+  // manage byline/border
+  if (!have_authors)
+    $('.d-byline').remove();
+  $('.d-byline').after($('<hr class="section-separator"/>'));
+  $('.d-byline a').remove();
+
+  // remove toc
+  $('.d-toc-header').remove();
+  $('.d-toc').remove();
+  $('.d-toc-separator').remove();
+
+  // move appendix elements
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+  });
+
+
+  // inject headers into references and footnotes
+  var refs_header = $('<h3></h3>');
+  refs_header.text('References');
+  $('#refs').prepend(refs_header);
+
+  var footnotes_header = $('<h3></h3');
+  footnotes_header.text('Footnotes');
+  $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+  // move appendix-bottom entries to the bottom
+  $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+  $('.appendix-bottom').remove();
+
+  // remove appendix if it's empty
+  if ($('.d-appendix').children().length === 0)
+    $('.d-appendix').remove();
+
+  // prepend separator above appendix
+  $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+  // trim code
+  $('pre>code').each(function(i, val) {
+    $(this).html($.trim($(this).html()));
+  });
+
+  // move posts-container right before article
+  $('.posts-container').insertBefore($('.d-article'));
+
+  $('body').addClass('downlevel');
+
+  on_load_complete();
+}
+
+
+function init_common() {
+
+  // jquery plugin to change element types
+  (function($) {
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      this.replaceWith(function() {
+        return $("<" + newType + "/>", attrs).append($(this).contents());
+      });
+    };
+  })(jQuery);
+
+  // prevent underline for linked images
+  $('a > img').parent().css({'border-bottom' : 'none'});
+
+  // mark non-body figures created by knitr chunks as 100% width
+  $('.layout-chunk').each(function(i, val) {
+    var figures = $(this).find('img, .html-widget');
+    if ($(this).attr('data-layout') !== "l-body") {
+      figures.css('width', '100%');
+    } else {
+      figures.css('max-width', '100%');
+      figures.filter("[width]").each(function(i, val) {
+        var fig = $(this);
+        fig.css('width', fig.attr('width') + 'px');
+      });
+
+    }
+  });
+
+  // auto-append index.html to post-preview links in file: protocol
+  // and in rstudio ide preview
+  $('.post-preview').each(function(i, val) {
+    if (window.location.protocol === "file:")
+      $(this).attr('href', $(this).attr('href') + "index.html");
+  });
+
+  // get rid of index.html references in header
+  if (window.location.protocol !== "file:") {
+    $('.distill-site-header a[href]').each(function(i,val) {
+      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+    });
+  }
+
+  // add class to pandoc style tables
+  $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+  $('.kable-table').children('table').addClass('pandoc-table');
+
+  // add figcaption style to table captions
+  $('caption').parent('table').addClass("figcaption");
+
+  // initialize posts list
+  if (window.init_posts_list)
+    window.init_posts_list();
+
+  // implmement disqus comment link
+  $('.disqus-comment-count').click(function() {
+    window.headroom_prevent_pin = true;
+    $('#disqus_thread').toggleClass('hidden');
+    if (!$('#disqus_thread').hasClass('hidden')) {
+      var offset = $(this).offset();
+      $(window).resize();
+      $('html, body').animate({
+        scrollTop: offset.top - 35
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (is_downlevel_browser())
+    init_downlevel();
+  else
+    window.addEventListener('WebComponentsReady', init_distill);
+});
+
+</script>
+
+<!--/radix_placeholder_distill-->
+  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+<!-- UIKit -->
+<!-- UIkit CSS -->
+<link
+  rel="stylesheet"
+  href="https://www.tjpalanca.com/static/uikit-3.3.7/uikit.css"
+/>
+<!-- UIkit JS -->
+<script src="https://www.tjpalanca.com/static/uikit-3.3.7/uikit.min.js">
+</script>
+<script src="https://www.tjpalanca.com/static/uikit-3.3.7/uikit-icons.min.js">
+</script>
+<!-- Lunr.JS -->
+<script src="https://www.tjpalanca.com/static/lunr-2.3.8/lunr.js">
+</script>
+<!-- Search Posts -->
+<script src="https://www.tjpalanca.com/static/custom/search-posts.js">
+</script>
+<!-- Resize iframes -->
+<script
+  src="https://www.tjpalanca.com/static/custom/iframe-resize.js"
+></script>
+<!-- Zoom Images -->
+<script
+  src="https://www.tjpalanca.com/static/custom/image-zoom.js"
+></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-63170596-2"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-63170596-2');
+</script>
+<style type="text/css">
+.distill-site-nav {
+  color: rgba(20, 20, 20, 0.8);
+  background-color: #f2f2f2;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#search_widget {
+  border: 0 solid #ccc;
+  text-align: left;
+  display: none;
+}
+
+#search_widget button {
+  background-color: #aaaaaa;
+  color: white;
+  margin-top: 10px;
+}
+
+.distill-site-nav a:hover {
+  color: rgba(120, 120, 120, 0.8);
+}
+
+d-article iframe {
+  border: none;
+  overflow: hidden;
+}
+
+</style>
+<!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage","description":"Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling.","authors":[{"author":"TJ Palanca","authorURL":"https://www.twitter.com/tjpalanca","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2017-03-12T00:00:00.000+00:00","citationText":"Palanca, 2017"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a class="logo" href="https://www.tjpalanca.com/">
+<img src="../../static/images/logo.png"/>
+</a>
+<a href="../../index.html" class="title">TJ Palanca</a>
+</div>
+<div class="nav-right">
+<a href="../../index.html">home</a>
+<a href="../../blog.html">blog</a>
+<a href="../../contact.html">contact</a>
+<a href="../../about.html">about</a>
+<a href="../../policies.html">faq &amp; policies</a>
+<a href="https://www.github.com/tjpalanca">
+<i class="fa fa-github"></i>
+</a>
+<a href="https://www.twitter.com/tjpalanca">
+<i class="fa fa-twitter"></i>
+</a>
+<a href="https://www.facebook.com/tjpalanca.blog">
+<i class="fa fa-facebook"></i>
+</a>
+<a href="../../blog.xml">
+<i class="fa fa-rss"></i>
+</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage</h1>
+<p>Facebook has become one of most visible sources of news in the Philippines, and it has arguably played a huge role in shaping Filipino views. We take a look at how the Philippines news cycle evolved with by using topic modeling.</p>
+</div>
+
+<div class="d-byline">
+  TJ Palanca <a href="https://www.twitter.com/tjpalanca" class="uri">https://www.twitter.com/tjpalanca</a> 
+  
+<br/>2017-03-12
+</div>
+
+<div class="d-article">
+<h3 class="d-toc-header">Table of Contents</h3>
+<nav class="d-toc" id="TOC">
+<ul>
+<li><a href="#motivation-social-media-in-the-philippines">Motivation: Social Media in the Philippines</a><ul>
+<li><a href="#i-read-it-on-facebook">“I read it on Facebook”</a></li>
+<li><a href="#biased-media">“Biased media”</a></li>
+</ul></li>
+<li><a href="#process-topic-modeling">Process: Topic modeling</a></li>
+<li><a href="#news-landscape-of-the-philippines">News landscape of the Philippines</a><ul>
+<li><a href="#news-atlas-of-the-philippines">News ‘atlas’ of the Philippines</a></li>
+<li><a href="#sample-articles">Sample articles</a></li>
+</ul></li>
+<li><a href="#topic-trends-in-2016">Topic trends in 2016</a></li>
+<li><a href="#news-page-topic-distribution">News page topic distribution</a><ul>
+<li><a href="#news-page-distribution">News page distribution</a></li>
+<li><a href="#news-page-topic-concentration">News page topic concentration</a></li>
+</ul></li>
+<li><a href="#reactions-to-topics">Reactions to topics</a></li>
+<li><a href="#final-remarks">Final remarks</a></li>
+<li><a href="#technical-documentation">Technical documentation</a></li>
+</ul>
+</nav>
+<hr class="d-toc-separator"/>
+<div class="layout-chunk" data-layout="l-screen">
+<p><img src="images/cover-social-media.jpg" width="1024" style='object-fit: cover; max-height: 30vh;' /></p>
+</div>
+<h2 id="motivation-social-media-in-the-philippines">Motivation: Social Media in the Philippines</h2>
+<h3 id="i-read-it-on-facebook">“I read it on Facebook”</h3>
+<p>The Philippines is the social media capital of the world. According to <a href="http://www.huffingtonpost.com/jonha-revesencio/philippines-a-digital-lif_1_b_7199924.html">this Huffington Post article</a><span class="citation" data-cites="Revesencio_2017">(Revesencio <a href="#ref-Revesencio_2017">2017</a>)</span>, “from a global average of 4.4 hours/day, the Filipino spends an average of 6.3 hours/day online via laptop and 3.3 hours/day via mobile.” It’s then no surprise that social media has become one of the main news sources for many Filipinos, and with a tumultuous 2016 Presidential Election, many issues have cropped up, from <a href="http://newsinfo.inquirer.net/784772/duterte-hits-media-for-sensationalism-bias">the newly elected President hitting media for “biased” news</a>, <a href="http://www.philstar.com/headlines/2017/01/19/1664130/pangilinan-wants-facebook-penalized-over-fake-news">introducing legislation around the spread of “fake news” on social media</a>, to <a href="http://www.bbc.com/news/blogs-trending-38173842">a campaign engineering a social media machine designed to weaponize hatred</a>.</p>
+<aside style="min-width: 250px;">
+<a id='5yqgfHHHTRVW2yXw3-vs8Q' class='gie-single' href='http://www.gettyimages.com/detail/630076470' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a>
+<script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'5yqgfHHHTRVW2yXw3-vs8Q',sig:'VT7JWktBvUTYCPEO8ZcUjUZg8-GPpMaDe686coLXR5k=',w:'594px',h:'396px',items:'630076470',caption: true ,tld:'com',is360: false })});</script>
+<script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+<figcaption>
+Philippines President Rodrigo Duterte (R) poses for a selfie during a meeting with the Filipino community in Singapore on December 16, 2016.
+</figcaption>
+</aside>
+<p>Since social media and the internet is such a vast place, how much do we really know about the Philippine news landscape online? This series is intended to explore the phenomenon by analyzing the unstructured text information in news posts for the entire 2016.</p>
+<h3 id="biased-media">“Biased media”</h3>
+<p>Mainstream news outlets, many of which have a significant online presence, have come under fire for apparently over or under-reporting certain events, usually against the newly-elected President and other government officials. By de-emphasizing positive news and constantly posting negative news about the administration, critics of mainstream media claim that there is an attempt to discredit the administration and turn the public opinion against them. This seems like a problem we can address and answer with data, and that’s exactly what we’ll try to do in the first part of this series.</p>
+<h2 id="process-topic-modeling">Process: Topic modeling</h2>
+<p>To answer the question, we need data, and the most complete source of data is on Facebook, by far the most commonly used social media platform on the Islands, particularly the <a href="https://developers.facebook.com/docs/graph-api">Facebook Graph API</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. We extract data from this API for the top news pages in the country, then apply topic modeling to the content of the headlines, captions, and posts.</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="images/lda-process-description.png" alt="TOPIC MODELING - A brief overview of how topic modeling is performed. (click to zoom)" width="800" />
+<p class="caption">
+Figure 1: TOPIC MODELING - A brief overview of how topic modeling is performed. (click to zoom)
+</p>
+</div>
+</div>
+<p>Topic modeling, in natural language processing and machine learning, is a way for us to take unstructured text such as headlines, captions, and posts, and discover latent “topics” or themes that are underlying the corpus. For this specific article, we use Latent Dirichlet Allocation (LDA)<span class="citation" data-cites="lda_blei_ng_jordan">(Blei et al. <a href="#ref-lda_blei_ng_jordan">2003</a>)</span> In other words, by taking into consideration the words used, we are able to define certain topics then classify each post in the topic to which the article belongs. For more information, please read the <a href="#technical-documentation">technical documentation</a>.</p>
+<h2 id="news-landscape-of-the-philippines">News landscape of the Philippines</h2>
+<h3 id="news-atlas-of-the-philippines">News ‘atlas’ of the Philippines</h3>
+<p>Once we perform the topic modeling, we can generate some pretty interesting visualizations. See here for an overview of the news landscape of the Philippines, each group is composed of the most relevant words for that topic, and a manually-determined label. The distances that the topics have from each other reflect their semantic distance, or basically how different the words are for that topic.</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<img src="figures/news-landscape-map.png" alt="News Landscape of the Philippines (click to zoom)" width="1984" />
+<p class="caption">
+Figure 2: News Landscape of the Philippines (click to zoom)
+</p>
+</div>
+</div>
+<p>As you can see there is a central mass of mainly English news on both local and international topics. In the periphery are mostly lifestyle and entertainment topics, on the far top right there are sports news, and then Filipino language news settles at the bottom.</p>
+<p>In the center of the mass you can see what (or who) is clearly the center of most news in 2016 - newly elected President Duterte. Spanning out from that topic are those of his policies and programs, the War on Drugs, his campaign, law enforcement, the Marcos Burial, and the drug-related charges filed against his critic Senator Leila de Lima.</p>
+<p>To the northwest of President Duterte, you’ll see more general nationwide news - electoral process, transportation, finance and economy, and the weather.</p>
+<p>You’ll see further northwest a slightly separated island that covers international news, foreign policy, and the exiting Aquino Administration, whose main focus in the final years of his term was to secure an arbitral judgement against China for its claims in the South China Sea.</p>
+<p>One thing to note is that Women’s Volleyball and Beauty Pageants seems to have lumped together. Why? I have no clue.</p>
+<h3 id="sample-articles">Sample articles</h3>
+<p>But wait, how can we determine that these topic classifications actually make sense? Let’s try to pull out sample articles classified by the model and see if they can be understood.</p>
+<div class="layout-chunk" data-layout="l-screen">
+<div class="figure"><span id="fig:unnamed-chunk-4"></span>
+<img src="figures/topic-classification-sample.png" alt="Sample articles from the LDA classification (click to zoom)" width="2268" />
+<p class="caption">
+Figure 3: Sample articles from the LDA classification (click to zoom)
+</p>
+</div>
+</div>
+<p>Inspecting the headlines seems to show that the topics are well classified. For more details about how the model was trained, you are welcome to view the <a href="#technical-documentation">technical documentation</a>.</p>
+<h2 id="topic-trends-in-2016">Topic trends in 2016</h2>
+<p>Now that we are confident that topic classification is attained reasonably well, let’s take a look at the trends over time.</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure"><span id="fig:unnamed-chunk-5"></span>
+<iframe src="figures/topic-trends.html" width="624" height="800">
+</iframe>
+<p class="caption">
+Figure 4: TOPIC TRENDS - Hover over each square to view sample articles. Red dots indicates ‘peaks’ for each topic (<a href="figures/topic-trends.html">full screen</a>)
+</p>
+</div>
+</div>
+<p>We can see here how 2016 progressed in terms of “hot topics” in each week:</p>
+<p><small></p>
+<ul>
+<li>Jan - We started the year with <strong>Filipino Showbiz</strong> leading off from MMFF 2015</li>
+<li>Feb to Mar - a lull in the news save for a bout of local election related violence showing up in <strong>City and Barangay News</strong>.</li>
+<li>Apr - the RCBC Money Laundering Scandal topped the charts in <strong>Financial Regulation and Crime</strong>,</li>
+<li>May - entirely dedicated to the <strong>Election Campaign</strong> and the final election week contained many articles about the <strong>Electoral Process</strong></li>
+<li>Jun - after the election of <strong>President Duterte</strong>, the news was filled with details of his stunning rise to power and what the new administration will do, <strong>NBA Basketball</strong> also dominated in June as the finals were taking place,</li>
+<li>Jul to Aug - a mixed bag, covering negotiations taking place with groups causing <strong>Internal Conflict</strong>, drug lists being released in <strong>Law Enforcement</strong>, and a fresh new bout of <strong>Domestic Terrorism</strong> from the Abu Sayyaf Group,</li>
+<li>Sep - <strong>Technology News</strong> peaked with the release of the new iPhone 7 and Apple Watch, the <strong>War on Drugs</strong> started to come under fire from critics, with staunch critic <strong>Leila De Lima and Drug Allegations</strong> surfacing during the last week,</li>
+<li>Oct - <strong>Foreign Policy</strong> was a hot topic, with President Duterte pivoting to align more closely with China, and raising concerns about the viability of the claim in the South China Sea,</li>
+<li>Nov - the <strong>Marcos Burial</strong> was top news for 4 straight weeks</li>
+<li>Dec - we round out the rather tumultuous year with many articles about <strong>Relationships, Work and Family</strong>, <strong>Science News</strong>; also, the annual Christmas rush has brought articles related to <strong>Transportation</strong>.</li>
+</ul>
+<p></small></p>
+<p>If you’re interested in viewing the trend for a particular topic, you can use this chart to view it. Simply hover over the line to highlight it and display the topic name.</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure"><span id="fig:unnamed-chunk-6"></span>
+<iframe src="figures/topic-trends-line.html" width="624" height="800">
+</iframe>
+<p class="caption">
+Figure 5: TOPIC TRENDS - Hover over each line to view the line in relation to others and to display the topic name as a tooltip (<a href="figures/topic-trends-line.html">full screen</a>)
+</p>
+</div>
+</div>
+<h2 id="news-page-topic-distribution">News page topic distribution</h2>
+<h3 id="news-page-distribution">News page distribution</h3>
+<p>A common accusation leveled against traditional news media is the amount of bias in reporting various topics. We try to explore the topic distribution of news articles.</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure"><span id="fig:unnamed-chunk-7"></span>
+<iframe src="figures/topic-distribution-pages.html" width="624" height="600">
+</iframe>
+<p class="caption">
+Figure 6: BIAS AND BALANCE - Check the news distribution and hover over each bar for details (<a href="figures/topic-distribution-pages.html">full screen</a>)
+</p>
+</div>
+</div>
+<p>A few observations from the chart:</p>
+<ul>
+<li>Most major news articles have an even balance of news</li>
+<li>GMA News focused a lot on Filipino Showbiz, ABS-CBN focused on Movies &amp; Television</li>
+<li>INQUIRER.net focused Law Enforcement and the War on Drugs</li>
+<li>Oddly enough, ANC 24/7’s articles were mostly about Women’s Volleyball and Beauty Pageants</li>
+</ul>
+<h3 id="news-page-topic-concentration">News page topic concentration</h3>
+<p>We know how each of the topics are distributed, but how do we measure topics against each other in terms of topic concentration and potential “bias”. One way to measure concentration across different topics is the Herfindahl-Hirschman Index (HHI). This index ranges from 0 to 100 with 100 meaning perfect concentration.</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure"><span id="fig:unnamed-chunk-8"></span>
+<iframe src="figures/topic-concentration.html" width="624" height="800">
+</iframe>
+<p class="caption">
+Figure 7: TOPIC CONCENTRATION - Hover over each bar to see the top topics for that page (<a href="figures/topic-concentration.html">full screen</a>)
+</p>
+</div>
+</div>
+<p>The most concentrated were news pages that focused mainly on Filipino subjects (which got lumped together), but apart from that the interesting findings are:</p>
+<ul>
+<li>SunStar News, a Cebu based newspaper, focused mainly on local news, particularly in Visayas and Mindanao.</li>
+<li>Yahoo Philippines almost always just talked about entertainment topics, and MSN Philippines focused on lifestyle topics.</li>
+<li>Main news outlets, contrary to the comments posted on these pages, were the least concentrated and had the widest topic distribution.</li>
+</ul>
+<h2 id="reactions-to-topics">Reactions to topics</h2>
+<p>If topics are relatively well distributed in terms of topics, then how do we go about explaining the perception of biased media. Well, Facebook’s timeline is heavily geared to provide information relating to topics that you have already interacted with. If we compare the amount of news articles published per topic over time, with the reactions we have to them over time:</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<div class="figure"><span id="fig:unnamed-chunk-9"></span>
+<img src="figures/reactions-vs-articles.gif" alt="REACTIONS VS ARTICLES - What news publish vs what topics we interact with."  />
+<p class="caption">
+Figure 8: REACTIONS VS ARTICLES - What news publish vs what topics we interact with.
+</p>
+</div>
+</div>
+<p>We can clearly see that this might just be because of people overindexing on topics that are most popular or those that they are more interested in.</p>
+<h2 id="final-remarks">Final remarks</h2>
+<p>Using natural language processing and topic modeling, we are able to turn unstructured text information and uncover latent topics in the corpus, so we can learn about the entire online news landscape in the country, not just what pops up in our newsfeeds. Some key takeaways from this exercise would be:</p>
+<ol type="1">
+<li>Despite being a politics-driven year, we are still obsessed with entertainment. Movies, Television, and Showbiz all have taken top spots in the news.</li>
+<li>There are definite spikes in activity during certain weeks. Some of the most newsworthy events were the Elections in May, the South China Sea dispute in July, President Duterte in May and again in June, and the Marcos Burial in November.</li>
+<li>Despite what Facebook commenters may say, news pages are well distributed in terms of topics, and do not solely focus on particular topics. What actually appears on people’s newsfeeds, which is dependent on what users interact with, is another story.</li>
+</ol>
+<h2 id="technical-documentation">Technical documentation</h2>
+<p>In the interest of reproducible research, here are the notebooks containing the code, results, and commentary behind the post. You may download the resulting code and run it yourself, provided:</p>
+<ul>
+<li>You have the proper API keys to access the Facebook Graph API<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, and</li>
+<li>You agree that this is provided as-is and with no warranty.</li>
+</ul>
+<p>You may also view the GitHub Repository <a href="https://github.com/tjpalanca/facebook-news-analysis">here</a> for the complete code and analysis that went into this post. You may also choose to collaborate with me in producing more parts to this series!</p>
+<ul>
+<li><a href="docs/fb-scraping.html">Part 1 - Facebook Graph API Extraction</a></li>
+<li><a href="docs/fb-topic-modeling.html">Part 2 - Facebook Topic Modeling</a></li>
+</ul>
+<div id="refs" class="references">
+<div id="ref-lda_blei_ng_jordan">
+<p>Blei, David M, Blei@cs Berkeley Edu, Andrew Y Ng, Michael I Jordan, Jordan@cs Berkeley Edu, and John Lafferty. 2003. “Latent Dirichlet Allocation.” <em>Journal of Machine Learning Research</em> 3: 993–1022. <a href="http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf">http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf</a>.</p>
+</div>
+<div id="ref-Revesencio_2017">
+<p>Revesencio, Jonha. 2017. “Philippines: A Digital Lifestyle Capital in the Making?” <em>Huffington Post</em>, September. <a href="https://web.archive.org/web/20170928113516/http://www.huffingtonpost.com/jonha-revesencio/philippines-a-digital-lif_1_b_7199924.html">https://web.archive.org/web/20170928113516/http://www.huffingtonpost.com/jonha-revesencio/philippines-a-digital-lif_1_b_7199924.html</a>.</p>
+</div>
+</div>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>If you are looking for the source of this data, unfortunately Facebook has altered their APIs and it is no longer straightforward to extract this information, and the Terms of Service inhibit me from sharing the raw data.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>If you are looking for the source of this data, unfortunately Facebook has altered their APIs and it is no longer straightforward to extract this information, and the Terms of Service inhibit me from sharing the raw data.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+<!--radix_placeholder_article_footer-->
+<div class="article-footer">
+  <p class="social_footer">
+    <span class="disqus-comments">
+      <i class="fas fa-comments"></i>
+      &nbsp;
+      <span class="disqus-comment-count" data-disqus-identifier="posts/2017-03-12-facebook-news-topic-modeling/">Comment on this article</span>
+    </span>
+    <span class="article-sharing">
+      Share: &nbsp;
+      <a href="https://twitter.com/share?text=On%20Facebook%20News%20in%20the%20Philippines%3A%20Using%20topic%20modeling%20to%20find%20trends%20in%20online%20news%20coverage&amp;url=https%3A%2F%2Fwww.tjpalanca.com%2Fposts%2F2017-03-12-facebook-news-topic-modeling%2F">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.tjpalanca.com%2Fposts%2F2017-03-12-facebook-news-topic-modeling%2F&amp;title=On%20Facebook%20News%20in%20the%20Philippines%3A%20Using%20topic%20modeling%20to%20find%20trends%20in%20online%20news%20coverage">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=https%3A%2F%2Fwww.tjpalanca.com%2Fposts%2F2017-03-12-facebook-news-topic-modeling%2F">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://pinterest.com/pin/create/link/?url=https%3A%2F%2Fwww.tjpalanca.com%2Fposts%2F2017-03-12-facebook-news-topic-modeling%2F&amp;description=On%20Facebook%20News%20in%20the%20Philippines%3A%20Using%20topic%20modeling%20to%20find%20trends%20in%20online%20news%20coverage">
+        <i class="fab fa-pinterest"></i>
+      </a>
+    </span>
+  </p>
+  <script id="dsq-count-scr" src="https://jumbodumbothoughts.disqus.com/count.js" async></script>
+  <div id="disqus_thread" class="hidden"></div>
+  <script>
+var disqus_config = function () {
+  this.page.url = 'https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/';
+  this.page.identifier = 'posts/2017-03-12-facebook-news-topic-modeling/';
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://jumbodumbothoughts.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+  <p>
+    <div class="subscribe"><div uk-margin style="border:0px solid #ccc; text-align:left;">
+<form
+  action="https://feedburner.google.com/fb/a/mailverify"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=tjpalanca-blog', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"
+>
+<p>
+  <strong>
+    If you would like to receive updates when I have a new post,
+    enter your email address:
+  </strong>
+</p>
+<input type="text" class="uk-input" name="email"/>
+<input type="hidden" value="tjpalanca-blog" name="uri"/>
+<input type="hidden" name="loc" value="en_US"/>
+<button
+  type="submit"
+  class="uk-button uk-button-default uk-button-small"
+  style="background-color: #2cbf53; color: white; margin-top: 10px;"
+>
+<div style="display:flex; align-items:center">
+  <span uk-icon="icon: mail" style="margin-right: 2px;"></span>
+  <span>Subscribe</span>
+</div>
+</button>
+</form>
+</div>
+
+<div id="search_widget" uk-margin>
+<br/>
+<h3>Search</h3>
+<input type="text" class="uk-input" id="search_string"/>
+<button
+  id="search_button"
+  class="uk-button uk-button-default uk-button-small"
+>
+<div style="display:flex; align-items:center">
+  <span uk-icon="icon: search" style="margin-right: 2px;"></span>
+  <span>Search</span>
+</div>
+</button>
+<button
+  id="reset_button"
+  class="uk-button uk-button-default uk-button-small"
+  style="display: none;"
+>
+<div style="display:flex; align-items:center">
+  <span uk-icon="icon: close" style="margin-right: 2px;"></span>
+  <span>Reset</span>
+</div>
+</button>
+</div>
+<script type="application/javascript">
+  initialize_search_posts()
+</script>
+</div>
+  </p>
+</div>
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+  <h3 id="updates-and-corrections">Corrections</h3>
+  <p>If you see mistakes or want to suggest changes, please <a href="https://github.com/tjpalanca/facebook-news-analysis/issues/new">create an issue</a> on the source repository.</p>
+  <h3 id="reuse">Reuse</h3>
+  <p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>. Source code is available at <a href="https://github.com/tjpalanca/facebook-news-analysis">https://github.com/tjpalanca/facebook-news-analysis</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
+  <h3 id="citation">Citation</h3>
+  <p>For attribution, please cite this work as</p>
+  <pre class="citation-appendix short">Palanca (2017, March 12). TJ Palanca: On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage. Retrieved from https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/</pre>
+  <p>BibTeX citation</p>
+  <pre class="citation-appendix long">@misc{palanca2017on,
+  author = {Palanca, TJ},
+  title = {TJ Palanca: On Facebook News in the Philippines: Using topic modeling to find trends in online news coverage},
+  url = {https://www.tjpalanca.com/posts/2017-03-12-facebook-news-topic-modeling/},
+  year = {2017}
+}</pre>
+</div>
+<script id="distill-bibliography" type="text/bibtex">
+@article{lda_blei_ng_jordan, title={Latent Dirichlet Allocation}, volume={3}, url={http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf}, journal={Journal of Machine Learning Research}, author={Blei, David M and Blei@cs Berkeley Edu and Ng, Andrew Y and Jordan, Michael I and Jordan@cs Berkeley Edu and Lafferty, John}, year={2003}, pages={993–1022} }
+
+@article{
+  Revesencio_2017,
+  title={Philippines: A Digital Lifestyle Capital in the Making?},
+  url={https://web.archive.org/web/20170928113516/http://www.huffingtonpost.com/jonha-revesencio/philippines-a-digital-lif_1_b_7199924.html},
+  journal={Huffington Post}, author={Revesencio, Jonha},
+  year={2017},
+  month={Sep}
+}
+</script>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+  <p>© Copyright 2009-2020 <a href="https://www.twitter.com/tjpalanca">TJ Palanca</a>. <br/> Opinions expressed here represent my own and not those of my employer. Content on this site is subject to <a href="https://www.tjpalanca.com/policies.html">policies</a>.</p>
+</div>
+<!--/radix_placeholder_navigation_after_body-->
+
+
+</body>
+
+</html>
