@@ -6,7 +6,7 @@ title: "About"
 
 <div style="max-width: 300px;">
 ```{r}
-knitr::include_graphics("site_libs/images/about_image.jpg")
+knitr::include_graphics("static/images/about_image.jpg")
 ```
 </div>
 

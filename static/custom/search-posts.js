@@ -99,11 +99,11 @@ function initialize_search_posts() {
         .before(
           $("<div/>")
             .addClass("sidebar-section categories")
-            .append($("<h3/>").html("AUTHORS"))
+            .append($("<h3/>").html("Authors"))
             .append($("<ul/>").attr("id", "author_list"))
         );
 
-      // Add each atuhort
+      // Add each author
       for (let [author_name, num_posts] of Object.entries(author_list)) {
         $("ul#author_list")
           .append(
@@ -121,11 +121,13 @@ function initialize_search_posts() {
               )
           );
       }
+
   }
 
   function search_author(author_name) {
 
     // clear active state
+    $("span#author_close").hide();
     $('.categories .active').removeClass('active');
 
     // mark all posts invisible to start
@@ -147,6 +149,22 @@ function initialize_search_posts() {
 
     // mark the hash active
     $(`.categories li>a:contains(${author_name})`).addClass('active');
+
+    // Add an x beside the author filter
+    if ($("span#author_close").length === 0) {
+      $("h3:contains('Authors')")
+        .append($("<span/>")
+        .attr("id", "author_close")
+        .attr("uk-icon", "close")
+        .css("cursor", "pointer")
+        .css("vertical-align", "bottom"));
+      $("span#author_close").click(() => {
+        show_all_posts();
+        $("span#author_close").hide();
+      });
+    } else {
+      $("span#author_close").show();
+    }
 
   }
 
@@ -240,17 +258,21 @@ function initialize_search_posts() {
   }
 
   function reset_search_posts() {
+    show_all_posts();
+    // Switch Buttons
+    $('button#search_button').show();
+    $('button#reset_button').hide();
+    $('#search_description').hide();
+    $('#search_string').removeClass('uk-form-danger');
+  }
+
+  function show_all_posts() {
     // Resort all posts
     get_posts();
     POSTS.map(post => make_post_visible(post.path));
     // Reset
     apply_post_limits(true);
     apply_hash_filter();
-    // Switch Buttons
-    $('button#search_button').show();
-    $('button#reset_button').hide();
-    $('#search_description').hide();
-    $('#search_string').removeClass('uk-form-danger');
   }
 
   $(document).ready(function() {
@@ -270,7 +292,32 @@ function initialize_search_posts() {
         reset_search_posts();
       });
       construct_author_list();
+      $(window).on('hashchange',function() {
+        if (window.location.hash) {
+          show_category_close();
+        }
+      });
+      if (window.location.hash) {
+        show_category_close();
+      }
     }
   });
+
+  function show_category_close() {
+    if ($("span#category_close").length === 0) {
+      $("h3:contains('Categories')")
+        .append($("<span/>")
+        .attr("id", "category_close")
+        .attr("uk-icon", "close")
+        .css("cursor", "pointer")
+        .css("vertical-align", "bottom"));
+      $("span#category_close").click(() => {
+        window.location.hash = "";
+        $("span#category_close").hide();
+      });
+    } else {
+      $("span#category_close").show();
+    }
+  }
 
 }

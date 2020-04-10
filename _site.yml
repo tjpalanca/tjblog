@@ -7,7 +7,7 @@ output_dir: "."
 google_analytics: "UA-63170596-2"
 navbar:
   logo:
-    image: site_libs/images/logo.png
+    image: static/images/logo.png
     href: https://www.tjpalanca.com/
   right:
     - text: "home"
@@ -30,7 +30,7 @@ navbar:
       href: blog.xml
 output:
   distill::distill_article:
-    css: site_libs/custom/styles.css
+    css: static/custom/styles.css
     includes:
       in_header: _header.html
 base_url: https://www.tjpalanca.com/
@@ -38,7 +38,7 @@ repository_url: https://www.github.com/tjpalanca/tjpalanca.github.io
 creative_commons: CC BY-NC-SA
 twitter:
   site: "@tjpalanca"
-favicon: site_libs/images/favicon.png
+favicon: static/images/favicon.png
 collections:
   posts:
     disqus: jumbodumbothoughts
