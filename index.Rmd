@@ -13,20 +13,22 @@ library(jsonlite)
 library(magrittr)
 library(purrr)
 library(htmltools)
-read_json("docs/posts/posts.json") %>%
-  extract(1:pmin(3, length(.))) %>%
-  distill:::html_for_articles() %>% (
-    function(article_html) {
-      article_html[[2]][[1]][[2]]$children[[1]]$attribs$style <-
-        "margin-top: 0px;"
-      article_html[[2]][[1]][[2]]$children[[2]] <-
-        tags$div(
-          tags$a(
-            href = "blog.html",
-            "See all articles »"
+if (file.exists("_site/posts/posts.json")) {
+  read_json("_site/posts/posts.json") %>%
+    extract(1:pmin(5, length(.))) %>%
+    distill:::html_for_articles() %>% (
+      function(article_html) {
+        article_html[[2]][[1]][[2]]$children[[1]]$attribs$style <-
+          "margin-top: 0px;"
+        article_html[[2]][[1]][[2]]$children[[2]] <-
+          tags$div(
+            tags$a(
+              href = "blog.html",
+              "See all articles »"
+            )
           )
-        )
-      article_html
-    }
-  )
+        article_html
+      }
+    )
+}
 ```
