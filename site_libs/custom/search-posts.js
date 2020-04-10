@@ -110,7 +110,6 @@ function initialize_search_posts() {
             $("<li/>")
               .append(
                 $("<a/>")
-                  .attr("href", "#")
                   .click(() => search_author(author_name))
                   .html(author_name)
               )
