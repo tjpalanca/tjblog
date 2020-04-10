@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+/*.html
+site_libs/*
+posts/*
+/*.xml
