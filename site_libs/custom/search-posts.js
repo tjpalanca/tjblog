@@ -110,6 +110,7 @@ function initialize_search_posts() {
             $("<li/>")
               .append(
                 $("<a/>")
+                  .css("cursor", "pointer")
                   .click(() => search_author(author_name))
                   .html(author_name)
               )
