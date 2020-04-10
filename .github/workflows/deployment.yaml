@@ -28,6 +28,6 @@ jobs:
             if: github.event_name == 'push'
             run: make docker-publish
           - name: Send redeployment hook
-            run: curl -X POST ${TJBLOG_REDEPLOYMENT_HOOK}?services=tjblog
+            run: curl -X POST ${TJBLOG_REDEPLOYMENT_HOOK}?services=tjblog-deployer
             env:
                 TJBLOG_REDEPLOYMENT_HOOK: ${{ secrets.TJBLOG_REDEPLOYMENT_HOOK }}
