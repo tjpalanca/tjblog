@@ -30,3 +30,13 @@ d-article iframe {
   border: none;
   overflow: hidden;
 }
+
+.posts-list .post-preview .thumbnail {
+  text-align: center;
+}
+
+.posts-list .post-preview .thumbnail img {
+  max-height: 250px;
+  width: auto;
+  display: inline;
+}
