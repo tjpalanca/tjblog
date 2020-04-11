@@ -3,13 +3,13 @@ function resizeIframe(iframe) {
 }
 
 $(document).ready(function() {
-  $('iframe').on('load', function() {
+  $('.d-article > div > iframe').on('load', function() {
     resizeIframe($(this)[0]);
   });
 });
 
 $(window).resize(function() {
-  $('iframe').each(function() {
+  $('.d-article > div > iframe').each(function() {
     $(this).trigger('load');
   });
 });
