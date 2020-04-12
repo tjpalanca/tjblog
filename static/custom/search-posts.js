@@ -56,6 +56,25 @@ function initialize_search_posts() {
     $('.posts-list').append(post);
   }
 
+  function add_search_description(description) {
+    if ($('p#search_description').length) {
+      $('p#search_description')
+        .show()
+        .html(description);
+    } else {
+      $(`
+        <p id="search_description" style="margin-top: 10px">
+          ${description}
+        </p>
+      `)
+        .insertAfter($('.posts-list-description'));
+    }
+  }
+
+  function hide_search_description() {
+    $('#search_description').hide();
+  }
+
   function search_posts() {
     // Fetch the search string
     const search_string = $('input#search_string').val();
@@ -75,15 +94,7 @@ function initialize_search_posts() {
           .map(r => r.ref)
           .map(make_post_visible);
         // Add explainer line
-        if ($('p#search_description').length) {
-          $('p#search_description')
-            .show()
-            .html(`Search results for: ${search_string}`);
-        } else {
-          $(`<p id="search_description">Search results for: ${search_string}</p>`)
-            .insertAfter($('.posts-list-description'));
-        }
-
+        add_search_description(`Search results for: ${search_string}`);
       } else {
         $('#search_string').addClass('uk-form-danger');
       }
@@ -173,10 +184,14 @@ function initialize_search_posts() {
       $("span#author_close").click(() => {
         show_all_posts();
         $("span#author_close").hide();
+        hide_search_description();
       });
     } else {
       $("span#author_close").show();
     }
+
+    // Add explainer line
+    add_search_description(`Posts authored by: ${author_name}`);
 
   }
 
@@ -274,7 +289,7 @@ function initialize_search_posts() {
     // Switch Buttons
     $('button#search_button').show();
     $('button#reset_button').hide();
-    $('#search_description').hide();
+    hide_search_description();
     $('#search_string').removeClass('uk-form-danger');
   }
 
@@ -307,10 +322,12 @@ function initialize_search_posts() {
       $(window).on('hashchange',function() {
         if (window.location.hash) {
           show_category_close();
+          add_search_description(`Posts in category: ${window.location.hash}`);
         }
       });
       if (window.location.hash) {
         show_category_close();
+        add_search_description(`Posts in category: ${window.location.hash}`);
       }
     }
   });
@@ -326,6 +343,7 @@ function initialize_search_posts() {
       $("span#category_close").click(() => {
         window.location.hash = "";
         $("span#category_close").hide();
+        hide_search_description();
       });
     } else {
       $("span#category_close").show();
