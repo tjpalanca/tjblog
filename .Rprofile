@@ -1,3 +1,6 @@
+# Load User Level Rprofile
+if (file.exists("~/.Rprofile")) source("~/.Rprofile", chdir = TRUE)
+
 # Libraries
 require(distill)
 require(magrittr)
