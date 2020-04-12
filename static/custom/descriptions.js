@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+  if (window.location.pathname.match('/posts/.+$')) {
+    $('.d-title')
+      .prepend(
+        $('<h1/>')
+          .css('line-height', '0.8em')
+          .append(
+            $('<span/>')
+              .addClass("uk-label")
+              .addClass("uk-label-success")
+              .html("BLOG POST")
+          )
+      );
+  }
+
   if (window.location.pathname.match('/notes/.+$')) {
     $('.d-article')
       .prepend(

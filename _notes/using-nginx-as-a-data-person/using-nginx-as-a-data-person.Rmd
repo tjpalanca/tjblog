@@ -11,4 +11,7 @@ date: "`r Sys.Date()`"
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - Web Development
+  - Data Science
 ---

@@ -81,7 +81,7 @@ function initialize_search_posts() {
             .html(`Search results for: ${search_string}`);
         } else {
           $(`<p id="search_description">Search results for: ${search_string}</p>`)
-            .insertAfter($('.posts-list-caption'));
+            .insertAfter($('.posts-list-description'));
         }
 
       } else {
