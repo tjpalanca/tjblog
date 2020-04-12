@@ -36,7 +36,7 @@ output:
     includes:
       in_header: !expr if (Sys.getenv("IN_DEVELOPMENT") == "TRUE") "_header_dev.html" else "_header.html"
 base_url: https://www.tjpalanca.com/
-repository_url: https://www.github.com/tjpalanca/tjpalanca.github.io
+repository_url: https://www.github.com/tjpalanca/tjblog
 creative_commons: CC BY-NC-SA
 twitter:
   site: "@tjpalanca"
