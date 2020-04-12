@@ -18,6 +18,21 @@ $(document).ready(function() {
             blog posts, please go <a href="https://www.tjpalanca.com/blog.html">
             here</a>.
           `)
+          .append(
+            $('<a/>')
+              .attr("uk-close", "")
+              .addClass("uk-alert-close")
+          )
+      );
+    $('.d-title')
+      .prepend(
+        $('<h1/>')
+          .css('line-height', '0.8em')
+          .append(
+            $('<span/>')
+              .addClass("uk-label")
+              .html("FIELD NOTES")
+          )
       );
   }
 
