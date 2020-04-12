@@ -1,0 +1,14 @@
+---
+title: "Using NGINX as a Data Person"
+description: |
+  NGINX is a high performance web server that is a very useful skill to pick 
+  up as a data person, because delivery of data products usually involves the 
+  web and a web browser.
+author:
+  - name: TJ Palanca
+    url: https://www.twitter.com/tjpalanca
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+---

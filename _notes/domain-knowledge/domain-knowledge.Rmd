@@ -1,0 +1,16 @@
+---
+title: "Domain Knowledge"
+description: |
+  Data professionals work in multiple fields, and may usually move from one 
+  industry to another in the course of their work. This usually means that they
+  will have to consider domain expertise or domain knowledge in their work, 
+  which may or may not involve other people in their respective organizations.
+author:
+  - name: TJ Palanca
+    url: https://www.twitter.com/tjpalanca
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+

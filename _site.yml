@@ -14,6 +14,8 @@ navbar:
       href: index.html
     - text: "blog"
       href: blog.html
+    - text: "notes"
+      href: notes.html
     - text: "contact"
       href: contact.html
     - text: "about"
@@ -41,6 +43,10 @@ twitter:
 favicon: static/images/favicon.png
 collections:
   posts:
+    disqus: jumbodumbothoughts
+    share: [twitter, linkedin, facebook, pinterest]
+    subscribe: _subscribe.html
+  notes:
     disqus: jumbodumbothoughts
     share: [twitter, linkedin, facebook, pinterest]
     subscribe: _subscribe.html
