@@ -25,3 +25,10 @@ create_note <- function(...) {
   # Open the new file
   file.edit(new_post)
 }
+
+# Emoji
+find_emoji <- function(search_term) {
+  emojifont::search_emoji(search_term) %>%
+    set_names(., .) %>%
+    purrr::map(emojifont::emoji)
+}

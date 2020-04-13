@@ -1,5 +1,6 @@
 ---
-title: "Using NGINX as a Data Person"
+title: '`r paste(emojifont::emoji("globe_with_meridians"),
+        "Using NGINX as a Data Person")`'
 description: |
   NGINX is a high performance web server that is a very useful skill to pick 
   up as a data person, because delivery of data products usually involves the 

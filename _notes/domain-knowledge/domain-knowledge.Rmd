@@ -1,5 +1,5 @@
 ---
-title: "Domain Knowledge"
+title: '`r paste(emojifont::emoji("man_scientist"), "Domain Knowledge")`'
 description: |
   Data professionals work in multiple fields, and may usually move from one 
   industry to another in the course of their work. This usually means that they

@@ -1,5 +1,5 @@
 ---
-title: "Chromebook Data Science"
+title:  '`r paste(emojifont::emoji("computer"), "Chromebook Data Science")`'
 description: |
   As compute power becomes more commoditized and data professionals are working 
   with larger and larger datasets, it becomes more and more convenient to 
