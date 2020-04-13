@@ -32,4 +32,6 @@ If you’re also a data nerd interested in changing the way this country works, 
 
 ## About the site
 
-This site is built using [R Markdown](https://rmarkdown.rstudio.com/) and used the [Distill Web Framework](https://rstudio.github.io/distill/), and hosted using [Github Pages](https://pages.github.com/). 
+This site is built using [R Markdown](https://rmarkdown.rstudio.com/) using the [Distill Web Framework](https://rstudio.github.io/distill/), and self-hosted on
+DigitalOcean. The source for this website is available on my 
+[GitHub](https://github.com/tjpalanca/tjblog).
