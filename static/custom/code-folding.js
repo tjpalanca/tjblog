@@ -62,19 +62,19 @@ function initialize_code_folding() {
         // Remove all other buttonface
         $('button.code-copier').css('background-color', 'buttonface');
         // Create hidden input
-        const $input = $('<input/>');
-        $('body').append($input);
+        const $textarea = $('<textarea/>');
+        $('body').append($textarea);
         // Grab the text to be copied
         const code = $(this)
             .css('background-color', '#32d296')
             .parent().parent()
             .find('d-code').text();
         // Put text into input and select it
-        $input.val(code).select();
+        $textarea.val(code).select();
         // Execute the copy
         document.execCommand("Copy");
         // Remove the temporary element
-        $input.remove();
+        $textarea.remove();
     }
 
     $(window).on('load', function() {
