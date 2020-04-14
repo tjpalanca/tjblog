@@ -2,7 +2,7 @@ function initialize_code_folding() {
 
     function toggle_code() {
         const $this = $(this);
-        const $code_block = $this.parent();
+        const $code_block = $this.parent().parent();
         if ($code_block.hasClass("code-hide")) {
             // If hidden, then show
             $code_block
@@ -23,7 +23,7 @@ function initialize_code_folding() {
     }
 
     function show_all_code() {
-        const $code_blocks = $('.code-block');
+        const $code_blocks = $('.code-block-wrapper');
         $code_blocks
             .css('height', '')
             .css('overflow-y', '')
@@ -34,7 +34,7 @@ function initialize_code_folding() {
     }
 
     function hide_all_code() {
-        const $code_blocks = $('.code-block');
+        const $code_blocks = $('.code-block-wrapper');
         $code_blocks
             .css('height', '1rem')
             .css('overflow-y', 'hidden')
@@ -58,29 +58,66 @@ function initialize_code_folding() {
         }
     }
 
+    function copy_code() {
+        // Remove all other buttonface
+        $('button.code-copier').css('background-color', 'buttonface');
+        // Create hidden input
+        const $input = $('<input/>');
+        $('body').append($input);
+        // Grab the text to be copied
+        const code = $(this)
+            .css('background-color', '#32d296')
+            .parent().parent()
+            .find('d-code').text();
+        // Put text into input and select it
+        $input.val(code).select();
+        // Execute the copy
+        document.execCommand("Copy");
+        // Remove the temporary element
+        $input.remove();
+    }
+
     $(window).on('load', function() {
         // Add show/hide buttons to code blocks
         const code_blocks =
             $('d-code')
+                .addClass('code-block')
                 .wrap(
                     $('<div/>')
                         .css('position', 'relative')
                         .addClass('code-block-wrapper')
                 )
+                .wrap(
+                    $('<div/>')
+                        .css('position', 'relative')
+                        .addClass('code-block-inner')
+                        .css('overflow-x', 'scroll')
+                )
                 .parent()
-                .addClass('code-block')
+                .parent()
                 .append(
-                    $('<button/>')
+                    $('<div/>')
+                    .css('position', 'absolute')
+                    .css('top', '-5px')
+                    .css('right', '0px')
+                    .append(
+                        $('<button/>')
+                        .html('COPY CODE')
+                        .css('line-height', '1rem')
+                        .css('font-size', '0.6rem')
+                        .css('margin-right', '5px')
+                        .addClass('uk-button uk-button-small code-copier')
+                        .click(copy_code)
+                    )
+                    .append(
+                        $('<button/>')
                         .html('HIDE CODE')
-                        .css('float', 'right')
-                        .css('position', 'absolute')
-                        .css('top', '0px')
-                        .css('right', '0px')
                         .css('line-height', '1rem')
                         .css('font-size', '0.6rem')
                         .addClass('uk-button uk-button-small code-folder')
                         .click(toggle_code)
-            );
+                    )
+                );
         // Add a hide all code button if there are code blocks
         if (code_blocks.length > 0) {
             $('d-article')
