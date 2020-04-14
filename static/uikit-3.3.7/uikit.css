@@ -155,7 +155,7 @@ video {
  * 3. Corrects responsive `max-width` behavior if padding and border are used.
  * 4. Exclude SVGs for IE11 because they don't preserve their aspect ratio.
  */
-canvas,
+/*canvas,*/
 img,
 video {
   max-width: 100%;
