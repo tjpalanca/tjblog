@@ -111,5 +111,3 @@ function initialize_code_folding() {
     });
 
 }
-
-

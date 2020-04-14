@@ -40,3 +40,7 @@ d-article iframe {
   width: auto;
   display: inline;
 }
+
+d-article li {
+  margin-bottom: 0.5em;
+}
