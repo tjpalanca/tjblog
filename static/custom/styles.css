@@ -44,3 +44,7 @@ d-article iframe {
 d-article li {
   margin-bottom: 0.5em;
 }
+
+small {
+  line-height: 1.1em;
+}
