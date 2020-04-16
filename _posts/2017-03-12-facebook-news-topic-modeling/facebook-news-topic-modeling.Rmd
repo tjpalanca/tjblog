@@ -26,6 +26,7 @@ bibliography: bibliography.bib
 repository_url: https://github.com/tjpalanca/facebook-news-analysis
 editor_options: 
   chunk_output_type: console
+type: analysis
 ---
 
 ```{r layout="l-screen", out.extra="style='object-fit: cover; max-height: 30vh;'"}

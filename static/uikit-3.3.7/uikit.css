@@ -70,18 +70,17 @@ strong {
  * 1. Consolas has a better baseline in running text compared to `Courier`
  * 2. Correct the odd `em` font sizing in all browsers.
  * 3. Style
-
+*/
 :not(pre) > code,
 :not(pre) > kbd,
 :not(pre) > samp {
-  font-family: Consolas, monaco, monospace;
-  font-size: 0.875rem;
+  /* font-family: Consolas, monaco, monospace; */
+  /* font-size: 0.875rem; */
   color: #f0506e;
   white-space: nowrap;
   padding: 2px 6px;
   background: #f8f8f8;
 }
-*/
 /*
  * Emphasize
 em {
