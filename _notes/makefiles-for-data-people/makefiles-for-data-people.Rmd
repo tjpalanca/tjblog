@@ -1,0 +1,36 @@
+---
+title: "Makefiles for Data People"
+description: Makefiles are awesome
+author:
+  - name: TJ Palanca
+    url: https://www.twitter.com/tjpalanca
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+## Custom Flags
+
+### `-` to not halt execution when command fails
+
+```Makefile
+docker-pull:
+  -docker pull tjpalanca/image
+```
+
+Adding the dash at the start allows you to "try" certain things that may
+or may not work in a CI context. In this example, we try to pull the 
+latest version of the image to use as a cache, but it's not an issue
+if it is unable to do so because we can always build from scratch.
+
+### `@` to not echo code to be executed 
+
+```Makefile 
+docker-pull:
+  @docker pull tjpalanca/image 
+```
+
+Adding the `@` at the front inhibits echo-ing of the command that is 
+executed, cleaning up your logs if you need access to it.
