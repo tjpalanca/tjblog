@@ -1,0 +1,42 @@
+---
+title: "Containerized Development"
+description: |
+  Shoo those dependency problems away with containers!
+author:
+  - name: TJ Palanca
+    url: https://www.twitter.com/tjpalanca
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## Useful Code
+
+### General application run test 
+
+Sometimes, you have a dockerized application and want a quick and dirty 
+way to test whether it runs on a persisted basis. You can use this
+snippet in a Makefile to run on your CI system:
+
+```Makefile
+# Test if the container runs
+docker-test:
+	@docker run -it --name $(APP_NAME) -d $(TEST_ENV) $(REPO_VER) && \
+	echo "Waiting 15 seconds for app startup" && sleep 15 && \
+	echo "Docker Logs ==========" && docker logs $(APP_NAME) && \
+	echo "======================" && \
+	docker inspect -f {{.State.Running}} $(APP_NAME) && \
+	docker stop $(APP_NAME) || docker stop $(APP_NAME) && \
+	docker rm $(APP_NAME) || docker rm $(APP_NAME)
+```
+
+What this does is:
+
+1. Run the persistent application in detached mode
+2. Waits a specified number of seconds (15 above) 
+3. Prints out the logs of the docker image regardless of whether or not
+   the container ran successfully
+4. Checks whether the container is still running, and fails if not
+5. Stops and removes the contianer to clean up regardless of success
+   or failure.
