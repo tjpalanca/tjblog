@@ -1,5 +1,5 @@
 ---
-title: "Containerized Development"
+title: '`r paste(emojifont::emoji("ballot_box"), "Containerized Data Work")`'
 description: |
   Shoo those dependency problems away with containers!
 author:

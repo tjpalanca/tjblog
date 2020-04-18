@@ -1,5 +1,5 @@
 ---
-title: "Makefiles for Data People"
+title: '`r paste(emojifont::emoji("building_construction"), "Makefiles for Data People")`'
 description: Makefiles are awesome
 author:
   - name: TJ Palanca
