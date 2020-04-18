@@ -969,13 +969,16 @@
 <pre class="makefile"><code>
 # Test if the container runs
 docker-test:
-    @docker run -it --name $(APP_NAME) -d $(TEST_ENV) $(REPO_VER) &amp;&amp; \
+    docker run -it --name $(APP_NAME) -d $(TEST_ENV) $(REPO_VER) &amp;&amp; \
     echo &quot;Waiting 15 seconds for app startup&quot; &amp;&amp; sleep 15 &amp;&amp; \
     echo &quot;Docker Logs ==========&quot; &amp;&amp; docker logs $(APP_NAME) &amp;&amp; \
     echo &quot;======================&quot; &amp;&amp; \
-    docker inspect -f {{.State.Running}} $(APP_NAME) &amp;&amp; \
-    docker stop $(APP_NAME) || docker stop $(APP_NAME) &amp;&amp; \
-    docker rm $(APP_NAME) || docker rm $(APP_NAME)</code></pre>
+    if [ &quot;$$(docker inspect -f {{.State.Running}} $(APP_NAME))&quot; == &quot;false&quot; ]; \
+    then    echo &quot;Container failed&quot;; \
+            docker stop $(APP_NAME) | xargs docker rm; exit 1; \
+    else    echo &quot;Container succeeded&quot;; \
+            docker stop $(APP_NAME) | xargs docker rm; exit 0; \
+    fi</code></pre>
 <p>What this does is:</p>
 <ol type="1">
 <li>Run the persistent application in detached mode</li>

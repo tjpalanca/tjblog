@@ -22,13 +22,16 @@ snippet in a Makefile to run on your CI system:
 ```Makefile
 # Test if the container runs
 docker-test:
-	@docker run -it --name $(APP_NAME) -d $(TEST_ENV) $(REPO_VER) && \
+	docker run -it --name $(APP_NAME) -d $(TEST_ENV) $(REPO_VER) && \
 	echo "Waiting 15 seconds for app startup" && sleep 15 && \
 	echo "Docker Logs ==========" && docker logs $(APP_NAME) && \
 	echo "======================" && \
-	docker inspect -f {{.State.Running}} $(APP_NAME) && \
-	docker stop $(APP_NAME) || docker stop $(APP_NAME) && \
-	docker rm $(APP_NAME) || docker rm $(APP_NAME)
+	if [ "$$(docker inspect -f {{.State.Running}} $(APP_NAME))" == "false" ]; \
+	then 	echo "Container failed"; \
+			docker stop $(APP_NAME) | xargs docker rm; exit 1; \
+	else 	echo "Container succeeded"; \
+			docker stop $(APP_NAME) | xargs docker rm; exit 0; \
+	fi
 ```
 
 What this does is:
