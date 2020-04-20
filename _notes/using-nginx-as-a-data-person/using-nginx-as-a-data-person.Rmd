@@ -16,3 +16,15 @@ categories:
   - Web Development
   - Data Science
 ---
+
+## NGINX as a Data Person
+
+You might be wondering what a data person would be doing tinkering around with 
+a web server. It's because of the fact that in order to deliver value 
+end-to-end with data products, you're going to need to go all the way from
+instrumentation (data collection), to data engineering, to analysis, to 
+dashboarding, science, and finally, production. You can achieve that through
+having the skills yourself or leveraging your team or company's skillsets to
+deliver throughout each stage.
+
+Oftentimes, especially in developing proof-of-concepts, it simply isn't cost justified to be leveraging a whole team.
