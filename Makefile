@@ -36,7 +36,7 @@ docker-shell:
 
 # Docker deployment
 docker-deploy:
-	docker run -it --rm \
+	docker run -t --rm \
 		$(VOLUMES) \
 		$(REPO_VER) \
 		/bin/bash -c "cp -r _site/* /home/public/tjblog"

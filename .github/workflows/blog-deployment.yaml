@@ -4,20 +4,14 @@ on:
     push:
         branches:
           - master
-        paths-ignore:
-          - "_comments/**"
-          - ".github/workflows/comments-deployment.yaml"
     pull_request:
         branches:
           - master
-        paths-ignore:
-          - "_comments/**"
-          - ".github/workflows/comments-deployment.yaml"
 
 jobs:
     build_and_deploy:
         name: Build and deploy personal blog
-        runs-on: ubuntu-latest
+        runs-on: [self-hosted, linux]
         steps:
           - name: Checkout the code
             uses: actions/checkout@v2
@@ -30,10 +24,9 @@ jobs:
                 DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
           - name: Retrieve and build the image
             run: make docker-pull && make docker-build
+          - name: Deploy the files
+            if: github.event_name == 'push'
+            run: make docker-deploy
           - name: Publish the image
             if: github.event_name == 'push'
             run: make docker-publish
-          - name: Send redeployment hook
-            run: curl -X POST ${TJBLOG_REDEPLOYMENT_HOOK}?services=tjblog-deployer
-            env:
-                TJBLOG_REDEPLOYMENT_HOOK: ${{ secrets.TJBLOG_REDEPLOYMENT_HOOK }}
