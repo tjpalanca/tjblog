@@ -61,7 +61,7 @@ listing_html <- function(title,
                 )
                 .prepend(
                   $('<h3/>')
-                    .css('font-size', '2em')
+                    .css('font-size', '1.8em')
                     .css('margin-bottom', '10px')
                     .css('margin-top', '0')
                     .html('{{title}}')
