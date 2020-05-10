@@ -8,27 +8,100 @@ description: >
 site: distill::distill_website
 ---
 
-```{r Posts}
+```{r setup}
 library(jsonlite)
 library(magrittr)
 library(purrr)
 library(htmltools)
-if (file.exists("_site/posts/posts.json")) {
-  read_json("_site/posts/posts.json") %>%
-    extract(1:pmin(5, length(.))) %>%
-    distill:::html_for_articles() %>% (
-      function(article_html) {
-        article_html[[2]][[1]][[2]]$children[[1]]$attribs$style <-
-          "margin-top: 0px;"
-        article_html[[2]][[1]][[2]]$children[[2]] <-
-          tags$div(
-            tags$a(
-              href = "blog.html",
-              "See all articles »"
+library(tibble)
+library(dplyr)
+library(lubridate)
+
+listing_html <- function(title,
+                         class,
+                         description, 
+                         json_listing, 
+                         more_articles, 
+                         num_articles = 3L) {
+  if (file.exists(json_listing)) {
+    tibble(entry = read_json(json_listing)) %>% 
+      mutate(date = as_datetime(map_chr(entry, "date"))) %>% 
+      arrange(desc(date)) %>% 
+      filter(row_number() <= num_articles) %>% 
+      pull(entry) %>% 
+      distill:::html_for_articles() %>% (
+        function(article_html) {
+          article_html[[2]][[1]][[2]]$children[[1]]$attribs$style <-
+            "margin-top: 0px;"
+          article_html[[2]][[1]][[2]]$children[[2]] <-
+            tags$div(
+              style = "margin-bottom: 50px;",
+              tags$a(
+                href = more_articles,
+                "See all articles »"
+              )
             )
+          article_html[[2]][[1]][[2]]$attribs$class <- 
+            paste(article_html[[2]][[1]][[2]]$attribs$class, class) %>% 
+            stringr::str_replace("l-page", "l-body-outset")
+          tagList(
+            article_html,
+            tags$script(HTML(glue::glue(.open = "{{", .close = "}}", "
+              $('.{{class}}')
+                .prepend(
+                  $('<hr/>')
+                    .css('margin-top', '20px')
+                    .css('margin-bottom', '5px')
+                )
+                .prepend(
+                  $('<div/>')
+                    .addClass('uk-text-meta posts-list-description')
+                    .css('max-width', '700px')
+                    .html('{{description}}')
+                )
+                .prepend(
+                  $('<h3/>')
+                    .css('font-size', '2em')
+                    .css('margin-bottom', '10px')
+                    .css('margin-top', '0')
+                    .html('{{title}}')
+                );
+            ")))
           )
-        article_html
-      }
-    )
+        }
+      )
+  }
 }
+
 ```
+
+```{r Posts}
+listing_html(
+  title = paste(emojifont::emoji("black_nib"), "Blog Posts"),
+  class = "blog-posts",
+  description = glue::glue(
+    "Blog posts are the results of projects, deep analyses on topical or other ",
+    "issues, or commentary on a specific issue. My favorite topics involve the ",
+    "Philippines, economics, politics, and of course data science and analytics."
+  ),
+  json_listing = "_site/posts/posts.json",
+  more_articles = "blog.html"
+)
+```
+
+```{r Field Notes}
+listing_html(
+  title = paste(emojifont::emoji("notebook"), "Field Notes"),
+  class = "field-notes",
+  description = glue::glue(
+    "Field notes are unfiltered, unverified, and unorganized thoughts, ideas, ",
+    "and solutions that come up in my day-to-day work. The hope is that other ",
+    "people working in data may also encounter the same edge cases, gotchas, ",
+    "and other organizational or technical problems and that this resource is ",
+    "helpful to them. For my regular blog posts, please go here."
+  ),
+  json_listing = "_site/notes/notes.json",
+  more_articles = "notes.html"
+)
+```
+
