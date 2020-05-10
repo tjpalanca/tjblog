@@ -1,0 +1,28 @@
+---
+title: "Data Product Development"
+description: |
+  Data products are any product that involves ingesting, processing, or 
+  presenting data with the purpose of presenting insight or making automated
+  decisions in a way that goes beyond the meaning of the raw data.
+author:
+  - name: TJ Palanca
+    url: https://www.twitter.com/tjpalanca
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## User Experience (UX) in Data Products
+
+> If you want people to do the right thing, make it easy.
+
+Remember that the main goal of your data product users is typically not the
+extraction of meaning from the data; it is to harness the power of data to solve
+the problem that they are really trying to solve. Therefore, it may be tempting
+to assume that people will use your data product in exactly the way you think
+it was designed to be used.
+
+This cannot be left to chance. If you require that users do the "right" thing or
+use your app properly, then you must make that the easiest thing to do in light
+of their "jobs to be done".
