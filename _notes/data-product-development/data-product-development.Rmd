@@ -1,5 +1,6 @@
 ---
-title: "Data Product Development"
+title: '`r paste(emojifont::emoji("card_file_box"),
+        "Data Product Development")`'
 description: |
   Data products are any product that involves ingesting, processing, or 
   presenting data with the purpose of presenting insight or making automated

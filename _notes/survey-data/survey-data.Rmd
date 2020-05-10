@@ -1,5 +1,6 @@
 ---
-title: "Survey Data"
+title: '`r paste(emojifont::emoji("clipboard"),
+        "Survey Data")`'
 description: |
   Usually, data people will encounter situations where they have to work on 
   phenomena that are not directly measurable (opinions and perceptions, as one
