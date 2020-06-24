@@ -1,0 +1,22 @@
+---
+title: "Decisions, decisions, decisions"
+description: |
+  Business requires you to make decisions, and decisions (not time) drives your
+  business forwards. Here are some of my thoughts about how we related data
+  science (decision science) to business decisions.
+author:
+  - name: TJ Palanca
+    url: https://www.twitter.com/tjpalanca
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: decisions-decisions-decisions.bib
+---
+
+# Decisions as a data team's north star
+
+Decisions drive the business forward. In order to make good decisions, you'll 
+need to use some evidence, i.e. qualitative or quantitative data. For those who
+are still on the fence about using data, see 
+[here](https://www.youtube.com/watch?v=QqeOQ2-VotE)[@Colson_2019]
