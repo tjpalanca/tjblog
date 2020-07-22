@@ -1,4 +1,0 @@
----
-title: "Field Notes"
-listing: notes
----
