@@ -11,7 +11,7 @@ RUN echo "\
     download.file.method = 'libcurl')" >> /usr/local/lib/R/etc/Rprofile.site
 
 # R Packages
-RUN install2.r distill nomnoml emojifont
+RUN install2.r -s distill nomnoml emojifont
 
 # Create app working directory
 RUN mkdir -p /src
