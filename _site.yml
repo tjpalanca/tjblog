@@ -14,12 +14,8 @@ navbar:
       href: index.html
     - text: "blog"
       href: blog.html
-    - text: "field notes"
-      href: https://www.notion.so/tjpalanca/e5b607382c7b4eb8a35b39529baafb60?v=1055655dc8a54f03859e42b221170e3d
-    - text: "projects"
-      href: https://www.notion.so/tjpalanca/894fb47ea10a48a4ba8e1fb64a930daf?v=d7a87fd1b02c47778e259f314cb73693
-    - text: "thoughts"
-      href: https://www.notion.so/tjpalanca/TJThoughts-eb07e3539ced437185b103378a6d5c1f
+    - text: "notion"
+      href: https://www.notion.so/tjpalanca/TJNotion-87598a00b4a14506864fc598aa0dcb55
     - text: "contact"
       href: contact.html
     - text: "about"

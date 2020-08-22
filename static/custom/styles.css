@@ -1,13 +1,46 @@
 .distill-site-nav {
+  font-family: 'IBM Plex Sans', sans-serif;
   color: rgba(20, 20, 20, 0.8);
-  background-color: #f2f2f2;
+  background-color: white;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .distill-site-nav a {
   color: inherit;
   text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: #008080;
+}
+
+h1, h2 {
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 600 !important;
+}
+
+h1 span.uk-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600 !important;
+}
+
+html, body, p {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.posts-list .description p {
+    font-family: 'IBM Plex Sans', serif !important;
+    color: gray !important;
+}
+
+.posts-list .description h2 {
+  font-family: 'IBM Plex Serif', serif !important;
+  font-size: 1.3em !important;
 }
 
 #search_widget {
@@ -20,10 +53,6 @@
   background-color: #aaaaaa;
   color: white;
   margin-top: 10px;
-}
-
-.distill-site-nav a:hover {
-  color: rgba(120, 120, 120, 0.8);
 }
 
 d-article iframe {

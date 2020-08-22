@@ -18,52 +18,51 @@ function initialize_descriptions() {
       const type_index  = metadata.attributes.names.value.indexOf("type");
       const type_values = metadata.value[type_index].value;
       type_values.map((type_value) => {
+          let color = null;
+          let bgclr = null;
+          let blurb = null;
+          switch(type_value.toLowerCase()) {
+            case "newsletter":
+              color = "#faa05a";
+              bgclr = "#fff6f0";
+              blurb = `
+                I'm writing a short, quick-fire newsletter that focuses on
+                day-to-day issues faced by data people in their work. As such,
+                a lot of the content here will be based on my opinions and
+                experience.
+              `;
+              break;
+            default:
+              color = "#008080";
+              break;
+          }
           $('#title_tags')
-              .append(
-                 $('<span/>')
-                  .addClass("uk-label uk-label-primary")
-                  .css('margin-right', '5px')
-                  .html(type_value)
-              );
-      });
-    } else if (window.location.pathname.match('/posts/.+$')) {
-      $('#title_tags')
-        .append(
-          $('<span/>')
-            .addClass("uk-label")
-            .addClass("uk-label-success")
-            .html("BLOG POST")
-        );
-    } else if (window.location.pathname.match('/notes/.+$')) {
-      $('.d-article')
-        .prepend(
-          $('<div/>')
-            .attr('uk-alert', '')
-            .addClass("uk-alert-warning")
-            .css("font-size", "0.9em")
-            .css("line-height", "1.2em")
-            .html(`
-              You are visiting the <strong>Field Notes</strong> section of my
-              website, which contains unfiltered, unverified, and unorganized
-              thoughts, ideas, and solutions that come up in my day-to-day work.
-              The hope is that other people working in data may also encounter
-              the same edge cases, gotchas, and other organizational or technical
-              problems and that this resource is helpful to them. For my regular
-              blog posts, please go <a href="https://www.tjpalanca.com/blog.html">
-              here</a>.
-            `)
             .append(
-              $('<a/>')
-                .attr("uk-close", "")
-                .addClass("uk-alert-close")
-            )
-        );
-      $('#title_tags')
-        .append(
-          $('<span/>')
-            .addClass("uk-label uk-label-warning")
-            .html("FIELD NOTES")
-        );
+              $('<span/>')
+                .addClass("uk-label")
+                .css('background-color', color)
+                .css('margin-right', '5px')
+                .html(type_value)
+            );
+          if (blurb) {
+            $('.d-article')
+              .prepend(
+                $('<div/>')
+                  .attr('uk-alert', '')
+                  .css("background-color", bgclr)
+                  .css("color", color)
+                  .css("font-size", "0.9em")
+                  .css("line-height", "1.2em")
+                  .addClass("l-body-outset")
+                  .html(blurb)
+                  .append(
+                    $('<a/>')
+                      .attr("uk-close", "")
+                      .addClass("uk-alert-close")
+                  )
+              );
+          }
+      });
     }
 
     if (window.location.pathname.match('blog.html$')) {
