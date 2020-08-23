@@ -2,8 +2,6 @@
 title: "About"
 ---
 
-## About me
-
 <div style="max-width: 300px;">
 ```{r}
 knitr::include_graphics("static/images/about_image.jpg")

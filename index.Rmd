@@ -1,5 +1,5 @@
 ---
-title: '`r paste0(emojifont::emoji("wave"), "Hey there!")`'
+title: Hey there!
 description: >
   I'm a data scientist and all-around problem solver with experience building 
   data products in fast growing companies across Asia Pacific. I'm passionate 
