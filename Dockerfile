@@ -12,7 +12,7 @@ RUN echo "\
 
 # R Packages
 RUN install2.r distill nomnoml emojifont
-RUN Rscript -e "devtools::install_github('tjpalanca/data-art@v0.1.0', \
+RUN Rscript -e "devtools::install_github('tjpalanca/data-art@v0.1.1', \
   dependencies = TRUE, upgrade = FALSE)"
 
 # Create app working directory

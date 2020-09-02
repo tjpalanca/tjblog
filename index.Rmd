@@ -23,7 +23,12 @@ d-title {
 </style>
 
 ```{r layout="l-screen"}
-data.art::honeycomb(height = "300px")
+data.art::honeycomb(
+  hex_size = 40L,
+  hex_stroke_width = 5L,
+  flash_interval_secs = 0.5,
+  height = "250px"
+)
 ```
 
 ```{r setup}
