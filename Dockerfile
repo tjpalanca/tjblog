@@ -1,4 +1,4 @@
-FROM rocker/geospatial:3.6.1
+FROM tjpalanca/apps:tjutils-v0.3.1
 LABEL maintainer="TJ Palanca <mail@tjpalanca.com>"
 
 # Install nginx
@@ -12,6 +12,8 @@ RUN echo "\
 
 # R Packages
 RUN install2.r distill nomnoml emojifont
+RUN Rscript -e "devtools::install_github('tjpalanca/data-art@v0.1.0', \
+  dependencies = TRUE, upgrade = FALSE)"
 
 # Create app working directory
 RUN mkdir -p /src

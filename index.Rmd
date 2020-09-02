@@ -10,7 +10,21 @@ site: distill::distill_website
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400;1,600&family=IBM+Plex+Serif:wght@600&display=block');
+
+d-article {
+  padding-top: 0;
+}
+d-title p {
+  margin-bottom: 10px;
+}
+d-title {
+  padding-bottom: 0;
+}
 </style>
+
+```{r layout="l-screen"}
+data.art::honeycomb(height = "300px")
+```
 
 ```{r setup}
 library(jsonlite)
