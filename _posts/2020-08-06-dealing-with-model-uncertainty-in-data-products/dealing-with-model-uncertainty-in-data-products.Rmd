@@ -16,19 +16,19 @@ type: newsletter
 
 As software moves closer and closer to traditional industry (think ridesharing, fin-tech, agri-tech, etc.), more and more data products are being built to support or automate decisions that would normally be made by human experts. As this happens, there typically is a valid doubt as to whether a data product can automate a solution to a high enough standard that it becomes worth the investment.
 
-When  unmanaged, this uncertainty can stall the production of otherwise good data products. Either the data product will be developed in a way that materially harms the business because the data scientists overestimated the value of their models, or human experts will reject the product entirely and never realize any value from their data.
+When unmanaged, this uncertainty can stall the production of otherwise good data products. Either the data product will be developed in a way that materially harms the business because the data scientists overestimated the value of their models, or human experts will reject the product entirely and never realize any value from their data.
 
-I'm trying to write down some tips in dealing with design uncertainty in data products: (a) build in parameterization or agility into your data products, and (b) evolve your data products in an agile way. These concepts are typically not new to product management, but as data scientists find themselves in situations where they have to be their own product manager, I think it is useful to phrase it in this lens.
+I'm trying to write down some tips in dealing with design uncertainty in data products: (a) build in parameterization or agility into your data products, and (b) evolve your data products in an agile way. These concepts are typically not new to product management, but as data scientists find themselves in situations where they have to be their own product manager, I think it is useful to phrase it through this lens.
 
 ## Building in parameterization where we don't have data
 
-Should we cap credit limits at 10 million PHP or 15 million PHP? Sometimes, there is no data-driven way to answer this question because we don't have examples of how users would react to this policy. The domain expert may also be uncomfortable about making a strong decision on what that number should be, but in a typical software development context there is a demand to spec that user story down to the exact parameter.
+Should we cap credit limits at 10 million PHP or 15 million PHP? Sometimes, there is no data-driven way to answer this question because we don't have examples of how users would react to this policy. The domain expert may also be uncomfortable about making a strong decision on what that number should be, but in a typical software development context, there is a demand to spec that user story down to the exact parameter.
 
-In these cases, the best course of action is to invest time in parameterizing these decisions. We can set them at the value that makes sense for now, but build into the product functionality to quickly switch this parameter once we have new information (and to replace this with some machine learned decision once we have enough examples). 
+In these cases, the best course of action is to invest time in parameterizing these decisions. We can set them at the value that makes sense for now but builds into the product functionality to quickly switch this parameter once we have new information (and to replace this with some machine-learned decision once we have enough examples).
 
-This way, the product development can move forward without having to make potentially costly decisions that are hard to reverse down the line.
+This way, product development can move forward without having to make potentially costly decisions that are hard to reverse down the line.
 
-Put another way: you can either build perfect prediciton such that you know exactly what will happen as you roll out your data product, or you can build in split second reaction times such that you'll never really need the foreecast.
+Put another way: you can either build perfect prediction such that you know exactly what will happen as you roll out your data product, or you can build in split-second reaction times such that you'll never really need the forecast.
 
 ## Evolving data products
 
@@ -41,7 +41,7 @@ knitr::include_graphics("images/evolving_data_products.png")
 ```
 
 
-What one can do here is progress up the green boxes by really just starting with typical software - rules-based logic with fact based inputs. Once we get comfortable and continue to collect data/reduce uncertainty around how to make the right decisions, you can progress up the chain and add more modeling elements to it.
+What one can do here is progress up the green boxes by really just starting with typical software - rules-based logic with fact-based inputs. Once we get comfortable and continue to collect data/reduce uncertainty around how to make the right decisions, you can progress up the chain and add more modeling elements to it.
 
 Two factors influence how fast you can progress across the green axis:
 
