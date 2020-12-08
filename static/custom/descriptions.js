@@ -85,29 +85,6 @@ function initialize_descriptions() {
       }
     }
 
-    if (window.location.pathname.match('notes.html$')) {
-      if ($('.posts-list-description').length === 0) {
-        $('.posts-list-caption')
-          .css('font-weight', 'bold')
-          .html(String.fromCodePoint('0x1F4D3') + " Field Notes")
-          .after(
-            $('<div/>')
-              .addClass('uk-text-meta')
-              .addClass('posts-list-description')
-              .css('max-width', '800px')
-              .html(`
-                Field notes are unfiltered, unverified, and unorganized
-                thoughts, ideas, and solutions that come up in my day-to-day work.
-                The hope is that other people working in data may also encounter
-                the same edge cases, gotchas, and other organizational or technical
-                problems and that this resource is helpful to them. For my regular
-                blog posts, please go
-                <a href="https://www.tjpalanca.com/blog.html">here</a>.
-              `)
-          );
-      }
-    }
-
   });
 }
 

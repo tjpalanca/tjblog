@@ -1,5 +1,31 @@
 function initialize_search_posts() {
 
+  function get_posts() {
+    const pagename = window.location.pathname.match("[^\/]+\.html$")[0];
+    let json_url = "posts/posts.json";
+    switch(pagename) {
+      case "blog.html":
+        json_url = "posts/posts.json";
+        break;
+      case "notes.html":
+        json_url = "notes/notes.json";
+        break;
+      default:
+        break;
+    }
+    if (typeof(POSTS) == "undefined") {
+      // Fetch the posts from the listing
+      POSTS = $.parseJSON(
+        $.ajax({
+          type     : 'GET',
+          url      : json_url,
+          dataType : 'json',
+          async    : false
+        }).responseText
+      );
+    }
+  }
+
   function make_post_visible(ref) {
     const post = $(`d-article a[href$="${ref}"]`);
     set_posts_visible(post, true);
