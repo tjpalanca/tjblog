@@ -20,6 +20,17 @@ d-title p {
 d-title {
   padding-bottom: 0;
 }
+span.algolia-autocomplete {
+  border: 1px solid #e8e8e8;
+  background-color: #fafafa;
+}
+span.algolia-autocomplete input {
+  background-color: #fafafa;
+}
+span.aa-dropdown-menu {
+  border: 1px solid #e8e8e8 !important;
+  background-color: #fafafa !important;
+}
 </style>
 
 ```{r layout="l-screen"}
