@@ -1,55 +1,5 @@
 function initialize_search_posts() {
 
-  function get_posts() {
-    const pagename = window.location.pathname.match("[^\/]+\.html$")[0];
-    let json_url = "posts/posts.json";
-    switch(pagename) {
-      case "blog.html":
-        json_url = "posts/posts.json";
-        break;
-      case "notes.html":
-        json_url = "notes/notes.json";
-        break;
-      default:
-        break;
-    }
-    if (typeof(POSTS) == "undefined") {
-      // Fetch the posts from the listing
-      POSTS = $.parseJSON(
-        $.ajax({
-          type     : 'GET',
-          url      : json_url,
-          dataType : 'json',
-          async    : false
-        }).responseText
-      );
-    }
-  }
-
-  function build_search_index() {
-    if (typeof(SEARCH_INDEX) == "undefined") {
-      // Fetch Posts list
-      get_posts();
-      // Build the Lunr.JS Index
-      SEARCH_INDEX = lunr(function () {
-        // Define fields
-        this.ref('path');
-        this.field('title');
-        this.field('description');
-        this.field('author_names');
-        this.field('categories');
-        // Build the index
-        POSTS.map(function(post) {
-          post.author_names = post.author.map((a) => a.name).join(", ");
-          post.categories =post.categories .join(", ");
-          return post;
-        }).forEach(function (post) {
-          this.add(post);
-        }, this);
-      });
-    }
-  }
-
   function make_post_visible(ref) {
     const post = $(`d-article a[href$="${ref}"]`);
     set_posts_visible(post, true);
@@ -73,39 +23,6 @@ function initialize_search_posts() {
 
   function hide_search_description() {
     $('#search_description').hide();
-  }
-
-  function search_posts() {
-    // Fetch the search string
-    const search_string = $('input#search_string').val();
-    // If search string is not blank perform search
-    if (search_string !== "") {
-      // Build the search index
-      build_search_index();
-      // Perform the search
-      const search_results = SEARCH_INDEX.search(search_string);
-      // If there are search results
-      if (search_results.length) {
-        $('#search_string').removeClass('uk-form-danger');
-        // Hide all articles first
-        hide_all_posts();
-        // Show only the matching posts
-        search_results
-          .map(r => r.ref)
-          .map(make_post_visible);
-        // Add explainer line
-        add_search_description(`Search results for: ${search_string}`);
-      } else {
-        $('#search_string').addClass('uk-form-danger');
-      }
-      // clear active state
-      $('.categories .active').removeClass('active');
-      // Show the reset button
-      $('button#search_button').hide();
-      $('button#reset_button').show();
-    } else {
-      $('#search_string').addClass('uk-form-danger');
-    }
   }
 
   function construct_author_list() {
@@ -284,15 +201,6 @@ function initialize_search_posts() {
     set_posts_visible($('.posts-list').children('a'), false);
   }
 
-  function reset_search_posts() {
-    show_all_posts();
-    // Switch Buttons
-    $('button#search_button').show();
-    $('button#reset_button').hide();
-    hide_search_description();
-    $('#search_string').removeClass('uk-form-danger');
-  }
-
   function show_all_posts() {
     // Resort all posts
     get_posts();
@@ -304,20 +212,6 @@ function initialize_search_posts() {
 
   $(document).ready(function() {
     if ($('.posts-list').length > 0) {
-      $('div#search_widget').show();
-      $('input#search_string')
-        .on("keyup", function(event) {
-          if (event.keyCode === 13) {
-            event.preventDefault();
-            $("#search_button").click();
-          }
-        });
-      $('button#search_button').click(function() {
-        search_posts();
-      });
-      $('button#reset_button').click(function() {
-        reset_search_posts();
-      });
       construct_author_list();
       $(window).on('hashchange',function() {
         if (window.location.hash) {
